@@ -1,0 +1,1275 @@
+/* =========================================================
+   הפועל רמת גן גבעתיים – עיצוב
+   הצבעים והגופנים מוגדרים פעם אחת כאן למעלה, וכל השאר משתמש בהם.
+   ========================================================= */
+:root {
+  --red: #d91d25;
+  --red-dark: #a8141b;
+  --black: #111111;
+  --ink: #1d1d1f;
+  --grey: #6b6b70;
+  --line: #e4e4e7;
+  --paper: #f6f5f3;
+  --white: #ffffff;
+
+  --font: "Heebo", system-ui, sans-serif;
+  --font-en: "Playfair Display", Georgia, serif;
+  --font-display: "Karantina", "Heebo", sans-serif; /* כותרות גדולות */
+  --font-ui: "Rubik", "Heebo", sans-serif;          /* כפתורים, תפריט ושם הקבוצה */
+
+  --radius: 0;
+  --container: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 76px; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* ---------- כותרת עליונה ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 4px solid var(--red);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.brand img { width: 48px; height: 48px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text strong { font-weight: 900; font-size: 1.15rem; }
+.brand-text small { font-size: .8rem; opacity: .7; }
+
+.main-nav { display: flex; align-items: center; gap: 28px; }
+.main-nav a {
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  padding-block: 6px;
+}
+.main-nav a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+.main-nav a:hover::after { transform: scaleX(1); }
+.nav-cta {
+  background: var(--red);
+  padding: 8px 18px !important;
+  border-radius: 0;
+}
+.nav-cta:hover { background: var(--red-dark); }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--white);
+  border-radius: 0;
+}
+
+/* ---------- פתיח ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-bottom: 6px solid var(--red);
+}
+.hero-shapes .tri {
+  position: absolute;
+  display: block;
+}
+/* המשולשים החדים, כמו בגרפיקה של המועדון באינסטגרם */
+.tri-1 {
+  inset-block: 0;
+  left: 0;
+  width: 46%;
+  background: var(--red);
+  clip-path: polygon(0 0, 100% 0, 55% 100%, 0 100%);
+}
+.tri-2 {
+  bottom: 0;
+  left: 30%;
+  width: 26%;
+  height: 55%;
+  background: var(--black);
+  clip-path: polygon(40% 0, 100% 100%, 0 100%);
+  opacity: .9;
+}
+.tri-3 {
+  top: 0;
+  left: 38%;
+  width: 20%;
+  height: 40%;
+  background: #cfcfd3;
+  clip-path: polygon(0 0, 100% 0, 30% 100%);
+}
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 40px;
+  min-height: 560px;
+  padding-block: 56px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  color: var(--red);
+}
+.hero h1 { margin: 0; line-height: .9; }
+.big-100 {
+  display: block;
+  font-size: clamp(6rem, 18vw, 13rem);
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: -.04em;
+  transform: skewX(-8deg);
+  transform-origin: bottom;
+}
+.hero-title {
+  display: block;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  color: var(--black);
+  transform: skewX(-8deg);
+  margin-top: 10px;
+}
+.hero-sub {
+  max-width: 460px;
+  font-size: 1.15rem;
+  color: var(--grey);
+  margin: 22px 0 28px;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 0;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .15s, background .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--red); color: var(--white); }
+.btn-primary:hover { background: var(--red-dark); }
+.btn-ghost { border: 2px solid var(--black); color: var(--black); }
+.btn-ghost:hover { background: var(--black); color: var(--white); }
+
+.hero-badge { display: flex; justify-content: center; }
+.hero-badge img {
+  width: min(380px, 80%);
+  height: auto;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
+}
+
+/* ---------- כותרות של מקטעים ---------- */
+.section { padding-block: 72px; }
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.section-head h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1;
+  transform: skewX(-8deg);
+}
+.section-head .en {
+  display: block;
+  font-family: var(--font-en);
+  font-style: italic;
+  font-weight: 900;
+  font-size: .55em;
+  color: var(--red);
+  margin-bottom: 6px;
+  transform: skewX(8deg);
+  direction: ltr;
+  text-align: right;
+}
+
+/* ---------- משחקים ---------- */
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.match-card {
+  position: relative;
+  border-radius: var(--radius);
+  padding: 28px;
+  overflow: hidden;
+}
+.match-card.next { background: var(--red); color: var(--white); }
+.match-card.last { background: var(--white); border: 1px solid var(--line); }
+.match-label {
+  font-family: var(--font-en);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.6rem;
+  direction: ltr;
+  text-align: right;
+  margin: 0;
+}
+.match-meta { margin: 4px 0 24px; opacity: .85; font-weight: 500; }
+.match-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.team img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.team span { font-weight: 800; font-size: 1.05rem; }
+.match-card.next .team img {
+  background: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+}
+/* קופסת התוצאה השחורה, כמו בפוסטים של המועדון */
+.score-box {
+  background: var(--black);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 2.4rem;
+  padding: 6px 18px;
+  border-radius: 0;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.score-box i { font-style: normal; opacity: .6; }
+.vs {
+  font-family: var(--font-en);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+.countdown div {
+  background: rgba(0,0,0,.22);
+  border-radius: 0;
+  padding: 8px 14px;
+  min-width: 70px;
+  text-align: center;
+}
+.countdown strong { display: block; font-size: 1.6rem; font-weight: 900; line-height: 1.1; }
+.countdown small { font-size: .8rem; opacity: .85; }
+.result-tag {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 4px 14px;
+  border-radius: 0;
+  font-weight: 800;
+  font-size: .9rem;
+}
+.result-tag.win { background: #e6f6ea; color: #12763a; }
+.result-tag.draw { background: #f0f0f2; color: var(--grey); }
+.result-tag.loss { background: #fdeaea; color: var(--red-dark); }
+
+.season-strip {
+  margin-top: 32px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+.season-strip h3 { margin: 0 0 14px; font-size: 1.05rem; }
+.form-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.form-list li {
+  flex: 0 0 auto;
+  width: 44px;
+  text-align: center;
+  font-size: .75rem;
+  color: var(--grey);
+}
+.form-list b {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.form-list .w b { background: #1f9d55; }
+.form-list .d b { background: #8a8a90; }
+.form-list .l b { background: var(--red); }
+.form-list .u b { background: var(--white); color: var(--grey); border: 2px dashed var(--line); }
+
+/* ---------- סגל ---------- */
+.squad { background: var(--black); color: var(--white); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button {
+  font: inherit;
+  font-weight: 700;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid #3a3a3d;
+  padding: 7px 18px;
+  border-radius: 0;
+  cursor: pointer;
+}
+.filters button[aria-selected="true"],
+.filters button:hover { background: var(--red); border-color: var(--red); }
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 18px;
+}
+.player-card {
+  position: relative;
+  background: #1c1c1e;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .2s;
+}
+.player-card:hover { transform: translateY(-4px); }
+.player-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.4;
+  background: var(--red);
+  overflow: hidden;
+}
+/* משולש כהה מאחורי השחקן */
+.player-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--red-dark);
+  clip-path: polygon(0 0, 60% 0, 0 70%);
+}
+.player-photo img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 92%;
+  width: auto;
+  object-fit: contain;
+}
+.player-number {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255,255,255,.9);
+  transform: skewX(-8deg);
+}
+.player-info { padding: 14px 16px 16px; }
+.player-info h3 { margin: 0; font-size: 1.1rem; font-weight: 800; }
+.player-info p { margin: 2px 0 0; color: #a1a1a6; font-size: .9rem; }
+
+/* ---------- ציר זמן ---------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  inset-inline: 0;
+  height: 4px;
+  background: var(--line);
+}
+.timeline li { position: relative; padding-top: 70px; }
+.timeline .year {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--white);
+  border: 4px solid var(--black);
+  border-radius: 0;
+  padding: 6px 16px;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+.timeline .trophy .year { border-color: var(--red); color: var(--red); }
+.timeline .future .year { background: var(--red); border-color: var(--red); color: var(--white); }
+.timeline h3 { margin: 0 0 6px; font-size: 1.15rem; font-weight: 800; }
+.timeline p { margin: 0; color: var(--grey); font-size: .95rem; }
+
+/* ---------- מספרים ---------- */
+.club { background: var(--red); color: var(--white); padding-block: 48px; }
+.club-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1;
+  transform: skewX(-8deg);
+}
+.stat span { font-weight: 700; opacity: .9; }
+
+/* ---------- כותרת תחתונה ---------- */
+.site-footer { background: var(--black); color: var(--white); padding-block: 36px; }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.footer-note { margin: 0; max-width: 460px; font-size: .85rem; opacity: .65; text-align: center; }
+/* ---------- השותפים (מעל הפוטר) ---------- */
+.sponsors { background: var(--paper); border-top: 1px solid var(--line); padding-block: 40px 48px; }
+.sponsors .section-head { justify-content: center; text-align: center; margin-bottom: 24px; }
+.sponsors .section-head h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+.sponsor-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.sponsor { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sponsor-box {
+  width: 200px; height: 100px; max-width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--red);
+  padding: 12px; text-align: center; text-decoration: none; color: var(--ink);
+  transition: border-color .2s, transform .2s;
+}
+a.sponsor-box:hover { border-color: var(--red); transform: translateY(-2px); }
+.sponsor-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.sponsor-text { display: flex; flex-direction: column; gap: 4px; }
+.sponsor-text strong { font-family: var(--font-ui); font-weight: 800; font-size: 1.15rem; }
+.sponsor-text small { font-size: .75rem; color: var(--grey); }
+.sponsor-tier { font-size: .75rem; font-weight: 700; color: var(--grey); letter-spacing: .03em; }
+
+/* ההערה בדיוק במרכז, בין הסמל לקישורים */
+@media (min-width: 900px) {
+  .footer-inner { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .footer-inner .social { justify-self: end; }
+}
+@media (max-width: 899px) {
+  .footer-inner { flex-direction: column; justify-content: center; }
+}
+.social { display: flex; gap: 18px; font-weight: 700; }
+.social a { text-decoration: none; border-bottom: 2px solid var(--red); }
+
+/* ---------- קישור פעיל בתפריט ---------- */
+.main-nav a.active::after { transform: scaleX(1); }
+
+/* ---------- כותרת הרצף בדף הבית ---------- */
+.strip-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.strip-head h3 { margin: 0; font-size: 1.05rem; }
+.text-link { color: var(--red); font-weight: 800; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
+
+/* ---------- פתיח של דפים פנימיים ---------- */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-bottom: 6px solid var(--red);
+  padding-block: 56px 48px;
+}
+.page-hero .tri-1 { width: 34%; }
+.page-hero .tri-2 { left: 22%; width: 16%; height: 70%; }
+.page-hero .container { position: relative; }
+.eyebrow-en {
+  margin: 0;
+  font-family: var(--font-en);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--red);
+}
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  font-weight: 900;
+  line-height: 1;
+  transform: skewX(-8deg);
+  transform-origin: bottom right;
+}
+.page-sub { margin: 12px 0 0; color: var(--grey); font-size: 1.1rem; font-weight: 500; }
+
+/* ---------- לוח משחקים ---------- */
+.season-summary {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.season-summary div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 10px;
+  text-align: center;
+}
+.season-summary strong { display: block; font-size: 2rem; font-weight: 900; line-height: 1.1; color: var(--black); direction: ltr; }
+.season-summary div:nth-child(2) strong { color: #1f9d55; }
+.season-summary div:nth-child(4) strong { color: var(--red); }
+.season-summary div:last-child { background: var(--black); border-color: var(--black); }
+.season-summary div:last-child strong, .season-summary div:last-child span { color: var(--white); }
+.season-summary span { font-size: .85rem; color: var(--grey); font-weight: 600; }
+
+.filters.light button { color: var(--ink); border-color: var(--line); background: var(--white); }
+.filters.light button[aria-selected="true"],
+.filters.light button:hover { color: var(--white); background: var(--red); border-color: var(--red); }
+
+.fixture-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fixture {
+  display: grid;
+  grid-template-columns: 200px 1fr 120px;
+  align-items: center;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-inline-start: 6px solid var(--line);
+  border-radius: 0;
+  padding: 14px 20px;
+}
+.fixture.played { border-inline-start-color: var(--black); }
+.fixture.upcoming { border-inline-start-color: var(--red); }
+.fx-meta { display: flex; flex-direction: column; font-size: .9rem; color: var(--grey); line-height: 1.4; }
+.fx-meta strong { color: var(--ink); font-size: 1rem; }
+.fx-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; }
+.fx-team { display: flex; align-items: center; gap: 10px; font-weight: 800; }
+.fx-team:last-child { flex-direction: row-reverse; text-align: left; }
+.fx-team img { width: 40px; height: 40px; object-fit: contain; }
+.score-box.small { font-size: 1.3rem; min-width: 76px; padding: 4px 10px; gap: 6px; }
+.fx-vs { font-family: var(--font-en); font-style: italic; font-weight: 900; color: var(--red); min-width: 76px; text-align: center; }
+.fx-result { text-align: left; }
+.fx-result .result-tag { margin: 0; }
+.result-tag.upcoming { background: #fff1f1; color: var(--red); }
+
+@media (max-width: 900px) {
+  .season-summary { grid-template-columns: repeat(4, 1fr); }
+  .season-summary div:last-child { grid-column: span 2; }
+  .fixture { grid-template-columns: 1fr auto; grid-template-areas: "meta result" "teams teams"; row-gap: 12px; }
+  .fx-meta { grid-area: meta; flex-direction: row; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+  .fx-result { grid-area: result; }
+  .fx-teams { grid-area: teams; }
+  .page-hero .tri-1 { width: 100%; height: 30%; }
+  .page-hero .hero-shapes .tri-2 { display: none; }
+  .page-hero { padding-block: 90px 36px; }
+}
+@media (max-width: 520px) {
+  .fixture { padding: 12px 14px; }
+  .fx-team { flex-direction: column; gap: 4px; font-size: .9rem; text-align: center; }
+  .fx-team:last-child { flex-direction: column; text-align: center; }
+  .season-summary strong { font-size: 1.6rem; }
+}
+
+/* ---------- עמוד היסטוריה ---------- */
+.trophies { padding-bottom: 24px; }
+.trophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.trophy-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--red);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+}
+.trophy-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.14);
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 40% 100%);
+}
+.trophy-card.dark { background: var(--black); }
+.trophy-card > * { position: relative; z-index: 1; }
+.trophy-card strong { display: block; font-size: 4.5rem; font-weight: 900; line-height: 1; transform: skewX(-8deg); }
+.trophy-card h3 { margin: 8px 0 2px; font-size: 1.4rem; font-weight: 900; }
+.trophy-card p { margin: 0; opacity: .85; font-weight: 600; }
+
+.chapters .container { max-width: 980px; }
+.chapter {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding-block: 40px;
+  border-bottom: 1px solid var(--line);
+}
+.chapter:last-child { border-bottom: 0; }
+.chapter-year {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--black);
+  transform: skewX(-8deg);
+  transform-origin: bottom right;
+  /* בלי זה התיבה נמתחת לגובה כל הפרק, וההטיה מזיזה את השנה ימינה ככל שהפרק ארוך יותר */
+  align-self: start;
+}
+.chapter-year.small { font-size: 2.2rem; line-height: 1.1; }
+/* השנים מתחלפות אדום-שחור לאורך הדף (1927 בשחור, 1964 באדום וכן הלאה) */
+.chapter:nth-child(even) .chapter-year { color: var(--red); }
+.chapter-body h2 { margin: 0 0 10px; font-size: 1.8rem; font-weight: 900; }
+.chapter-body p { margin: 0 0 12px; font-size: 1.1rem; color: #3a3a3e; }
+.chapter-body blockquote {
+  margin: 20px 0 0;
+  padding: 18px 24px;
+  background: var(--black);
+  color: var(--white);
+  border-inline-start: 8px solid var(--red);
+  border-radius: 0;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+.chapter.future {
+  background: var(--red);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  margin-top: 24px;
+  border: 0;
+}
+.chapter.future .chapter-year { color: var(--white); }
+.chapter.future p { color: var(--white); opacity: .92; }
+
+@media (max-width: 900px) {
+  .trophy-grid { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 10px; padding-block: 30px; }
+  .chapter-year { font-size: 3rem; }
+  .chapter-year.small { font-size: 1.8rem; }
+  .chapter.future { padding: 28px 22px; }
+}
+
+/* =========================================================
+   פינות חדות: חיתוך אלכסוני במקום עיגול, בהשראת הגרפיקה של המועדון
+   ========================================================= */
+.btn, .nav-cta, .filters button, .result-tag, .timeline .year {
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+.btn { padding-inline: 32px; }
+.btn-ghost { border: 0; background: var(--black); color: var(--white); }
+.btn-ghost:hover { background: #333; }
+.btn:hover, .player-card:hover { transform: none; }
+.filters button { border-width: 0; background: #2a2a2d; padding-inline: 22px; }
+.filters.light button { background: #e9e9ec; }
+.match-card, .trophy-card, .chapter.future { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%); }
+.match-card.last, .season-strip, .fixture, .season-summary div { border-width: 1px; }
+.player-card { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%); }
+.hero-badge img { filter: drop-shadow(0 10px 0 rgba(0,0,0,.18)); }
+.timeline .year { border: 0; padding: 6px 20px; background: var(--black); color: var(--white); }
+.timeline .trophy .year { background: var(--red); color: var(--white); }
+.timeline .future .year { background: var(--white); color: var(--red); outline: 3px solid var(--red); outline-offset: -3px; }
+.countdown div { clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+
+/* =========================================================
+   טלפון וטאבלט
+   ========================================================= */
+@media (max-width: 900px) {
+  .menu-toggle { display: block; }
+  .main-nav {
+    position: absolute;
+    top: 76px;
+    inset-inline: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--black);
+    padding: 8px 20px 20px;
+    display: none;
+  }
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: 14px 0; border-bottom: 1px solid #2a2a2d; }
+  .nav-cta { text-align: center; margin-top: 12px; border-bottom: 0 !important; }
+
+  .hero-inner { grid-template-columns: 1fr; min-height: 0; padding-block: 40px 56px; text-align: center; }
+  .hero-sub { margin-inline: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-badge { order: -1; }
+  .hero-badge img { width: 180px; }
+  .tri-1 { width: 100%; height: 30%; clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%); }
+  .hero-shapes .tri-2, .hero-shapes .tri-3 { display: none; }
+
+  .match-grid { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; gap: 26px; }
+  .timeline::before { top: 0; bottom: 0; right: 40px; left: auto; width: 4px; height: auto; inset-inline: auto; right: 44px; }
+  .timeline li { padding-top: 0; padding-right: 120px; min-height: 48px; }
+  .club-inner { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+}
+
+@media (max-width: 520px) {
+  .section { padding-block: 52px; }
+  .player-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .player-number { font-size: 2.2rem; }
+  .player-info { padding: 10px 12px 12px; }
+  .player-info h3, .player-info .player-name { font-size: 1rem; }
+  .team img { width: 60px; height: 60px; }
+  .score-box { font-size: 1.8rem; min-width: 92px; padding: 4px 12px; }
+  .match-card { padding: 22px 16px; }
+  .brand-text strong { font-size: 1rem; }
+}
+
+/* תיקונים לפינות החדות */
+.fixture { border-inline-start-width: 6px; }
+.match-card.last { clip-path: none; }
+.hero-badge img { filter: none; }
+@media (max-width: 900px) { .fixture { border-inline-start-width: 6px; } }
+
+/* =========================================================
+   גופנים: Karantina לכותרות הגדולות, Rubik לכפתורים ולתפריט
+   ========================================================= */
+.big-100, .hero-title, .section-head h2, .page-hero h1,
+.chapter-year, .chapter-body h2, .trophy-card strong, .trophy-card h3,
+.season-summary strong, .player-number, .timeline h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.section-head h2 .en { letter-spacing: 0; }
+.big-100 { font-size: clamp(7rem, 21vw, 15rem); letter-spacing: .02em; }
+.hero-title { font-size: clamp(2.6rem, 6.5vw, 4.4rem); line-height: 1; }
+.section-head h2 { font-size: clamp(2.6rem, 5vw, 3.6rem); }
+.page-hero h1 { font-size: clamp(3.2rem, 9vw, 5.8rem); }
+.chapter-year { font-size: 5rem; }
+.chapter-year.small { font-size: 2.8rem; }
+.chapter-body h2 { font-size: 2.3rem; line-height: 1.1; }
+.trophy-card strong { font-size: 5.5rem; }
+.trophy-card h3 { font-size: 1.9rem; }
+.season-summary strong { font-size: 2.6rem; }
+.player-number { font-size: 3.6rem; }
+.timeline h3 { font-size: 1.6rem; }
+
+.btn, .nav-cta, .main-nav a, .brand-text strong, .filters button, .result-tag {
+  font-family: var(--font-ui);
+  font-weight: 800;
+}
+@media (max-width: 900px) {
+  .chapter-year { font-size: 3.8rem; }
+  .chapter-year.small { font-size: 2.3rem; }
+}
+@media (max-width: 520px) {
+  .player-number { font-size: 2.8rem; }
+  .season-summary strong { font-size: 2.1rem; }
+}
+
+/* ---------- סגל מחולק לפי תפקידים ---------- */
+.player-grid { display: block; }
+.squad-group + .squad-group { margin-top: 56px; }
+.squad-group-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .05em;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--white);
+}
+/* קו אדום שממשיך עד סוף השורה */
+.squad-group-title::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  background: var(--red);
+}
+.squad-group-title span {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  letter-spacing: 0;
+  background: var(--red);
+  padding: 2px 12px;
+  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}
+.player-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 18px;
+}
+@media (max-width: 520px) {
+  .player-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .squad-group + .squad-group { margin-top: 40px; }
+  .squad-group-title { font-size: 2rem; }
+}
+
+/* ---------- קהל, שופט וקישור לעמוד המשחק ---------- */
+.match-extra {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 14px 0 0;
+  font-size: .9rem;
+  color: var(--grey);
+}
+.match-extra b { color: var(--ink); font-family: var(--font-ui); }
+.fixture { grid-template-columns: 200px 1fr 150px; }
+.fx-result { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.fx-crowd { font-size: .85rem; color: var(--grey); }
+.fx-crowd b { color: var(--ink); font-family: var(--font-ui); }
+.fx-link { font-size: .8rem; font-weight: 700; color: var(--red); text-decoration: none; }
+.fx-link:hover { text-decoration: underline; }
+.season-summary { grid-template-columns: repeat(8, 1fr); }
+.season-summary strong { font-size: 2.3rem; }
+@media (max-width: 1100px) {
+  .season-summary { grid-template-columns: repeat(4, 1fr); }
+  .season-summary div:last-child { grid-column: auto; }
+}
+@media (max-width: 900px) {
+  .fixture { grid-template-columns: 1fr auto; }
+}
+
+/* ---------- הודעות טעינה ושגיאה ---------- */
+.status-msg { padding: 24px 0; color: var(--grey); font-weight: 600; }
+.status-msg.error { color: var(--red); }
+
+/* ---------- מעברים חלקים ---------- */
+/* כל דף חדש נכנס בעמעום קל, ורשימה שמסננים מתחלפת בעמעום */
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.page-anim { animation: page-in .35s ease-out both; }
+.fade-swap { animation: fade-in .25s ease-out both; }
+.filters button { transition: background-color .2s, color .2s, border-color .2s; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .page-anim, .fade-swap { animation: none; }
+}
+
+/* ---------- רקע כרטיס שחקן, בהשראת תמונות השחקנים באינסטגרם של הקבוצה ---------- */
+/* אדום עם אור מאחורי הראש, קווים גליים, ואצטדיון בהיר מאחורי השחקן */
+.player-photo {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 30%, #f0393f 0%, transparent 70%),
+    linear-gradient(180deg, #d91d25 0%, #b8121a 100%);
+}
+.player-photo::before {
+  clip-path: none;
+  background: url("/card/waves.svg") center / cover no-repeat;
+}
+.player-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  opacity: .8; /* שקיפות האצטדיון */
+  background:
+    url("/card/stadium.png") center bottom / 100% auto no-repeat,
+    linear-gradient(180deg, transparent 0%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.4) 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+  pointer-events: none;
+  z-index: 0; /* האצטדיון מאחורי השחקן */
+}
+/* השחקן גדול, צמוד לתחתית, ונמוג בעדינות לתוך האצטדיון */
+.player-photo img {
+  z-index: 1;
+  max-width: none; /* בלי זה התמונה מתכווצת לרוחב הכרטיס ונשאר רווח מתחתיה */
+  height: 86%;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, rgba(0,0,0,.45) 100%);
+  mask-image: linear-gradient(180deg, #000 80%, rgba(0,0,0,.45) 100%);
+}
+.player-number { z-index: 2; }
+
+/* ---------- כרטיס שחקן כפתור ---------- */
+/* כפתור ממרכז את התוכן לגובה, ולכן כשיש שם ארוך בשורה הכרטיס השכן "נדחף" למטה.
+   flex מצמיד את התמונה לראש הכרטיס, וכל הכרטיסים בשורה באותו גובה */
+button.player-card {
+  display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; width: 100%; padding: 0; border: 0; text-align: inherit;
+  font: inherit; color: var(--white); cursor: pointer;
+}
+button.player-card .player-info { flex: 1; }
+button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.player-info .player-name { display: block; font-size: 1.1rem; font-weight: 800; }
+.player-info .player-meta { display: block; margin-top: 2px; color: #a1a1a6; font-size: .9rem; }
+
+/* ---------- חלון שחקן ---------- */
+@keyframes modal-in { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: none; } }
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(17,17,17,.72);
+  display: grid; place-items: center; padding: 16px;
+  animation: fade-in .2s ease-out both;
+}
+.player-modal {
+  position: relative;
+  width: min(760px, 100%); max-height: calc(100vh - 32px); overflow: auto;
+  display: grid; grid-template-columns: 300px 1fr;
+  background: #1c1c1e; color: var(--white);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%);
+  animation: modal-in .28s ease-out both;
+}
+.modal-close {
+  position: absolute; top: 10px; left: 10px; z-index: 3;
+  width: 40px; height: 40px; border: 0; cursor: pointer;
+  background: rgba(17,17,17,.6); color: var(--white); font-size: 1.1rem;
+}
+.modal-close:hover, .modal-close:focus-visible { background: var(--red); outline: none; }
+.modal-photo { aspect-ratio: auto; min-height: 340px; }
+.player-photo.modal-photo img { height: 80%; } /* בחלון התמונה רחבה, אז השחקן קטן יותר כדי שהאצטדיון ייראה */
+.modal-body { padding: 28px 28px 34px; }
+.modal-number {
+  display: block; font-family: var(--font-display); font-size: 4.2rem; line-height: .9;
+  color: var(--red); transform: skewX(-8deg); transform-origin: right;
+}
+.modal-body h2 { margin: 6px 0 14px; font-family: var(--font-display); font-size: 2.3rem; letter-spacing: .02em; line-height: 1; }
+.modal-facts { margin: 0 0 22px; display: grid; gap: 8px; }
+.modal-facts div { display: flex; gap: 10px; }
+.modal-facts dt { color: #a1a1a6; min-width: 82px; }
+.modal-facts dd { margin: 0; font-weight: 700; }
+.modal-sub { margin: 0 0 10px; font-family: var(--font-ui); font-size: .95rem; color: #a1a1a6; }
+.modal-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.modal-stats li { background: #2a2a2d; padding: 12px 10px; border-top: 3px solid var(--red); text-align: center; }
+.modal-stats strong { display: block; font-family: var(--font-display); font-size: 2rem; line-height: 1; }
+.modal-stats span { display: block; margin-top: 4px; font-size: .8rem; color: #c7c7cc; }
+.modal-empty { color: #a1a1a6; margin: 0; }
+@media (max-width: 640px) {
+  .player-modal { grid-template-columns: 1fr; }
+  .modal-photo { min-height: 0; aspect-ratio: 4 / 3.4; }
+  .modal-body { padding: 20px 18px 30px; }
+  .modal-number { font-size: 3.2rem; }
+  .modal-body h2 { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop, .player-modal { animation: none; }
+}
+
+/* =========================================================
+   שפת הגלים: כל המשטחים האדומים באתר בנויים כמו רקע כרטיס השחקן,
+   אדום עם אור רך וקווים גליים, ושוליים גליים במקום משולשים חדים
+   ========================================================= */
+:root {
+  --waves: url("/card/waves-tile.svg") center / 600px 260px repeat;
+  --red-wave:
+    var(--waves),
+    radial-gradient(ellipse 70% 60% at 50% 30%, #f0393f 0%, transparent 70%),
+    linear-gradient(180deg, #d91d25 0%, #b8121a 100%);
+  /* שוליים גליים: צורה שממלאת מצד שמאל עד קו גלי */
+  --wave-edge: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0H74C60 16 84 32 70 50C58 66 76 82 60 100H0Z'/></svg>");
+  --wave-edge-back: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0H86C74 20 96 36 84 54C72 72 90 86 78 100H0Z'/></svg>");
+  /* בטלפון: פס עליון עם תחתית גלית */
+  --wave-edge-top: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0H100V62C82 82 66 48 46 66C30 80 16 70 0 88Z'/></svg>");
+}
+
+/* פתיח: פאנל אדום עם קצה גלי, ושכבה כהה יותר מאחוריו במקום המשולשים */
+.hero-inner, .page-hero .container { z-index: 2; }
+.hero-shapes .tri-1 {
+  inset-block: 0; left: 0; width: 50%; height: auto;
+  z-index: 1;
+  background: var(--red-wave);
+  clip-path: none;
+  -webkit-mask: var(--wave-edge) 0 0 / 100% 100% no-repeat;
+  mask: var(--wave-edge) 0 0 / 100% 100% no-repeat;
+}
+.hero-shapes .tri-2 {
+  inset-block: 0; left: 0; width: 50%; height: auto;
+  z-index: 0; opacity: 1;
+  background: var(--waves), var(--red-dark);
+  clip-path: none;
+  -webkit-mask: var(--wave-edge-back) 0 0 / 100% 100% no-repeat;
+  mask: var(--wave-edge-back) 0 0 / 100% 100% no-repeat;
+}
+.hero-shapes .tri-3 { display: none; }
+.page-hero .hero-shapes .tri-1, .page-hero .hero-shapes .tri-2 { width: 36%; left: 0; height: auto; }
+
+/* כל שאר המשטחים האדומים */
+.match-card.next, .club, .chapter.future, .trophy-card { background: var(--red-wave); }
+.trophy-card.dark { background: var(--waves), var(--black); }
+.trophy-card::after { display: none; }
+
+@media (max-width: 900px) {
+  .hero-shapes .tri-1, .page-hero .hero-shapes .tri-1 {
+    inset: 0 0 auto 0; width: 100%; height: 34%;
+    -webkit-mask-image: var(--wave-edge-top);
+    mask-image: var(--wave-edge-top);
+  }
+  .hero-shapes .tri-2 { display: none; }
+}
+
+/* ---------- תמונות בפרקי ההיסטוריה ---------- */
+.chapter-photo {
+  margin: 20px 0 0;
+  border-bottom: 6px solid var(--red);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+  background: var(--black);
+}
+.chapter-photo img { width: 100%; height: auto; } /* בגודל המקורי, בלי לחתוך ראשים או רגליים */
+
+/* ---------- דף הבית: התמונה של המשולשים מסביב לסמל, במקום הגלים ----------
+   הסמל הנקי יושב בדיוק מעל הסמל שבתמונה (העיגול בתמונה הוא 586 מתוך 1200 פיקסלים) */
+.hero .hero-shapes { display: none; }
+.hero { --bw: 440px; }
+.hero-badge { position: relative; }
+.hero-badge img { position: relative; z-index: 1; width: var(--bw); max-width: none; }
+.hero-badge::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--bw) * 2.03);
+  aspect-ratio: 1200 / 747;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  background: url("/card/hero-burst.jpg") center / 100% 100% no-repeat;
+  /* רק הקצוות של התמונה דוהים ללבן */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
+                      linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-composite: source-in;
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
+                      linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent);
+          mask-composite: intersect;
+}
+.hero-text { position: relative; z-index: 1; }
+@media (max-width: 1100px) { .hero { --bw: 360px; } }
+@media (max-width: 900px) {
+  .hero { --bw: 240px; }
+}
+
+/* ---------- קרוסלה בפתיח של דף הבית ---------- */
+/* Embla: חלון שרואים בו שקופית אחת, ומסילה שזזה הצידה */
+.carousel-viewport { overflow: hidden; }
+.carousel-track { display: flex; touch-action: pan-y pinch-zoom; }
+.hero-carousel .slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+.slide-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  min-height: 560px;
+  padding-block: 56px 90px;
+}
+.slide-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  transform: skewX(-8deg);
+  transform-origin: bottom right;
+}
+.slide-sub { font-size: 1.15rem; margin: 22px 0 28px; max-width: 480px; opacity: .85; }
+.slide-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.slide-visual .match-teams { width: min(460px, 100%); }
+.slide-visual .team img { width: 110px; height: 110px; }
+.btn-light { background: var(--white); color: var(--red); }
+.btn-light:hover { background: var(--black); color: var(--white); }
+
+/* התוצאה האחרונה: הגלים בשחור, וכל הכיתוב לבן */
+.slide-last {
+  background:
+    url("/card/waves-tile-dark.svg") center / 600px 260px repeat,
+    radial-gradient(ellipse 70% 60% at 50% 30%, #2c2c30 0%, transparent 70%),
+    linear-gradient(180deg, #1b1b1e 0%, #0c0c0d 100%);
+  color: var(--white);
+}
+.slide-last .eyebrow { color: var(--white); opacity: .8; }
+.slide-last .score-box { background: var(--red); font-size: 3rem; min-width: 150px; }
+.slide-last .team img { background: var(--white); border-radius: 50%; padding: 10px; }
+
+/* המשחק הבא: האדום עם הגלים */
+.slide-next { background: var(--red-wave); color: var(--white); }
+.slide-next .eyebrow { color: var(--white); opacity: .85; }
+.slide-next .team img { background: var(--white); border-radius: 50%; padding: 10px; }
+.slide-next .vs { font-size: 2.6rem; }
+
+/* מלך השערים: הכרטיס של השחקן בגדול */
+.slide-scorer { background: var(--white); }
+.slide-scorer .slide-title { color: var(--black); }
+.slide-scorer .slide-sub { color: var(--grey); opacity: 1; }
+.scorer-photo { width: min(340px, 90%); }
+.scorer-number {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  z-index: 2;
+  font-family: var(--font-en);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--white);
+}
+
+/* ניווט: חיצים ונקודות עם פס התקדמות */
+.carousel-nav {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 10px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+.carousel-arrow {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: none;
+  color: var(--black);
+  cursor: pointer;
+}
+.carousel-arrow:hover { color: var(--red); }
+.carousel-dots { display: flex; gap: 8px; }
+.carousel-dots button {
+  position: relative;
+  width: 28px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  background: #d5d5d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+.carousel-dots button.is-active { background: #f3b6b8; width: 44px; }
+.dot-progress {
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform-origin: right;
+  animation: dot-fill linear forwards;
+}
+.carousel-dots button.is-active:not(:has(.dot-progress)) { background: var(--red); }
+@keyframes dot-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.hero-carousel .hero-inner { padding-bottom: 90px; }
+
+@media (max-width: 900px) {
+  .slide-inner { grid-template-columns: 1fr; text-align: center; gap: 28px; min-height: 0; padding-block: 40px 90px; }
+  .slide-visual { order: -1; }
+  .slide-sub { margin-inline: auto; }
+  .slide-title { transform-origin: bottom center; }
+  .slide-visual .team img { width: 80px; height: 80px; }
+  .scorer-photo { width: min(260px, 80%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot-progress { display: none; }
+}
+/* השקופיות הקצרות יותר מתמרכזות לגובה של הארוכה ביותר */
+.slide-inner { align-content: center; }
+@media (max-width: 900px) {
+  .slide-inner .eyebrow { font-size: .8rem; letter-spacing: .08em; }
+}
+/* הסמלים תמיד עיגולים זהים באותו גובה, גם כששם קבוצה נשבר לשתי שורות */
+.slide-visual .match-teams { align-items: start; }
+.slide-visual .team img { max-width: none; flex-shrink: 0; aspect-ratio: 1; }
+.slide-visual .match-teams > :nth-child(2) { align-self: start; margin-top: calc(55px - 0.5 * var(--mid-h, 70px)); }
+.slide-last .score-box { --mid-h: 72px; }
+@media (max-width: 900px) {
+  .slide-visual .match-teams { gap: 8px; }
+  .slide-visual .match-teams > :nth-child(2) { margin-top: calc(40px - 0.5 * var(--mid-h, 50px)); }
+  .slide-last .score-box { font-size: 2.2rem; min-width: 104px; padding: 4px 12px; --mid-h: 50px; }
+  .slide-visual .team span { font-size: .95rem; }
+}
+/* מלך השערים ומלך הבישולים, שני כרטיסים זה לצד זה */
+.slide-visual.leaders { flex-direction: row; align-items: stretch; gap: 22px; }
+.leader-card {
+  flex: 1 1 0;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+}
+.leader-photo { width: 100%; }
+.leader-photo .scorer-number { font-size: 3rem; }
+.leader-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px 18px;
+  border-top: 5px solid var(--red);
+}
+.leader-label { font-weight: 800; font-size: .85rem; letter-spacing: .06em; color: var(--red); }
+.leader-value { font-weight: 900; font-size: 1.9rem; line-height: 1.15; color: var(--black); margin: 4px 0 2px; }
+.leader-name { font-weight: 800; font-size: 1.05rem; color: var(--black); }
+.leader-tied { font-size: .82rem; color: var(--grey); }
+@media (max-width: 900px) {
+  .slide-visual.leaders { gap: 12px; width: 100%; justify-content: center; }
+  .leader-card { max-width: 170px; }
+  .leader-photo .scorer-number { font-size: 2.2rem; top: 6px; right: 10px; }
+  .leader-info { padding: 10px 10px 12px; text-align: center; }
+  .leader-value { font-size: 1.4rem; }
+  .leader-name { font-size: .92rem; }
+}

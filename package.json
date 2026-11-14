@@ -1,0 +1,32 @@
+{
+  "name": "hapoel-ramat-gan-app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "אתר הפועל רמת גן גבעתיים: שרת Express + אתר React",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,client -c red,white \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch-path=server server/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "node server/index.js",
+    "sync": "node server/sync-cli.js",
+    "sync:details": "node server/sync-cli.js --details",
+    "postinstall": "cd client && npm install",
+    "sync:games": "node server/sync-cli.js --games"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.15",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3"
+  },
+  "optionalDependencies": {
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

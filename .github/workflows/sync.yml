@@ -1,0 +1,64 @@
+# =========================================================
+# השגרות האוטומטיות באוויר. GitHub מריץ אותן לבד ושומר את התוצאות במסד Turso.
+#  - כל שעה: יש משחק שנגמר ועוד לא עודכן? אם כן, תוצאה + קהל + שופט (עם דפדפן Playwright).
+#  - כל בוקר: לוח משחקים, סגל וסטטיסטיקה.
+# אפשר גם להריץ ידנית: Actions > Sync > Run workflow.
+# צריך להגדיר ב-Settings > Secrets and variables > Actions:
+#   TURSO_DATABASE_URL, TURSO_AUTH_TOKEN
+# =========================================================
+name: Sync
+
+on:
+  schedule:
+    - cron: "7 * * * *"   # כל שעה (בדקה 7, כדי לא להתנגש בעומס של תחילת השעה)
+    - cron: "0 4 * * *"   # כל בוקר, 06:00 או 07:00 בישראל (GitHub עובד בשעון UTC)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "מה להריץ"
+        type: choice
+        default: daily
+        options: [daily, games, details]
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+      MODE: ${{ github.event.inputs.mode || (github.event.schedule == '0 4 * * *' && 'daily' || 'games') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # רק התלויות של השרת. --ignore-scripts מדלג על ההתקנה של האתר (client), שלא צריך כאן
+      - run: npm ci --ignore-scripts
+
+      - name: Daily refresh (fixtures, squad, stats)
+        if: env.MODE == 'daily'
+        run: node server/sync-cli.js
+
+      - name: Any finished games waiting?
+        id: due
+        if: env.MODE == 'games'
+        run: node server/sync-cli.js --due
+
+      # הדפדפן כבד, אז מתקינים אותו רק כשיש משחק לעדכן
+      - name: Install browser
+        if: (env.MODE == 'games' && steps.due.outputs.due != '0') || env.MODE == 'details'
+        run: npx playwright install --with-deps chromium
+
+      - name: Update finished games
+        if: env.MODE == 'games' && steps.due.outputs.due != '0'
+        run: node server/sync-cli.js --games
+
+      - name: Full refresh with attendance and referee for every game
+        if: env.MODE == 'details'
+        run: node server/sync-cli.js --details
