@@ -120,7 +120,7 @@ const PauseIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor" /></svg>
 );
 const PlayIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M17 5v14L6 12z" fill="currentColor" /></svg>
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 5v14l11-7z" fill="currentColor" /></svg>
 );
 
 // חץ כ-SVG ולא כתו, כי הדפדפן הופך את התווים ‹ › בטקסט עברי
@@ -168,18 +168,30 @@ export default function HeroCarousel({ summary, players }) {
   // כפתור עצירה (נדרש בתקן: תוכן שזז לבד יותר מ-5 שניות חייב אפשרות לעצור אותו).
   // אחרי עצירה ידנית, גם יציאה של העכבר לא מחזירה את הגלגול, עד שלוחצים שוב.
   const [paused, setPaused] = useState(false);
+  // "עצירת אנימציות" בסרגל הנגישות (מחלקה a11y-motion על <html>) עוצרת גם את הגלגול
+  const [motionOff, setMotionOff] = useState(false);
+  useEffect(() => {
+    const html = document.documentElement;
+    const check = () => setMotionOff(html.classList.contains("a11y-motion"));
+    check();
+    const obs = new MutationObserver(check);
+    obs.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => obs.disconnect();
+  }, []);
+  const stopped = paused || motionOff;
+
   useEffect(() => {
     const auto = embla?.plugins().autoplay;
     if (!auto) return;
-    const keepStopped = () => { if (paused) auto.stop(); };
-    if (paused) auto.stop();
-    embla.on("autoplay:play", keepStopped);
-    return () => { embla.off("autoplay:play", keepStopped); };
-  }, [embla, paused]);
-  const togglePlay = () => {
-    const auto = embla?.plugins().autoplay;
-    if (paused) { setPaused(false); auto?.play(); } else setPaused(true);
-  };
+    const keepStopped = () => auto.stop();
+    if (stopped) {
+      auto.stop();
+      embla.on("autoplay:play", keepStopped); // למשל כשהעכבר יוצא מהקרוסלה
+      return () => { embla.off("autoplay:play", keepStopped); };
+    }
+    auto.play();
+  }, [embla, stopped]);
+  const togglePlay = () => setPaused(p => !p);
 
   const prev = useCallback(() => embla?.scrollPrev(), [embla]);
   const next = useCallback(() => embla?.scrollNext(), [embla]);
@@ -224,8 +236,8 @@ export default function HeroCarousel({ summary, players }) {
           </div>
           <button type="button" className="carousel-arrow" onClick={next} aria-label="הבא"><Chevron dir="left" /></button>
           <button type="button" className="carousel-arrow carousel-pause" onClick={togglePlay}
-            aria-label={paused ? "הפעלת החלפה אוטומטית" : "עצירת החלפה אוטומטית"}>
-            {paused ? <PlayIcon /> : <PauseIcon />}
+            aria-label={stopped ? "הפעלת החלפה אוטומטית" : "עצירת החלפה אוטומטית"}>
+            {stopped ? <PlayIcon /> : <PauseIcon />}
           </button>
         </div>
       )}
