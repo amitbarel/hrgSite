@@ -3,6 +3,7 @@ import Header from "@/components/Header.jsx";
 import Footer from "@/components/Footer.jsx";
 import Sponsors from "@/components/Sponsors.jsx";
 import AccessibilityMenu from "@/components/AccessibilityMenu.jsx";
+import Script from "next/script";
 import "../tailwind.css";
 import "../styles.css";
 
@@ -35,13 +36,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="he" dir="rtl" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: A11Y_BOOT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Karantina:wght@700&family=Rubik:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet" />
       </head>
       <body>
+        {/* beforeInteractive: Next מכניס אותו ל-<head> ומריץ לפני שהדף מצויר */}
+        <Script id="a11y-boot" strategy="beforeInteractive">{A11Y_BOOT}</Script>
         <a href="#main" className="skip-link">דלג לתוכן הראשי</a>
         <Header />
         {children}
