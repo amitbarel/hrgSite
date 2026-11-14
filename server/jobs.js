@@ -1,11 +1,11 @@
 // =========================================================
 // השגרות האוטומטיות
-//  1. כל 10 דקות: יש משחק שנגמר (150 דקות אחרי הפתיחה) ועוד לא עודכן?
+//  1. כל שעה: יש משחק שנגמר (150 דקות אחרי הפתיחה) ועוד לא עודכן?
 //     אם כן: מרעננים תוצאות, ומושכים קהל ושופט. ניסיון חוזר פעם בשעה, עד 36 שעות.
 //     אחרי משחק שהסתיים מרעננים גם את הסטטיסטיקה של השחקנים (הופעות, שערים וכו').
-//  2. כל בוקר ב-06:00: מרעננים את לוח המשחקים (שעות חדשות), את הסגל ואת הסטטיסטיקה.
-// המצב נשמר במסד הנתונים, ולכן אם השרת עולה מחדש הוא ממשיך מאיפה שעצר.
-// במחשב: node-cron מריץ אותן (startJobs). באוויר: GitHub Actions מריץ את server/sync-cli.js.
+//  2. כל בוקר: מרעננים את לוח המשחקים (שעות חדשות), את הסגל ואת הסטטיסטיקה.
+// המצב נשמר במסד הנתונים, ולכן כל הרצה ממשיכה מאיפה שהקודמת עצרה.
+// GitHub Actions מריץ אותן דרך server/sync-cli.js. במחשב מריצים ידנית: npm run sync.
 // =========================================================
 import { gamesNeedingUpdate, markAttempt, saveGameDetails, setMeta, gameStatus, finishedWithoutDetails } from "./db.js";
 import { syncFixtures } from "./scraper/fixtures.js";
@@ -71,12 +71,4 @@ async function refreshStats() {
     log("stats sync failed:", e.message);
     return null;
   }
-}
-
-export async function startJobs() {
-  const { default: cron } = await import("node-cron");
-  const tz = { timezone: "Asia/Jerusalem" };
-  cron.schedule("*/10 * * * *", () => updateFinishedGames().catch(e => log("error:", e.message)), tz);
-  cron.schedule("0 6 * * *", () => dailyRefresh().catch(e => log("error:", e.message)), tz);
-  log("jobs scheduled: games every 10 min, daily refresh at 06:00");
 }

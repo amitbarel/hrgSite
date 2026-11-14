@@ -2,31 +2,41 @@
   "name": "hapoel-ramat-gan-app",
   "private": true,
   "version": "0.1.0",
-  "description": "אתר הפועל רמת גן גבעתיים: שרת Express + אתר React",
+  "description": "אתר הפועל רמת גן גבעתיים: Next.js + סקרייפרים שרצים ב-GitHub Actions",
   "type": "module",
   "engines": {
     "node": "22.x"
   },
   "scripts": {
-    "dev": "concurrently -n server,client -c red,white \"npm:dev:server\" \"npm:dev:client\"",
-    "dev:server": "node --watch-path=server server/index.js",
-    "dev:client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build",
-    "start": "node server/index.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "sync": "node server/sync-cli.js",
     "sync:details": "node server/sync-cli.js --details",
-    "postinstall": "cd client && npm install",
     "sync:games": "node server/sync-cli.js --games"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
-    "express": "^4.21.2",
-    "node-cron": "^3.0.3"
+    "@radix-ui/react-dialog": "^1.3.1",
+    "@radix-ui/react-slot": "^1.5.0",
+    "@radix-ui/react-tabs": "^1.2.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "lucide-react": "^1.73.0",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.7.0"
   },
   "optionalDependencies": {
     "playwright": "^1.49.1"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@tailwindcss/postcss": "^4.3.5",
+    "tailwindcss": "^4.3.5",
+    "tw-animate-css": "^1.4.0"
   }
 }

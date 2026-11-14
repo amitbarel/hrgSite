@@ -1,6 +1,6 @@
-# הפועל רמת גן גבעתיים – אתר (Front + Back)
+# הפועל רמת גן גבעתיים – אתר
 
-אתר לימודי, לא רשמי. **Front** ב-React (Vite), **Back** ב-Node.js + Express עם מסד SQLite (במחשב קובץ, באוויר Turso),
+אתר לימודי, לא רשמי. בנוי ב-**Next.js** (React), עם רכיבי **shadcn/ui** ומסד SQLite (במחשב קובץ, באוויר Turso),
 ושגרות שמעדכנות את האתר לבד אחרי כל משחק.
 
 ## הרצה ראשונה
@@ -8,59 +8,66 @@
 דרוש **Node.js 22 ומעלה** (בודקים עם `node -v`).
 
 ```bash
-npm install                      # מתקין גם את השרת וגם את ה-client
-npx playwright install chromium  # דפדפן אוטומטי, בשביל נתוני קהל ושופט (חד-פעמי)
-npm run dev                      # שרת על 3001 + אתר על 5173
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-פותחים את http://localhost:5173. בהרצה הראשונה המסד נטען מ-`data/seed.json`, כך שהאתר עובד מיד.
+בפעם הראשונה המסד נטען מ-`data/seed.json`, כך שהאתר עובד מיד.
+בשביל נתוני קהל ושופט צריך גם דפדפן אוטומטי (חד-פעמי): `npx playwright install chromium`.
 
 ## פקודות
 
 | פקודה | מה היא עושה |
 |---|---|
-| `npm run dev` | פיתוח: השרת מתרענן בכל שמירה, והאתר מתעדכן מיד בדפדפן |
-| `npm run sync` | מושך עכשיו מאתר המנהלת את לוח המשחקים והסגל |
+| `npm run dev` | פיתוח: הדף מתעדכן מיד בכל שמירה |
+| `npm run build` ואז `npm start` | גרסת "ייצור", בדיוק כמו ב-Vercel |
+| `npm run sync` | מושך עכשיו מאתר המנהלת את לוח המשחקים, הסגל והסטטיסטיקה |
 | `npm run sync:details` | כמו sync, ובנוסף קהל ושופט לכל משחק שחסרים לו |
 | `npm run sync:games` | רק משחקים שנגמרו ועוד לא עודכנו |
-| `npm run build` ואז `npm start` | גרסת "ייצור": השרת מגיש גם את האתר, הכול על http://localhost:3001 |
 
 ## איך זה בנוי
 
 ```
+src/
+  app/              הדפים (App Router של Next): כל תיקייה היא כתובת
+    layout.jsx      המסגרת של כל הדפים: כותרת, פוטר, ומה שוואטסאפ וגוגל מציגים
+    page.jsx        דף הבית (/)
+    squad/          /squad
+    fixtures/       /fixtures
+    history/        /history
+    api/health/     /api/health: מתי רצו העדכונים לאחרונה
+  views/            התוכן של כל דף
+  components/       רכיבים: כותרת, קרוסלה, כרטיסי משחק, כרטיס שחקן ועוד
+  components/ui/    רכיבי shadcn/ui: Dialog, Sheet, Tabs, Carousel
+  lib/data.js       קריאת הנתונים מהמסד (רץ רק בשרת)
+  styles.css        העיצוב (צבעים וגופנים בראש הקובץ)
+  tailwind.css      Tailwind והצבעים של shadcn
 server/
-  app.js          ה-API (Express). רץ גם במחשב וגם ב-Vercel
-  index.js        השרת במחשב: ה-API, האתר הבנוי והשגרות
-  db.js           מסד הנתונים (libSQL: קובץ במחשב, Turso באוויר) וכל השאילתות
-  jobs.js         השגרות האוטומטיות
-  seed.js         טעינת נתוני התחלה למסד ריק
-  sync-cli.js     הרצה ידנית של העדכון
+  db.js             מסד הנתונים (libSQL: קובץ במחשב, Turso באוויר) וכל השאילתות
+  jobs.js           השגרות: מה לעדכן ומתי
+  seed.js           טעינת נתוני התחלה למסד ריק
+  sync-cli.js       הרצת העדכון (ידנית, או מ-GitHub Actions)
   scraper/
-    fixtures.js   לוח משחקים ותוצאות (מעמוד /scores/)
-    squad.js      סגל ותאריכי לידה (מעמוד הקבוצה ועמודי השחקנים)
-    details.js    קהל ושופט (עמוד המשחק, דרך Playwright)
-    stats.js      סטטיסטיקה עונתית לכל שחקן
-api/index.js      הכניסה של Vercel ל-API
-vercel.json       הגדרות Vercel
+    fixtures.js     לוח משחקים ותוצאות (מעמוד /scores/)
+    squad.js        סגל ותאריכי לידה (מעמוד הקבוצה ועמודי השחקנים)
+    details.js      קהל ושופט (עמוד המשחק, דרך Playwright)
+    stats.js        סטטיסטיקה עונתית לכל שחקן
+public/             תמונות, סמל ולוגואים
 .github/workflows/sync.yml   השגרות באוויר (GitHub Actions)
-client/
-  src/pages/      הדפים: בית, סגל, לוח משחקים, היסטוריה
-  src/components/ רכיבים: כותרת, כרטיסי משחק, כרטיס שחקן ועוד
-  src/styles.css  העיצוב (צבעים וגופנים בראש הקובץ)
 data/
-  seed.json       נתוני התחלה
-  hapoel.db       המסד עצמו (נוצר לבד, לא נשמר ב-Git)
+  seed.json         נתוני התחלה
+  hapoel.db         המסד במחשב (נוצר לבד, לא נשמר ב-Git)
 ```
 
-### ה-API
+### איך הנתונים מגיעים לדף
 
-| כתובת | מחזירה |
-|---|---|
-| `GET /api/games` | כל משחקי העונה של הקבוצה |
-| `GET /api/players` | הסגל |
-| `GET /api/summary` | המשחק הבא, המשחק האחרון, מאזן העונה וממוצע קהל בבית |
-| `GET /api/club` | פרטי המועדון |
-| `GET /api/health` | מתי רצו העדכונים לאחרונה |
+אין API באמצע. כל דף הוא קומפוננטת שרת שקוראת ישירות מהמסד (`src/lib/data.js`), ו-Next שולח לדפדפן
+HTML מוכן עם כל הנתונים. לכן הדף מופיע מיד, בלי "טוען…", וגוגל ווואטסאפ רואים את התוכן.
+
+הדפים נשמרים במטמון ונבנים מחדש לכל היותר פעם ב-5 דקות (`export const revalidate = 300` בכל דף).
+ככה רוב הביקורים לא מגיעים בכלל למסד, ותוצאה חדשה מופיעה באתר תוך כמה דקות.
+
+רק החלקים שצריכים אינטראקציה (קרוסלה, תפריט, סינון, חלון שחקן) מסומנים `"use client"` ורצים גם בדפדפן.
 
 ## השגרות
 
@@ -71,28 +78,24 @@ data/
 
 המצב נשמר במסד, ולכן כל הרצה ממשיכה מאיפה שהקודמת עצרה.
 
-- **במחשב** השגרות רצות בתוך השרת (`npm run dev`): בדיקת משחקים כל 10 דקות, ורענון ב-06:00.
-- **באוויר** הן רצות ב-GitHub Actions (`.github/workflows/sync.yml`): בדיקת משחקים כל שעה, ורענון כל בוקר.
-  אפשר גם להריץ ידנית מהלשונית Actions.
+השגרות רצות ב-GitHub Actions (`.github/workflows/sync.yml`): בדיקת משחקים כל שעה, ורענון כל בוקר.
+אפשר גם להריץ ידנית מהלשונית Actions, ובמחשב עם `npm run sync`.
 
 ## העלאה לאוויר (Vercel + Turso + GitHub Actions)
 
 1. **מסד נתונים:** נרשמים ל-[Turso](https://turso.tech), יוצרים מסד, ומעתיקים את הכתובת (`libsql://...`) וטוקן.
-2. **Vercel:** מייבאים את הריפו מ-GitHub. ההגדרות כבר ב-`vercel.json`. ב-Settings > Environment Variables מוסיפים
+2. **Vercel:** מייבאים את הריפו מ-GitHub. Vercel מזהה Next.js לבד (וגם `vercel.json` אומר לו). ב-Settings > Environment Variables מוסיפים
    `TURSO_DATABASE_URL` ו-`TURSO_AUTH_TOKEN`.
 3. **GitHub Actions:** בריפו, Settings > Secrets and variables > Actions, מוסיפים את אותם שני משתנים.
 4. **נתונים ראשונים:** ב-GitHub, Actions > Sync > Run workflow, ובוחרים `details`. זה טוען את `data/seed.json`
    למסד הריק, מרענן הכול, ומושך קהל ושופט לכל משחק.
 
-Vercel מגיש את האתר הבנוי, וה-API רץ שם כפונקציה (`api/index.js`). כל תשובה נשמרת במטמון של Vercel ל-5 דקות,
-אז רוב הביקורים לא מגיעים בכלל למסד.
+בזמן הבנייה ב-Vercel הדפים נבנים מהמסד, ואחר כך מתרעננים לבד כל 5 דקות.
 
 ## הגדרות (`.env`)
 
 מעתיקים את `.env.example` ל-`.env`:
 
-- `PORT`: פורט השרת במחשב (ברירת מחדל 3001)
-- `ENABLE_JOBS`: ‏`false` כדי לכבות את השגרות במחשב
 - `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`: רק אם רוצים שגם המחשב יעבוד מול המסד בענן
 - `CHROMIUM_PATH`: אופציונלי, נתיב לדפדפן כרום קיים במקום ההתקנה של Playwright
 
