@@ -1,10 +1,13 @@
-// כפתורי סינון. light = גרסה לרקע בהיר
-export default function Filters({ options, value, onChange, light = false }) {
+// כפתורי סינון (Tabs של shadcn/ui). light = גרסה לרקע בהיר.
+// Radix נותן ניווט במקלדת (חיצים) והתפקידים הנכונים לקוראי מסך.
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export default function Filters({ options, value, onChange, light = false, label = "סינון" }) {
   return (
-    <div className={`filters${light ? " light" : ""}`} role="tablist">
-      {options.map(o => (
-        <button key={o} role="tab" aria-selected={o === value} onClick={() => onChange(o)}>{o}</button>
-      ))}
-    </div>
+    <Tabs value={value} onValueChange={onChange} dir="rtl">
+      <TabsList className={`filters${light ? " light" : ""}`} aria-label={label}>
+        {options.map(o => <TabsTrigger key={o} value={o}>{o}</TabsTrigger>)}
+      </TabsList>
+    </Tabs>
   );
 }

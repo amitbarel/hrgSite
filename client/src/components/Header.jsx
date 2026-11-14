@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const LINKS = [
   { to: "/", label: "בית", end: true },
@@ -7,6 +8,20 @@ const LINKS = [
   { to: "/squad", label: "הסגל" },
   { to: "/history", label: "היסטוריה" },
 ];
+
+function NavLinks({ onNavigate }) {
+  return (
+    <>
+      {LINKS.map(l => (
+        <NavLink key={l.to} to={l.to} end={l.end} onClick={onNavigate}
+          className={({ isActive }) => (isActive ? "active" : undefined)}>
+          {l.label}
+        </NavLink>
+      ))}
+      <Link to="/fixtures" className="nav-cta" onClick={onNavigate}>לוח משחקים</Link>
+    </>
+  );
+}
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -22,18 +37,23 @@ export default function Header() {
             <small>מאז 1927</small>
           </span>
         </Link>
-        <button className="menu-toggle" aria-label="פתיחת תפריט" aria-expanded={open} onClick={() => setOpen(o => !o)}>
-          <span></span><span></span><span></span>
-        </button>
-        <nav className={`main-nav${open ? " open" : ""}`} aria-label="ניווט ראשי">
-          {LINKS.map(l => (
-            <NavLink key={l.to} to={l.to} end={l.end} onClick={close}
-              className={({ isActive }) => (isActive ? "active" : undefined)}>
-              {l.label}
-            </NavLink>
-          ))}
-          <Link to="/fixtures" className="nav-cta" onClick={close}>לוח משחקים</Link>
-        </nav>
+
+        {/* במחשב: הקישורים בשורה */}
+        <nav className="main-nav" aria-label="ניווט ראשי"><NavLinks /></nav>
+
+        {/* בטלפון: תפריט שנכנס מימין (Sheet של shadcn/ui) */}
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger className="menu-toggle" aria-label="פתיחת תפריט">
+            <span></span><span></span><span></span>
+          </SheetTrigger>
+          <SheetContent side="right" className="mobile-menu" aria-describedby={undefined} dir="rtl">
+            <SheetTitle className="mobile-menu-title">
+              <img src="/logo.png" alt="" width="44" height="44" />
+              הפועל רמת גן גבעתיים
+            </SheetTitle>
+            <nav className="mobile-nav" aria-label="ניווט ראשי"><NavLinks onNavigate={close} /></nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );

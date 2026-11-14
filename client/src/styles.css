@@ -958,13 +958,12 @@ button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset
   display: grid; place-items: center; padding: 16px;
   animation: fade-in .2s ease-out both;
 }
+/* המיקום (באמצע המסך) והאנימציה מגיעים מה-Dialog של shadcn; כאן רק המראה */
 .player-modal {
-  position: relative;
-  width: min(760px, 100%); max-height: calc(100vh - 32px); overflow: auto;
+  width: min(760px, calc(100% - 32px)); max-height: calc(100vh - 32px); overflow: auto;
   display: grid; grid-template-columns: 300px 1fr;
   background: #1c1c1e; color: var(--white);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%);
-  animation: modal-in .28s ease-out both;
 }
 .modal-close {
   position: absolute; top: 10px; left: 10px; z-index: 3;
@@ -1273,3 +1272,49 @@ button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset
   .leader-value { font-size: 1.4rem; }
   .leader-name { font-size: .92rem; }
 }
+
+/* ---------- תפריט בטלפון (Sheet של shadcn) ---------- */
+.mobile-menu {
+  background: var(--black);
+  color: var(--white);
+  padding: 22px 22px 28px;
+  border-left: 4px solid var(--red);
+  font-family: var(--font-ui);
+}
+.mobile-menu-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 52px; /* מקום לכפתור הסגירה */
+}
+.mobile-nav { display: flex; flex-direction: column; }
+.mobile-nav a {
+  padding: 16px 0;
+  border-bottom: 1px solid #2a2a2d;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.mobile-nav a.active { color: #ff6b70; }
+.mobile-nav .nav-cta { margin-top: 18px; text-align: center; border-bottom: 0; }
+.sheet-close {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: #2a2a2d;
+  color: var(--white);
+  cursor: pointer;
+}
+.sheet-close:hover, .sheet-close:focus-visible { background: var(--red); outline: none; }
+/* כפתורי הסינון של Radix: סימון מקלדת ברור */
+.filters button:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+.filters.light button:focus-visible { outline-color: var(--ink); }

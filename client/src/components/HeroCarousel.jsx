@@ -1,8 +1,8 @@
-// הפתיח של דף הבית: קרוסלה (על Embla, אותה ספרייה שעליה בנויה הקרוסלה של shadcn) שמתחלפת לבד בין 100 השנים, התוצאה האחרונה, המשחק הבא ומלך השערים
+// הפתיח של דף הבית: קרוסלה (Carousel של shadcn/ui, על Embla) שמתחלפת לבד בין 100 השנים, התוצאה האחרונה, המשחק הבא והמובילים של העונה
 import { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Countdown from "./Countdown.jsx";
 import { MatchTeams, ScoreBox } from "./Teams.jsx";
 import { fmtDate, fmtTime, fmtNum, RESULT, OUR_TEAM_ID, heCount } from "../utils.js";
@@ -136,7 +136,7 @@ export default function HeroCarousel({ summary, players }) {
   // מתחלף לבד כל 7 שניות; נעצר כשהעכבר עליו או כשמשתמשים במקלדת, ולא זז בכלל למי שביקש פחות תנועה
   const [reduced] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [plugins] = useState(() => (reduced ? [] : [Autoplay({ delay: DELAY, stopOnInteraction: false, stopOnMouseEnter: true })]));
-  const [viewportRef, embla] = useEmblaCarousel({ loop: true, direction: "rtl", duration: 30 }, plugins);
+  const [embla, setEmbla] = useState(null);
   const [current, setCurrent] = useState(0);
   const [playing, setPlaying] = useState(!reduced);
 
@@ -157,31 +157,25 @@ export default function HeroCarousel({ summary, players }) {
   const next = useCallback(() => embla?.scrollNext(), [embla]);
 
   return (
-    <section
+    <Carousel
       className="hero hero-carousel"
-      aria-roledescription="carousel"
       aria-label="עדכונים מהקבוצה"
-      onKeyDown={e => {
-        if (e.key === "ArrowLeft") next();
-        if (e.key === "ArrowRight") prev();
-      }}
+      opts={{ loop: true, direction: "rtl", duration: 30 }}
+      plugins={plugins}
+      setApi={setEmbla}
     >
-      <div className="carousel-viewport" ref={viewportRef}>
-        <div className="carousel-track">
-          {slides.map((s, k) => (
-            <div
-              key={s.key}
-              className={`slide ${s.cls}${k === current ? " is-active" : ""}`}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${k + 1} מתוך ${n}: ${s.label}`}
-              aria-hidden={k !== current}
-            >
-              {s.body}
-            </div>
-          ))}
-        </div>
-      </div>
+      <CarouselContent className="carousel-track">
+        {slides.map((s, k) => (
+          <CarouselItem
+            key={s.key}
+            className={`slide ${s.cls}${k === current ? " is-active" : ""}`}
+            aria-label={`${k + 1} מתוך ${n}: ${s.label}`}
+            aria-hidden={k !== current}
+          >
+            {s.body}
+          </CarouselItem>
+        ))}
+      </CarouselContent>
 
       {n > 1 && (
         <div className="carousel-nav">
@@ -203,6 +197,6 @@ export default function HeroCarousel({ summary, players }) {
           <button type="button" className="carousel-arrow" onClick={next} aria-label="הבא"><Chevron dir="left" /></button>
         </div>
       )}
-    </section>
+    </Carousel>
   );
 }

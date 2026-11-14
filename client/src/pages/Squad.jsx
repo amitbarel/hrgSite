@@ -40,7 +40,7 @@ export default function Squad() {
           </div>
         </div>
       </section>
-      {open && <PlayerModal player={open} onClose={close} />}
+      <PlayerModal player={open} onClose={close} />
     </>
   );
 }
