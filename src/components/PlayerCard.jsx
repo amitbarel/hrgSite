@@ -10,7 +10,7 @@ export default function PlayerCard({ player: p, onOpen }) {
     e.currentTarget.style.bottom = "20%";
   };
   return (
-    <button type="button" className="player-card" onClick={() => onOpen?.(p)} aria-label={`פרטים על ${p.name}`}>
+    <button type="button" className="player-card" onClick={() => onOpen?.(p)}>
       <div className="player-photo">
         <span className="player-number">{p.number ?? ""}</span>
         <img src={p.photo} alt={p.name} loading="lazy" onError={onError} />

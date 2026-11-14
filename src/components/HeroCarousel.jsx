@@ -116,6 +116,13 @@ function LeadersSlide({ goals, assists, played }) {
   );
 }
 
+const PauseIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor" /></svg>
+);
+const PlayIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M17 5v14L6 12z" fill="currentColor" /></svg>
+);
+
 // חץ כ-SVG ולא כתו, כי הדפדפן הופך את התווים ‹ › בטקסט עברי
 function Chevron({ dir }) {
   return (
@@ -158,6 +165,22 @@ export default function HeroCarousel({ summary, players }) {
   // ייתכן שהגלגול התחיל עוד לפני שהמאזינים התחברו, אז בודקים את המצב גם ישירות
   useEffect(() => { if (embla) setPlaying(!!embla.plugins().autoplay?.isPlaying()); }, [embla]);
 
+  // כפתור עצירה (נדרש בתקן: תוכן שזז לבד יותר מ-5 שניות חייב אפשרות לעצור אותו).
+  // אחרי עצירה ידנית, גם יציאה של העכבר לא מחזירה את הגלגול, עד שלוחצים שוב.
+  const [paused, setPaused] = useState(false);
+  useEffect(() => {
+    const auto = embla?.plugins().autoplay;
+    if (!auto) return;
+    const keepStopped = () => { if (paused) auto.stop(); };
+    if (paused) auto.stop();
+    embla.on("autoplay:play", keepStopped);
+    return () => { embla.off("autoplay:play", keepStopped); };
+  }, [embla, paused]);
+  const togglePlay = () => {
+    const auto = embla?.plugins().autoplay;
+    if (paused) { setPaused(false); auto?.play(); } else setPaused(true);
+  };
+
   const prev = useCallback(() => embla?.scrollPrev(), [embla]);
   const next = useCallback(() => embla?.scrollNext(), [embla]);
 
@@ -169,13 +192,13 @@ export default function HeroCarousel({ summary, players }) {
       plugins={plugins}
       setApi={setEmbla}
     >
-      <CarouselContent className="carousel-track">
+      <CarouselContent className="carousel-track" aria-live={playing ? "off" : "polite"}>
         {slides.map((s, k) => (
           <CarouselItem
             key={s.key}
             className={`slide ${s.cls}${k === current ? " is-active" : ""}`}
             aria-label={`${k + 1} מתוך ${n}: ${s.label}`}
-            aria-hidden={k !== current}
+            inert={k !== current}
           >
             {s.body}
           </CarouselItem>
@@ -200,6 +223,10 @@ export default function HeroCarousel({ summary, players }) {
             ))}
           </div>
           <button type="button" className="carousel-arrow" onClick={next} aria-label="הבא"><Chevron dir="left" /></button>
+          <button type="button" className="carousel-arrow carousel-pause" onClick={togglePlay}
+            aria-label={paused ? "הפעלת החלפה אוטומטית" : "עצירת החלפה אוטומטית"}>
+            {paused ? <PlayIcon /> : <PauseIcon />}
+          </button>
         </div>
       )}
     </Carousel>

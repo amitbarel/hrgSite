@@ -23,7 +23,7 @@ export default function Squad({ players }) {
       <section className="section squad">
         <div className="container">
           <SectionHead en="Season 26/27" title="שחקני הקבוצה">
-            <Filters options={[ALL, ...groups]} value={filter} onChange={setFilter} />
+            <Filters label="סינון לפי עמדה" options={[ALL, ...groups]} value={filter} onChange={setFilter} />
           </SectionHead>
           <div key={filter} className="player-grid fade-swap">
             {shown.map(g => {

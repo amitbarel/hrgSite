@@ -24,7 +24,7 @@ function NavLinks({ onNavigate }) {
           {l.label}
         </Link>
       ))}
-      <Link href="/fixtures" className="nav-cta" onClick={onNavigate}>לוח משחקים</Link>
+      <Link href="/#matches" className="nav-cta" onClick={onNavigate}>המשחק הבא</Link>
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function FormStrip({ games }) {
         <h3>הרצף העונה בליגת העל</h3>
         <Link href="/fixtures" className="text-link">ללוח המשחקים המלא ←</Link>
       </div>
-      <ol className="form-list">
+      <ol className="form-list" tabIndex={0} aria-label="תוצאות העונה לפי מחזור">
         {games.map(g => {
           const r = g.result;
           const opp = g.isHome ? g.away : g.home;
@@ -18,7 +18,8 @@ export default function FormStrip({ games }) {
             : `מחזור ${g.round}: מול ${opp.name}, ${fmtDate(g.kickoff)}`;
           return (
             <li key={g.id} className={r || "u"} title={title}>
-              <b>{r ? RESULT[r].letter : g.round}</b>{fmtDate(g.kickoff).slice(0, 5)}
+              <span aria-hidden="true"><b>{r ? RESULT[r].letter : g.round}</b>{fmtDate(g.kickoff).slice(0, 5)}</span>
+              <span className="sr-only">{title}</span>
             </li>
           );
         })}

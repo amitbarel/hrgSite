@@ -378,7 +378,7 @@ a { color: inherit; }
   border-radius: 0;
   cursor: pointer;
 }
-.filters button[aria-selected="true"],
+.filters button[aria-pressed="true"],
 .filters button:hover { background: var(--red); border-color: var(--red); }
 
 .player-grid {
@@ -584,7 +584,7 @@ a.sponsor-box:hover { border-color: var(--red); transform: translateY(-2px); }
 .season-summary span { font-size: .85rem; color: var(--grey); font-weight: 600; }
 
 .filters.light button { color: var(--ink); border-color: var(--line); background: var(--white); }
-.filters.light button[aria-selected="true"],
+.filters.light button[aria-pressed="true"],
 .filters.light button:hover { color: var(--white); background: var(--red); border-color: var(--red); }
 
 .fixture-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -1195,8 +1195,9 @@ button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset
 .carousel-dots button {
   position: relative;
   width: 28px;
-  height: 6px;
-  padding: 0;
+  height: 24px;          /* שטח לחיצה נוח; הפס עצמו 6 פיקסלים, בזכות background-clip */
+  padding: 9px 0;
+  background-clip: content-box !important;
   border: 0;
   background: #d5d5d9;
   overflow: hidden;
@@ -1205,7 +1206,7 @@ button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset
 .carousel-dots button.is-active { background: #f3b6b8; width: 44px; }
 .dot-progress {
   position: absolute;
-  inset: 0;
+  inset: 9px 0;
   background: var(--red);
   transform-origin: right;
   animation: dot-fill linear forwards;
@@ -1318,3 +1319,113 @@ button.player-card:focus-visible { outline: 3px solid var(--red); outline-offset
 /* כפתורי הסינון של Radix: סימון מקלדת ברור */
 .filters button:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
 .filters.light button:focus-visible { outline-color: var(--ink); }
+
+
+/* =========================================================
+   נגישות
+   ========================================================= */
+
+/* טקסט שרק קורא מסך שומע */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* "דלג לתוכן": מוסתר עד שמגיעים אליו ב-Tab, ואז מופיע בפינה */
+.skip-link {
+  position: fixed; top: 10px; right: 10px; z-index: 1000;
+  padding: 12px 20px; background: var(--black); color: var(--white);
+  font-family: var(--font-ui); font-weight: 700; text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+main:focus { outline: none; }
+
+/* מסגרת מיקוד אחידה לכל מה שאפשר להגיע אליו במקלדת: שחור עם הילה לבנה, כך שרואים אותה על כל רקע */
+:where(a, button, [tabindex], input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--black);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--white);
+}
+
+/* ---- מצבי סרגל הנגישות (מחלקות על <html>) ---- */
+html.a11y-text-1 { font-size: 112.5%; }
+html.a11y-text-2 { font-size: 125%; }
+html.a11y-text-3 { font-size: 137.5%; }
+
+/* גופן קריא: בלי גופני התצוגה הדקים והנטויים */
+html.a11y-font { --font-en: "Heebo", Arial, sans-serif; --font-display: "Heebo", Arial, sans-serif; --font-ui: "Heebo", Arial, sans-serif; }
+html.a11y-font * { font-style: normal !important; letter-spacing: normal !important; }
+
+/* קישורים בולטים */
+html.a11y-links a { text-decoration: underline !important; text-underline-offset: 3px; }
+html.a11y-links a:not(.btn):not(.nav-cta) { outline: 2px dashed currentColor; outline-offset: 2px; }
+
+/* ניגודיות גבוהה: שחור, לבן וצהוב, בלי תמונות רקע */
+html.a11y-contrast body, html.a11y-contrast body * {
+  background-image: none !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html.a11y-contrast a, html.a11y-contrast a * { color: #ffeb3b !important; }
+html.a11y-contrast button { outline: 1px solid #fff; }
+html.a11y-contrast .hero-badge::before, html.a11y-contrast .hero-badge::after { display: none !important; }
+
+/* עצירת אנימציות ותנועה */
+html.a11y-motion *, html.a11y-motion *::before, html.a11y-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* ---- הכפתור והחלונית של סרגל הנגישות ---- */
+.a11y-toggle {
+  position: fixed; bottom: 18px; left: 18px; z-index: 60;
+  width: 52px; height: 52px; border: 0; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #1a56db; color: #fff; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
+.a11y-toggle svg { width: 30px; height: 30px; }
+.a11y-panel {
+  position: fixed; bottom: 80px; left: 18px; z-index: 61;
+  width: min(320px, calc(100vw - 36px));
+  max-height: calc(100vh - 110px); overflow: auto;
+  background: #fff; color: var(--ink);
+  box-shadow: 0 10px 40px rgba(0,0,0,.3);
+  padding: 18px;
+}
+.a11y-panel h2 { margin: 0 0 12px; font-family: var(--font-ui); font-size: 1.15rem; }
+.a11y-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.a11y-grid button, .a11y-size button {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  min-height: 74px; padding: 10px 6px;
+  border: 2px solid var(--line); background: var(--paper); color: var(--ink);
+  font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer;
+}
+.a11y-grid button[aria-pressed="true"] { border-color: #1a56db; background: #e8efff; }
+.a11y-grid svg { width: 26px; height: 26px; }
+.a11y-size { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border: 2px solid var(--line); background: var(--paper); padding: 8px 10px; }
+.a11y-size span { font-weight: 600; font-size: .9rem; }
+.a11y-size button { min-height: 40px; min-width: 44px; flex-direction: row; padding: 4px 10px; background: #fff; }
+.a11y-size button:disabled { opacity: .4; cursor: default; }
+.a11y-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; gap: 10px; font-size: .9rem; }
+.a11y-actions button { border: 0; background: none; padding: 6px 0; font: inherit; font-weight: 700; color: var(--red-dark); cursor: pointer; text-decoration: underline; }
+.a11y-actions a { color: #1a56db; font-weight: 700; }
+
+/* דפי טקסט (הצהרת נגישות) */
+.prose-page { max-width: 760px; font-size: 1.05rem; }
+.prose-page h2 { font-family: var(--font-ui); font-size: 1.4rem; margin: 2em 0 .5em; }
+.prose-page ul { padding-inline-start: 1.2em; }
+.prose-page li { margin-bottom: .4em; }
+.prose-page a { color: var(--red-dark); }
+/* הטקסט הנסתר של כל מחזור חייב להישאר בתוך הרשימה הנגללת, אחרת הוא מרחיב את הדף בטלפון */
+.form-list li { position: relative; }
+/* בניגודיות גבוהה גם הצורות הדקורטיביות (‎::before/::after) נצבעות שחור, והכפתור הנבחר מקבל מסגרת צהובה */
+html.a11y-contrast body *::before, html.a11y-contrast body *::after { background-color: #000 !important; background-image: none !important; border-color: #fff !important; }
+html.a11y-contrast [aria-pressed="true"] { outline: 3px solid #ffeb3b !important; outline-offset: 2px; color: #ffeb3b !important; }
+.a11y-size > div { display: flex; gap: 6px; }

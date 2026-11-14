@@ -1,15 +1,12 @@
-"use client";
-
-// כפתורי סינון (Tabs של shadcn/ui). light = גרסה לרקע בהיר.
-// Radix נותן ניווט במקלדת (חיצים) והתפקידים הנכונים לקוראי מסך.
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
+// כפתורי סינון. light = גרסה לרקע בהיר.
+// כל כפתור מודיע לקורא מסך אם הוא לחוץ (aria-pressed), והרשימה שמתחת מתעדכנת מיד.
+// (היו כאן Tabs של shadcn, אבל Tabs מחייבים לשונית תוכן לכל כפתור, ובלעדיה קורא מסך מקבל הפניה שבורה)
 export default function Filters({ options, value, onChange, light = false, label = "סינון" }) {
   return (
-    <Tabs value={value} onValueChange={onChange} dir="rtl">
-      <TabsList className={`filters${light ? " light" : ""}`} aria-label={label}>
-        {options.map(o => <TabsTrigger key={o} value={o}>{o}</TabsTrigger>)}
-      </TabsList>
-    </Tabs>
+    <div className={`filters${light ? " light" : ""}`} role="group" aria-label={label}>
+      {options.map(o => (
+        <button key={o} type="button" aria-pressed={o === value} onClick={() => onChange(o)}>{o}</button>
+      ))}
+    </div>
   );
 }

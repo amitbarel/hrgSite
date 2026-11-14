@@ -59,7 +59,7 @@ export default function Fixtures({ summary, games }) {
         <div className="container">
           <SeasonSummary summary={summary} />
           <SectionHead en="Fixtures & Results" title="כל המחזורים">
-            <Filters light options={Object.keys(FILTERS)} value={filter} onChange={setFilter} />
+            <Filters light label="סינון משחקים" options={Object.keys(FILTERS)} value={filter} onChange={setFilter} />
           </SectionHead>
           <ol key={filter} className="fixture-list fade-swap">
             {games.filter(FILTERS[filter]).map(g => <FixtureRow key={g.id} g={g} />)}
