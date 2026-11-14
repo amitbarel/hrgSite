@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -16,7 +14,6 @@ export default function Footer() {
         <div className="social">
           <a href="https://www.instagram.com/hapoelrgg_fc/" target="_blank" rel="noopener">אינסטגרם<span className="sr-only"> (נפתח בחלון חדש)</span></a>
           <a href="https://www.facebook.com/hapoelrg" target="_blank" rel="noopener">פייסבוק<span className="sr-only"> (נפתח בחלון חדש)</span></a>
-          <Link href="/accessibility">הצהרת נגישות</Link>
         </div>
       </div>
     </footer>
