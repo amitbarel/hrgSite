@@ -143,10 +143,9 @@ export default function HeroCarousel({ summary, players }) {
   const n = slides.length;
 
   // מתחלף לבד כל 7 שניות; נעצר כשהעכבר עליו או כשמשתמשים במקלדת, ולא זז בכלל למי שביקש פחות תנועה
-  // (העמוד נבנה בשרת, שם אין window. ה-breakpoints נבדקים רק בדפדפן, ושם מכבים למי שביקש פחות תנועה)
+  // הגלגול לא מתחיל לבד (playOnInit: false): האפקט למטה מפעיל אותו רק בדפדפן, ורק כשמותר
   const [plugins] = useState(() => [Autoplay({
-    delay: DELAY, stopOnInteraction: false, stopOnMouseEnter: true,
-    breakpoints: { "(prefers-reduced-motion: reduce)": { active: false } },
+    delay: DELAY, stopOnInteraction: false, stopOnMouseEnter: true, playOnInit: false,
   })]);
   const [embla, setEmbla] = useState(null);
   const [current, setCurrent] = useState(0);
@@ -168,6 +167,10 @@ export default function HeroCarousel({ summary, players }) {
   // כפתור עצירה (נדרש בתקן: תוכן שזז לבד יותר מ-5 שניות חייב אפשרות לעצור אותו).
   // אחרי עצירה ידנית, גם יציאה של העכבר לא מחזירה את הגלגול, עד שלוחצים שוב.
   const [paused, setPaused] = useState(false);
+  // מי שביקש במערכת ההפעלה פחות תנועה (נפוץ במחשבי Windows): מתחילים עצורים, ואפשר להפעיל בכפתור
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setPaused(true);
+  }, []);
   // "עצירת אנימציות" בסרגל הנגישות (מחלקה a11y-motion על <html>) עוצרת גם את הגלגול
   const [motionOff, setMotionOff] = useState(false);
   useEffect(() => {
@@ -189,7 +192,11 @@ export default function HeroCarousel({ summary, players }) {
       embla.on("autoplay:play", keepStopped); // למשל כשהעכבר יוצא מהקרוסלה
       return () => { embla.off("autoplay:play", keepStopped); };
     }
-    auto.play();
+    // Embla מאתחל את התוספים מחדש כשגודל המסך משתנה (reInit), ואז צריך להפעיל שוב
+    const start = () => auto.play();
+    start();
+    embla.on("reInit", start);
+    return () => { embla.off("reInit", start); };
   }, [embla, stopped]);
   const togglePlay = () => setPaused(p => !p);
 
