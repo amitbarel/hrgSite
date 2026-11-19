@@ -73,6 +73,14 @@ const SCHEMA = [
     points      INTEGER,            -- הנקודות הרשמיות, אחרי הורדת נקודות אם הייתה
     PRIMARY KEY (stage, team_id)
   )`,
+  `CREATE TABLE IF NOT EXISTS videos (
+    id           TEXT PRIMARY KEY,   -- מזהה הסרטון ביוטיוב
+    title        TEXT,
+    published_at TEXT,
+    thumb        TEXT,
+    game_id      INTEGER REFERENCES games(id),  -- המשחק שהתקציר שייך אליו, אם זוהה
+    kind         TEXT                -- short = תקציר, extended = תקציר מורחב
+  )`,
   `CREATE TABLE IF NOT EXISTS meta (
     key   TEXT PRIMARY KEY,
     value TEXT
@@ -194,6 +202,16 @@ export async function saveStandings(rows) {
   ]);
 }
 
+/** תקצירים: מוסיפים חדשים ומעדכנים קיימים (כותרת, שיוך למשחק), בלי למחוק */
+export async function saveVideos(list) {
+  await tx(list.map(v => ({
+    sql: `INSERT INTO videos (id, title, published_at, thumb, game_id, kind) VALUES (?, ?, ?, ?, ?, ?)
+          ON CONFLICT(id) DO UPDATE SET title = excluded.title, thumb = excluded.thumb, kind = excluded.kind,
+            game_id = COALESCE(excluded.game_id, videos.game_id)`,
+    args: [v.id, v.title, v.publishedAt, v.thumb, v.gameId, v.kind],
+  })));
+}
+
 export async function setMeta(key, value) {
   await q("INSERT INTO meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value",
     [key, String(value)]);
@@ -273,6 +291,14 @@ export async function standings() {
     });
   }
   return groups;
+}
+
+/** כל התקצירים, החדש ראשון */
+export async function videos() {
+  const rows = await q("SELECT * FROM videos ORDER BY published_at DESC");
+  return rows.map(r => ({
+    id: r.id, title: r.title, publishedAt: r.published_at, thumb: r.thumb, gameId: r.game_id, kind: r.kind,
+  }));
 }
 
 export async function count(table) {

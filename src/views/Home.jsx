@@ -7,7 +7,7 @@ import HeroCarousel from "../components/HeroCarousel.jsx";
 import { TIMELINE } from "@/lib/historyData";
 
 // הנתונים מגיעים מוכנים מהשרת (src/app/page.jsx), אז אין כאן מצב "טוען…"
-export default function Home({ summary, games, players, standings }) {
+export default function Home({ summary, games, players, standings, lastVideo }) {
   return (
     <>
       {/* ===== פתיח: קרוסלה של 100 שנה ועדכונים מהקבוצה ===== */}
@@ -19,7 +19,7 @@ export default function Home({ summary, games, players, standings }) {
           <SectionHead en="Match Day" title="משחקים" />
           <div className="match-grid">
             <NextMatch game={summary.next} />
-            <LastMatch game={summary.last} />
+            <LastMatch game={summary.last} video={lastVideo} />
           </div>
           {games.length > 0 && <FormStrip games={games} />}
           {standings?.length > 0 && <TableSnapshot groups={standings} />}

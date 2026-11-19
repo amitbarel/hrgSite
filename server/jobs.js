@@ -14,6 +14,7 @@ import { syncSquad } from "./scraper/squad.js";
 import { fetchGameDetails, closeBrowser } from "./scraper/details.js";
 import { syncStats } from "./scraper/stats.js";
 import { syncStandings } from "./scraper/standings.js";
+import { syncVideos } from "./scraper/videos.js";
 
 let running = false;
 const log = (...a) => console.log(`[jobs ${new Date().toLocaleString("he-IL", { timeZone: "Asia/Jerusalem" })}]`, ...a);
@@ -45,7 +46,7 @@ export async function updateFinishedGames({ force = false, gameIds = null } = {}
         log(`game ${id} updated`, details);
       }
     }
-    if (report.updated.length) { await refreshStats(); await refreshStandings(); }
+    if (report.updated.length) { await refreshStats(); await refreshStandings(); await refreshVideos(); }
     return report;
   } finally {
     await closeBrowser();
@@ -60,8 +61,9 @@ export async function dailyRefresh() {
   try { squad = await syncSquad(); } catch (e) { log("squad sync failed:", e.message); }
   const stats = await refreshStats();
   const table = await refreshStandings();
-  log(`daily refresh: ${games} games, ${squad ?? "?"} players, stats for ${stats ?? "?"}, table rows ${table ?? "?"}`);
-  return { games, squad, stats, table };
+  const videos = await refreshVideos();
+  log(`daily refresh: ${games} games, ${squad ?? "?"} players, stats for ${stats ?? "?"}, table rows ${table ?? "?"}, videos ${videos ?? "?"}`);
+  return { games, squad, stats, table, videos };
 }
 
 // הסטטיסטיקה מגיעה ממקור נפרד, אז כישלון בה לא עוצר את שאר העדכון
@@ -82,6 +84,17 @@ async function refreshStandings() {
     return await syncStandings();
   } catch (e) {
     log("standings sync failed:", e.message);
+    return null;
+  }
+}
+
+// תקצירים מיוטיוב. בלי מפתח (YOUTUBE_API_KEY) מדלגים בשקט, והאתר פשוט לא מציג תקצירים.
+async function refreshVideos() {
+  if (!process.env.YOUTUBE_API_KEY) return null;
+  try {
+    return await syncVideos();
+  } catch (e) {
+    log("videos sync failed:", e.message);
     return null;
   }
 }

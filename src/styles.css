@@ -1483,3 +1483,13 @@ html.a11y-contrast [aria-pressed="true"] { outline: 3px solid #ffeb3b !important
 .lt-legend li.pen::before { display: none; }
 .lt-stage + .lt-stage { margin-top: 40px; }
 .lt-stage h3 { margin: 0 0 12px; font-size: 1.2rem; font-weight: 900; }
+
+/* ---------- תקצירים ---------- */
+.hl-cta { text-align: center; margin: 16px 0 0; }
+.hl-cta .btn { border: 0; cursor: pointer; }
+.hl-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: 16px; background: #000; }
+.hl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.fx-hl { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; font-size: .85rem; font-weight: 800; }
+.fx-hl a { color: var(--red); text-decoration: none; }
+.fx-hl a:hover { text-decoration: underline; }
+.fx-hl a + a { color: var(--grey); }

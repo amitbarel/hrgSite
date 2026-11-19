@@ -1,4 +1,5 @@
 import Countdown from "./Countdown.jsx";
+import { HighlightButton } from "./Highlights.jsx";
 import { MatchTeams, ScoreBox } from "./Teams.jsx";
 import { fmtDate, fmtTime, fmtNum, RESULT } from "../utils.js";
 
@@ -21,7 +22,7 @@ export function NextMatch({ game }) {
   );
 }
 
-export function LastMatch({ game }) {
+export function LastMatch({ game, video }) {
   if (!game) return <article className="match-card last" />;
   const r = RESULT[game.result];
   return (
@@ -34,6 +35,7 @@ export function LastMatch({ game }) {
         {game.attendance && <span><b>{fmtNum(game.attendance)}</b> צופים</span>}
         {game.referee && <span>שופט: {game.referee}</span>}
       </p>
+      {video && <HighlightButton video={video} />}
     </article>
   );
 }

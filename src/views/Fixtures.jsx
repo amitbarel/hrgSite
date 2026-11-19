@@ -30,7 +30,7 @@ function SeasonSummary({ summary }) {
   );
 }
 
-function FixtureRow({ g }) {
+function FixtureRow({ g, hl }) {
   const time = fmtTime(g.kickoff);
   const r = g.result ? RESULT[g.result] : null;
   return (
@@ -44,6 +44,12 @@ function FixtureRow({ g }) {
       <div className="fx-result">
         {r ? <span className={`result-tag ${r.cls}`}>{r.label}</span> : <span className="result-tag upcoming">טרם שוחק</span>}
         {g.attendance && <span className="fx-crowd"><b>{fmtNum(g.attendance)}</b> צופים</span>}
+        {hl?.short && (
+          <span className="fx-hl">
+            <a href={`https://www.youtube.com/watch?v=${hl.short}`} target="_blank" rel="noopener">▶ תקציר<span className="sr-only"> (יוטיוב, נפתח בחלון חדש)</span></a>
+            {hl.extended && <a href={`https://www.youtube.com/watch?v=${hl.extended}`} target="_blank" rel="noopener">מורחב<span className="sr-only"> (יוטיוב, נפתח בחלון חדש)</span></a>}
+          </span>
+        )}
       </div>
     </li>
   );
@@ -51,7 +57,7 @@ function FixtureRow({ g }) {
 
 const VIEWS = { games: "משחקים ותוצאות", table: "טבלת הליגה" };
 
-export default function Fixtures({ summary, games, table }) {
+export default function Fixtures({ summary, games, table, highlights = {} }) {
   const [filter, setFilter] = useState("הכל");
   const [view, setView] = useState("games");
 
@@ -88,7 +94,7 @@ export default function Fixtures({ summary, games, table }) {
                 <Filters light label="סינון משחקים" options={Object.keys(FILTERS)} value={filter} onChange={setFilter} />
               </SectionHead>
               <ol key={filter} className="fixture-list fade-swap">
-                {games.filter(FILTERS[filter]).map(g => <FixtureRow key={g.id} g={g} />)}
+                {games.filter(FILTERS[filter]).map(g => <FixtureRow key={g.id} g={g} hl={highlights[g.id]} />)}
               </ol>
             </>
           )}
