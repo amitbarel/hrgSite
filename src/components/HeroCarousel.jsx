@@ -38,7 +38,7 @@ function LastSlide({ g }) {
   return (
     <div className="container slide-inner">
       <div className="slide-text">
-        <p className="eyebrow">Full Time · {when(g)}</p>
+        <p className="eyebrow">סיום · {when(g)}</p>
         <h2 className="slide-title">{r.label} {g.isHome ? "בבית" : "בחוץ"}<br />מול {opponent(g).name}</h2>
         <p className="slide-sub">
           אצטדיון {g.stadium}
@@ -56,7 +56,7 @@ function NextSlide({ g }) {
   return (
     <div className="container slide-inner">
       <div className="slide-text">
-        <p className="eyebrow">Next Match · {when(g)}</p>
+        <p className="eyebrow">המשחק הבא · {when(g)}</p>
         <h2 className="slide-title">המשחק הבא:<br />{g.isHome ? "בבית" : "בחוץ"} מול {opponent(g).name}</h2>
         <p className="slide-sub">אצטדיון {g.stadium}</p>
         <a href="#matches" className="btn btn-light">לפרטי המשחק</a>
@@ -103,7 +103,7 @@ function LeadersSlide({ goals, assists, played }) {
   return (
     <div className="container slide-inner">
       <div className="slide-text">
-        <p className="eyebrow">Season Leaders · ליגת העל</p>
+        <p className="eyebrow">מובילי העונה · ליגת העל</p>
         <h2 className="slide-title">המובילים<br />של העונה עד כה</h2>
         <p className="slide-sub">אחרי {played} מחזורים.</p>
         <Link href="/squad" className="btn btn-primary">לכל הסגל</Link>

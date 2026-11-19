@@ -37,7 +37,7 @@ function FixtureRow({ g }) {
     <li className={`fixture ${g.score ? "played" : "upcoming"}`}>
       <div className="fx-meta">
         <strong>מחזור {g.round}</strong>
-        <span>{fmtDate(g.kickoff)}{time ? ` · ${time}` : ""}</span>
+        <span>{fmtDate(g.kickoff)}{time ? ` · ${time}` : " · שעה תיקבע"}</span>
         <span>{g.stadium} · {g.isHome ? "בית" : "חוץ"}</span>
       </div>
       <FixtureTeams game={g} middle={g.score ? <ScoreBox score={g.score} small /> : <div className="fx-vs">VS</div>} />

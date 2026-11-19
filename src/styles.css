@@ -1423,3 +1423,16 @@ html.a11y-contrast [aria-pressed="true"] { outline: 3px solid #ffeb3b !important
 .a11y-size > div { display: flex; gap: 6px; }
 /* בטלפון: מקום בתחתית הפוטר, כדי שכפתור הנגישות הצף לא יסתיר את הטקסט */
 @media (max-width: 700px) { .site-footer { padding-bottom: 96px; } }
+
+/* =========================================================
+   כפתורים ישרים: בלי חיתוך אלכסוני, Heebo במשקל 500.
+   גם התפריט עובר ל-Heebo רגיל
+   ========================================================= */
+.btn, .nav-cta, .filters button { clip-path: none; font-family: var(--font); font-weight: 500; }
+.main-nav a, .mobile-nav a { font-family: var(--font); font-weight: 500; }
+
+/* קרוסלה: כותרת-העל בעברית ובלי ריווח אותיות, הכותרת ישרה, והספירה לאחור מוטה כמו שאר המספרים */
+.slide-inner .eyebrow { letter-spacing: 0; font-weight: 500; }
+.slide-title { transform: none; }
+.slide-next .countdown div { clip-path: none; }
+.slide-next .countdown strong { transform: skewX(-8deg); }

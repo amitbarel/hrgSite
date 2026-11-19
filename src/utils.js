@@ -12,8 +12,9 @@ export function fmtDate(iso) {
   return `${get("day")}.${get("month")}.${get("year")}`;
 }
 
-// -> "17:30" (שעון ישראל). 00:00 = השעה עוד לא נקבעה
+// -> "17:30" (שעון ישראל). 00:00 או 23:59Z = השעה עוד לא נקבעה
 export function fmtTime(iso) {
+  if (iso.slice(11, 16) === "23:59") return null; // 23:59Z = מהמנהלת עוד לא קבעה שעה
   const t = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
     .format(new Date(iso));
   return t === "00:00" ? null : t;
