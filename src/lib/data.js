@@ -5,7 +5,7 @@
 // =========================================================
 import "server-only";
 import { cache } from "react";
-import { ourGames, players, getMeta } from "../../server/db.js";
+import { ourGames, players, standings, getMeta } from "../../server/db.js";
 import { seedIfEmpty } from "../../server/seed.js";
 
 // במחשב, בלי Turso: מסד חדש מתמלא מ-data/seed.json, כדי שהאתר יעבוד מיד אחרי npm install
@@ -15,6 +15,7 @@ const ready = () => (process.env.TURSO_DATABASE_URL ? null : (seeded ??= seedIfE
 // cache: אם כמה חלקים באותו דף מבקשים את אותם נתונים, הולכים למסד פעם אחת
 export const getGames = cache(async () => { await ready(); return ourGames(); });
 export const getPlayers = cache(async () => { await ready(); return players(); });
+export const getStandings = cache(async () => { await ready(); return standings(); });
 
 // סיכום לדף הבית וללוח המשחקים: המשחק הבא, האחרון ומאזן העונה
 export const getSummary = cache(async () => {
@@ -47,5 +48,6 @@ export async function getHealth() {
     squadSyncedAt: await getMeta("squad_synced_at"),
     gamesJobAt: await getMeta("games_job_at"),
     statsSyncedAt: await getMeta("stats_job_at"),
+    standingsSyncedAt: await getMeta("standings_synced_at"),
   };
 }

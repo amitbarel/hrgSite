@@ -62,6 +62,17 @@ const SCHEMA = [
     sort      INTEGER,
     active    INTEGER DEFAULT 1
   )`,
+  `CREATE TABLE IF NOT EXISTS standings (
+    stage       TEXT NOT NULL,      -- RegularSeason, או שלב של פלייאוף
+    stage_order INTEGER,            -- הסדר של השלבים בתשובה של המנהלת
+    team_id     INTEGER NOT NULL,
+    name        TEXT,
+    position    INTEGER,
+    played      INTEGER, w INTEGER, d INTEGER, l INTEGER,
+    gf          INTEGER, ga INTEGER,
+    points      INTEGER,            -- הנקודות הרשמיות, אחרי הורדת נקודות אם הייתה
+    PRIMARY KEY (stage, team_id)
+  )`,
   `CREATE TABLE IF NOT EXISTS meta (
     key   TEXT PRIMARY KEY,
     value TEXT
@@ -171,6 +182,18 @@ export async function savePlayerStats(list) {
   ]);
 }
 
+/** הטבלה מוחלפת כולה בכל רענון, כך שלא נשארות שורות ישנות */
+export async function saveStandings(rows) {
+  await tx([
+    "DELETE FROM standings",
+    ...rows.map(r => ({
+      sql: `INSERT INTO standings (stage, stage_order, team_id, name, position, played, w, d, l, gf, ga, points)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      args: [r.stage, r.stageOrder, r.teamId, r.name, r.position, r.played, r.w, r.d, r.l, r.gf, r.ga, r.points],
+    })),
+  ]);
+}
+
 export async function setMeta(key, value) {
   await q("INSERT INTO meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value",
     [key, String(value)]);
@@ -228,6 +251,28 @@ export async function players() {
       yellow: p.yellow, red: p.red, cleanSheets: p.clean_sheets, subIn: p.sub_in, updatedAt: p.stats_at,
     } : null,
   }));
+}
+
+/**
+ * הטבלה לפי שלבים: [{ stage, rows: [...] }], בסדר של המנהלת.
+ * penalty = נקודות שהורדו. מחושב מההפרש, כי השדה penaltyPoints של Bamboo מגיע 0 גם כשהייתה הורדה.
+ */
+export async function standings() {
+  const rows = await q(`
+    SELECT s.*, t.name AS team_name, t.logo FROM standings s
+    LEFT JOIN teams t ON t.id = s.team_id
+    ORDER BY s.stage_order, s.position`);
+  const groups = [];
+  for (const r of rows) {
+    let g = groups.at(-1);
+    if (!g || g.stage !== r.stage) groups.push(g = { stage: r.stage, rows: [] });
+    g.rows.push({
+      id: r.team_id, name: r.team_name || r.name, logo: r.logo, position: r.position,
+      played: r.played, w: r.w, d: r.d, l: r.l, gf: r.gf, ga: r.ga, points: r.points,
+      penalty: Math.max(0, r.w * 3 + r.d - r.points),
+    });
+  }
+  return groups;
 }
 
 export async function count(table) {

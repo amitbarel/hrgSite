@@ -39,3 +39,27 @@ export function extractJsonVar(html, name) {
 export function decodeEntities(s) {
   return s.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 }
+
+// ---------- Bamboo: ה-API שאתר המנהלת עצמו מושך ממנו סטטיסטיקה וטבלה ----------
+const BAMBOO = "https://cdnapi.bamboo-cloud.com/api/football";
+
+// ה-API צריך מזהה אתר (iid) שמופיע בקוד של כל עמוד באתר המנהלת, אז לוקחים אותו משם
+let iid;
+async function bambooIid() {
+  if (iid) return iid;
+  const html = await getHtml("/scores/");
+  iid = html.match(/iid=([0-9a-f]{24})/)?.[1];
+  if (!iid) throw new Error("bamboo: site id (iid) not found on football.co.il");
+  return iid;
+}
+
+/** קריאה ל-Bamboo. למשל bamboo("standings", { tournamentId: 902, seasonName: "26/27" }) */
+export async function bamboo(endpoint, filter) {
+  const qs = new URLSearchParams({
+    format: "json", iid: await bambooIid(), filter: JSON.stringify(filter),
+    returnZeros: "true", disableDefaultFilter: "true",
+  });
+  const res = await fetch(`${BAMBOO}/${endpoint}?${qs}`, { headers: { "User-Agent": HEADERS["User-Agent"] } });
+  if (!res.ok) throw new Error(`bamboo ${endpoint}: HTTP ${res.status}`);
+  return (await res.json()).data;
+}

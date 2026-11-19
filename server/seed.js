@@ -5,7 +5,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { saveFixtures, replacePlayers, saveGameDetails, savePlayerStats, count, playersWithStats } from "./db.js";
+import { saveFixtures, replacePlayers, saveGameDetails, savePlayerStats, saveStandings, count, playersWithStats } from "./db.js";
 
 const file = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "data", "seed.json");
 
@@ -13,6 +13,7 @@ export async function seedIfEmpty() {
   if (!existsSync(file)) return false;
   const seed = JSON.parse(readFileSync(file, "utf8"));
   await seedStatsIfMissing(seed);
+  await seedStandingsIfMissing(seed);
   if ((await count("games")) > 0) return false;
   await saveFixtures(seed.teams, seed.games);
   for (const g of seed.games) if (g.attendance || g.referee) await saveGameDetails(g.id, g);
@@ -26,4 +27,10 @@ export async function seedIfEmpty() {
 async function seedStatsIfMissing(seed) {
   if (!seed.stats?.length) return;
   if ((await playersWithStats()) === 0) await savePlayerStats(seed.stats);
+}
+
+// טבלת ליגה התחלתית, למסד שעוד לא משך אותה
+async function seedStandingsIfMissing(seed) {
+  if (!seed.standings?.length) return;
+  if ((await count("standings")) === 0) await saveStandings(seed.standings);
 }

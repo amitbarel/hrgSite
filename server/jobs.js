@@ -3,7 +3,8 @@
 //  1. כל שעה: יש משחק שנגמר (150 דקות אחרי הפתיחה) ועוד לא עודכן?
 //     אם כן: מרעננים תוצאות, ומושכים קהל ושופט. ניסיון חוזר פעם בשעה, עד 36 שעות.
 //     אחרי משחק שהסתיים מרעננים גם את הסטטיסטיקה של השחקנים (הופעות, שערים וכו').
-//  2. כל בוקר: מרעננים את לוח המשחקים (שעות חדשות), את הסגל ואת הסטטיסטיקה.
+//  2. כל בוקר: מרעננים את לוח המשחקים (שעות חדשות), את הסגל, את הסטטיסטיקה ואת טבלת הליגה.
+//     (הטבלה מתעדכנת גם אחרי משחק שלנו. משחקים של אחרים נכנסים לטבלה בבוקר שאחרי.)
 // המצב נשמר במסד הנתונים, ולכן כל הרצה ממשיכה מאיפה שהקודמת עצרה.
 // GitHub Actions מריץ אותן דרך server/sync-cli.js. במחשב מריצים ידנית: npm run sync.
 // =========================================================
@@ -12,6 +13,7 @@ import { syncFixtures } from "./scraper/fixtures.js";
 import { syncSquad } from "./scraper/squad.js";
 import { fetchGameDetails, closeBrowser } from "./scraper/details.js";
 import { syncStats } from "./scraper/stats.js";
+import { syncStandings } from "./scraper/standings.js";
 
 let running = false;
 const log = (...a) => console.log(`[jobs ${new Date().toLocaleString("he-IL", { timeZone: "Asia/Jerusalem" })}]`, ...a);
@@ -43,7 +45,7 @@ export async function updateFinishedGames({ force = false, gameIds = null } = {}
         log(`game ${id} updated`, details);
       }
     }
-    if (report.updated.length) await refreshStats();
+    if (report.updated.length) { await refreshStats(); await refreshStandings(); }
     return report;
   } finally {
     await closeBrowser();
@@ -57,8 +59,9 @@ export async function dailyRefresh() {
   let squad = null;
   try { squad = await syncSquad(); } catch (e) { log("squad sync failed:", e.message); }
   const stats = await refreshStats();
-  log(`daily refresh: ${games} games, ${squad ?? "?"} players, stats for ${stats ?? "?"}`);
-  return { games, squad, stats };
+  const table = await refreshStandings();
+  log(`daily refresh: ${games} games, ${squad ?? "?"} players, stats for ${stats ?? "?"}, table rows ${table ?? "?"}`);
+  return { games, squad, stats, table };
 }
 
 // הסטטיסטיקה מגיעה ממקור נפרד, אז כישלון בה לא עוצר את שאר העדכון
@@ -69,6 +72,16 @@ async function refreshStats() {
     return n;
   } catch (e) {
     log("stats sync failed:", e.message);
+    return null;
+  }
+}
+
+// גם הטבלה ממקור נפרד, וכישלון בה לא עוצר את שאר העדכון
+async function refreshStandings() {
+  try {
+    return await syncStandings();
+  } catch (e) {
+    log("standings sync failed:", e.message);
     return null;
   }
 }

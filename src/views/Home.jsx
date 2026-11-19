@@ -2,11 +2,12 @@ import Link from "next/link";
 import SectionHead from "../components/SectionHead.jsx";
 import { NextMatch, LastMatch } from "../components/MatchCards.jsx";
 import FormStrip from "../components/FormStrip.jsx";
+import { TableSnapshot } from "../components/LeagueTable.jsx";
 import HeroCarousel from "../components/HeroCarousel.jsx";
 import { TIMELINE } from "@/lib/historyData";
 
 // הנתונים מגיעים מוכנים מהשרת (src/app/page.jsx), אז אין כאן מצב "טוען…"
-export default function Home({ summary, games, players }) {
+export default function Home({ summary, games, players, standings }) {
   return (
     <>
       {/* ===== פתיח: קרוסלה של 100 שנה ועדכונים מהקבוצה ===== */}
@@ -21,6 +22,7 @@ export default function Home({ summary, games, players }) {
             <LastMatch game={summary.last} />
           </div>
           {games.length > 0 && <FormStrip games={games} />}
+          {standings?.length > 0 && <TableSnapshot groups={standings} />}
         </div>
       </section>
 
