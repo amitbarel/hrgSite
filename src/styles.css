@@ -1493,3 +1493,117 @@ html.a11y-contrast [aria-pressed="true"] { outline: 3px solid #ffeb3b !important
 .fx-hl a { color: var(--red); text-decoration: none; }
 .fx-hl a:hover { text-decoration: underline; }
 .fx-hl a + a { color: var(--grey); }
+
+/* ---------- מצטייני העונה (בראש עמוד הסגל) ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.leaders-block { margin-bottom: 72px; }
+.leaders-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.leader-tile {
+  font: inherit;
+  color: var(--white);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 14px 12px;
+  background: #1c1c1e;
+  border: 0;
+  border-top: 4px solid var(--red);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background .2s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+.leader-tile:hover { background: #27272a; }
+.leader-tile[aria-pressed="true"] { background: var(--red); }
+.leader-tile:focus-visible { outline: 3px solid var(--white); outline-offset: -3px; }
+.leader-tile-label { font-family: var(--font-ui); font-weight: 700; font-size: .9rem; color: var(--red); }
+.leader-tile[aria-pressed="true"] .leader-tile-label { color: var(--white); }
+/* תמונה קטנה של המוביל, בפינה */
+.leader-tile-photo {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--red-dark);
+}
+.leader-tile-photo img { width: 100%; height: 115%; object-fit: cover; object-position: top; }
+.leader-tile-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-top: 22px;
+}
+.leader-tile-name { font-weight: 800; font-size: 1rem; line-height: 1.3; }
+.leader-tile-more { font-size: .8rem; color: #a1a1a6; margin-top: 4px; }
+.leader-tile[aria-pressed="true"] .leader-tile-more { color: rgba(255,255,255,.85); }
+
+.cards-value { display: inline-flex; gap: .35em; }
+.leader-tile-value .cards-value { font-size: .85em; }
+.cards-value > span { display: inline-flex; align-items: center; gap: 4px; }
+.mini-card { display: inline-block; width: .34em; height: .48em; border-radius: 2px; }
+.mini-card.yellow { background: #f5c400; }
+.mini-card.red { background: #ff3b3b; box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
+
+.leaders-ranking { margin-top: 18px; background: #1c1c1e; padding: 20px 22px 18px; border-top: 4px solid var(--red); }
+.leaders-ranking-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.leaders-ranking-head h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; line-height: 1; letter-spacing: .03em; }
+.leaders-close { font: inherit; font-size: 1.1rem; color: var(--white); background: transparent; border: 2px solid #3a3a3d; width: 38px; height: 38px; cursor: pointer; }
+.leaders-close:hover { border-color: var(--red); background: var(--red); }
+.ranking-list { list-style: none; margin: 0; padding: 0; }
+.ranking-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 260px) 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #2c2c2f;
+}
+.ranking-list li:last-child { border-bottom: 0; }
+.ranking-place { font-family: var(--font-display); font-weight: 700; font-size: 1.8rem; line-height: 1; color: #a1a1a6; text-align: center; }
+.ranking-list li.first .ranking-place { color: var(--red); }
+.ranking-player { font: inherit; color: inherit; text-align: start; background: none; border: 0; padding: 0; display: flex; align-items: center; gap: 12px; cursor: pointer; min-width: 0; }
+.ranking-player img { width: 44px; height: 44px; flex: none; border-radius: 50%; background: var(--red); object-fit: cover; object-position: top; }
+.ranking-player span { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
+.ranking-player b { font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ranking-player small { color: #a1a1a6; font-size: .85rem; }
+.ranking-player:hover b { color: var(--red); }
+.ranking-player:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.ranking-bar { height: 8px; background: #2c2c2f; }
+.ranking-bar i { display: block; height: 100%; background: var(--red); }
+.ranking-value { font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; line-height: 1; min-width: 56px; text-align: end; }
+.ranking-value .cards-value { font-size: 1.5rem; }
+.ranking-all { font: inherit; font-weight: 700; color: var(--white); background: transparent; border: 2px solid #3a3a3d; padding: 7px 18px; margin-top: 14px; cursor: pointer; }
+.ranking-all:hover { background: var(--red); border-color: var(--red); }
+
+@media (max-width: 1000px) {
+  .leaders-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .leaders-block { margin-bottom: 52px; }
+  /* בטלפון: פס שגוללים הצידה, כרטיס וחצי נראים כדי שיהיה ברור שיש עוד */
+  .leaders-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .leaders-row::-webkit-scrollbar { display: none; }
+  .leader-tile { flex: 0 0 44%; scroll-snap-align: start; }
+  .leader-tile-photo { width: 52px; height: 52px; }
+  .leader-tile-value { font-size: 3rem; }
+  .leaders-ranking { padding: 16px 14px 14px; margin-inline: -20px; }
+  .ranking-list li { grid-template-columns: 28px 1fr auto; gap: 10px; }
+  .ranking-bar { display: none; }
+}

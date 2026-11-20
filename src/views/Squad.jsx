@@ -6,6 +6,7 @@ import SectionHead from "../components/SectionHead.jsx";
 import Filters from "../components/Filters.jsx";
 import PlayerCard from "../components/PlayerCard.jsx";
 import PlayerModal from "../components/PlayerModal.jsx";
+import SeasonLeaders from "../components/SeasonLeaders.jsx";
 
 const ALL = "הכל";
 
@@ -22,6 +23,8 @@ export default function Squad({ players }) {
       <PageHero en="The Squad" title="הסגל" sub={`${players.length} שחקנים בעונת 2026/27`} />
       <section className="section squad">
         <div className="container">
+          <SectionHead en="Season Leaders" title="מצטייני העונה" />
+          <SeasonLeaders players={players} onOpenPlayer={setOpen} />
           <SectionHead en="Season 26/27" title="שחקני הקבוצה">
             <Filters label="סינון לפי עמדה" options={[ALL, ...groups]} value={filter} onChange={setFilter} />
           </SectionHead>
