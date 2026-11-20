@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Countdown from "../components/Countdown.jsx";
 import SectionHead from "../components/SectionHead.jsx";
-import { HighlightButton } from "../components/Highlights.jsx";
 import { ScoreBox } from "../components/Teams.jsx";
 import { teamLogo, OUR_TEAM_ID, fmtDate, fmtTime, fmtNum, RESULT } from "../utils.js";
 import { placePlayers, formationLabel } from "../lib/formations.js";
+import { matchKits, kitStyle } from "../lib/kits.js";
 
 const nameOf = t => (t.id === OUR_TEAM_ID ? 'הפועל ר"ג' : t.name);
 
@@ -163,14 +163,14 @@ function playerMarks(id, events) {
 
 // כל שחקן במקום שלו לפי המערך: עומק 0 (שוער) עד 5 (חלוץ), צד 0 (ימין של הקבוצה) עד 4 (שמאל).
 // הקבוצה למעלה תוקפת למטה, אז הימין שלה בצד שמאל של המסך. הקבוצה למטה הפוכה.
-function Half({ lineup, events, side }) {
+function Half({ lineup, events, side, kit }) {
   return placePlayers(lineup.formationKey, lineup.starters).map(p => {
     const y = p.depth === 0 ? 5 : 14 + ((p.depth - 1) / 4) * 30; // אחוזים מגובה המגרש, מהקו של הקבוצה
     const x = 10 + p.lat * 20;
     const style = side === "top" ? { top: `${y}%`, left: `${x}%` } : { top: `${100 - y}%`, left: `${100 - x}%` };
     return (
       <div key={p.id} className={`pp ${side}`} style={style}>
-        <span className="pp-num">{p.num}{p.id === lineup.captain && <i className="pp-cap" title="קפטן">C</i>}</span>
+        <span className="pp-num" style={kitStyle(kit)}>{p.num}{p.id === lineup.captain && <i className="pp-cap" title="קפטן">C</i>}</span>
         <span className="pp-name">{p.name}</span>
         <span className="pp-marks">{playerMarks(p.id, events)}</span>
       </div>
@@ -199,6 +199,7 @@ function Bench({ team, lineup, events }) {
 function Lineups({ game, opta }) {
   const home = opta.lineups[game.home.id];
   const away = opta.lineups[game.away.id];
+  const kits = matchKits(game.home.id, game.away.id);
   return (
     <div className="mp-box lineups">
       <Bench team={game.home} lineup={home} events={opta.events} />
@@ -206,8 +207,8 @@ function Lineups({ game, opta }) {
         <p className="pitch-tag">{nameOf(game.home)}{home.formation && ` · ${home.formation}`}</p>
         <div className="pitch">
           <hr className="pitch-mid" />
-          <Half lineup={home} events={opta.events} side="top" />
-          <Half lineup={away} events={opta.events} side="bottom" />
+          <Half lineup={home} events={opta.events} side="top" kit={kits.home} />
+          <Half lineup={away} events={opta.events} side="bottom" kit={kits.away} />
         </div>
         <p className="pitch-tag">{nameOf(game.away)}{away.formation && ` · ${away.formation}`}</p>
       </div>
@@ -263,7 +264,7 @@ export default function Match({ game, opta: raw, prev, next, meetings, table, vi
       <section className="section match-page">
         <div className="container">
           <InfoStrip game={game} opta={opta} />
-          <div className={`mp-grid${game.score ? "" : " upcoming"}`}>
+          <div className={`mp-grid${video ? "" : " upcoming"}`}>
             <div className="mp-main">
               {!game.score && !opta?.lineups && (
                 <div className="mp-block">
@@ -271,12 +272,14 @@ export default function Match({ game, opta: raw, prev, next, meetings, table, vi
                   <p className="mp-box mp-note">ההרכבים יופיעו כאן כשהם מתפרסמים, בדרך כלל כשעה לפני שריקת הפתיחה.</p>
                 </div>
               )}
-              {game.score && (
+              {video && (
                 <div className="mp-block">
                   <SectionHead en="Highlights" title="תקציר" />
-                  {video ? <HighlightButton video={video} /> : (
-                    <div className="hl-placeholder"><span>▶</span>התקציר מיוטיוב יוטמע כאן</div>
-                  )}
+                  {/* הנגן של יוטיוב מוצג מיד, בלי לנגן לבד */}
+                  <div className="hl-frame mp-video">
+                    <iframe src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0`} title={video.title} loading="lazy"
+                      allow="encrypted-media; picture-in-picture" allowFullScreen />
+                  </div>
                 </div>
               )}
             </div>
