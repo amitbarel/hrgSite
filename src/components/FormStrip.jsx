@@ -18,8 +18,10 @@ export default function FormStrip({ games }) {
             : `מחזור ${g.round}: מול ${opp.name}, ${fmtDate(g.kickoff)}`;
           return (
             <li key={g.id} className={r || "u"} title={title}>
-              <span aria-hidden="true"><b>{r ? RESULT[r].letter : g.round}</b>{fmtDate(g.kickoff).slice(0, 5)}</span>
-              <span className="sr-only">{title}</span>
+              <Link href={`/match/${g.id}`} className="form-link">
+                <span aria-hidden="true"><b>{r ? RESULT[r].letter : g.round}</b>{fmtDate(g.kickoff).slice(0, 5)}</span>
+                <span className="sr-only">{title}</span>
+              </Link>
             </li>
           );
         })}

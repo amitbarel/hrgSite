@@ -2,17 +2,15 @@
 // סגל: עמוד הקבוצה באתר המנהלת (לשונית "סגל"), ותאריך לידה מעמוד כל שחקן
 // =========================================================
 import { getHtml, decodeEntities, sleep } from "./http.js";
-import { replacePlayers, players as currentPlayers, setMeta } from "../db.js";
+import { replacePlayers, players as currentPlayers, setMeta, getMeta, leagueTeams, replaceLeaguePlayers, OUR_TEAM_ID } from "../db.js";
 
 const TEAM_PATH = "/hapoel-ramat-gan/";
 
-export async function syncSquad() {
-  const html = await getHtml(TEAM_PATH);
+/** השחקנים מלשונית "סגל" בעמוד קבוצה: [{ id, name, group, position, number, photo }] */
+export function parseSquad(html) {
   const start = html.indexOf('id="segelTab"');
   if (start < 0) throw new Error("Squad tab not found");
   const seg = html.slice(start, start + 200000);
-
-  const known = new Map((await currentPlayers()).map(p => [p.id, p]));
   const list = [];
   let group = null;
   const re = /player-section-title">([^<]+)<|<img[^>]+src="([^"]+\/players\/[^"]+)"[^>]*alt="([^"]*)"[\s\S]*?href="\/player\/(\d+)"[\s\S]*?<\/div>\s*([\s\S]*?)<\/div>/g;
@@ -28,9 +26,15 @@ export async function syncSquad() {
       position,
       number: /^\d+$/.test(num) ? Number(num) : null,
       photo: m[2],
-      birth: known.get(id)?.birth ?? null,
     });
   }
+  return list;
+}
+
+export async function syncSquad() {
+  const html = await getHtml(TEAM_PATH);
+  const known = new Map((await currentPlayers()).map(p => [p.id, p]));
+  const list = parseSquad(html).map(p => ({ ...p, birth: known.get(p.id)?.birth ?? null }));
   if (list.length < 11) throw new Error(`Only ${list.length} players parsed, keeping old squad`);
 
   // תאריך לידה רק לשחקנים חדשים, כדי לא להעמיס על האתר
@@ -45,4 +49,28 @@ export async function syncSquad() {
   await replacePlayers(list);
   await setMeta("squad_synced_at", new Date().toISOString());
   return list.length;
+}
+
+// =========================================================
+// הסגלים של שאר הקבוצות בליגה: רק שם בעברית ומספר חולצה, בשביל ההרכבים בדף המשחק
+// (Opta שולחת שמות באנגלית). פעם בשבוע מספיק, עם הפסקה בין הקבוצות.
+// =========================================================
+const WEEK = 7 * 24 * 3600e3;
+
+export async function syncLeagueSquads({ force = false } = {}) {
+  const last = await getMeta("league_squads_synced_at");
+  if (!force && last && Date.now() - new Date(last).getTime() < WEEK) return null;
+  let done = 0;
+  for (const team of await leagueTeams()) {
+    if (team.id === OUR_TEAM_ID) continue; // את שלנו כבר יש בטבלת players
+    try {
+      const list = parseSquad(await getHtml(`/${team.slug}/`)).filter(p => p.number);
+      if (list.length >= 11) { await replaceLeaguePlayers(team.id, list); done++; }
+    } catch (e) {
+      console.warn(`[squads] ${team.slug}: ${e.message}`);
+    }
+    await sleep(1500);
+  }
+  if (done) await setMeta("league_squads_synced_at", new Date().toISOString());
+  return done;
 }

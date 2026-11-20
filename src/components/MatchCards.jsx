@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Countdown from "./Countdown.jsx";
 import { HighlightButton } from "./Highlights.jsx";
 import { MatchTeams, ScoreBox } from "./Teams.jsx";
@@ -18,6 +19,7 @@ export function NextMatch({ game }) {
       <p className="match-meta">{meta(game)}</p>
       <MatchTeams game={game} middle={<div className="vs">VS</div>} />
       <Countdown to={game.kickoff} />
+      <p className="match-link"><Link href={`/match/${game.id}`}>לדף המשחק ←</Link></p>
     </article>
   );
 }
@@ -36,6 +38,7 @@ export function LastMatch({ game, video }) {
         {game.referee && <span>שופט: {game.referee}</span>}
       </p>
       {video && <HighlightButton video={video} />}
+      <p className="match-link"><Link href={`/match/${game.id}`}>הרכבים, שערים ומהלך המשחק ←</Link></p>
     </article>
   );
 }

@@ -81,6 +81,12 @@ const SCHEMA = [
     game_id      INTEGER REFERENCES games(id),  -- המשחק שהתקציר שייך אליו, אם זוהה
     kind         TEXT                -- short = תקציר, extended = תקציר מורחב
   )`,
+  `CREATE TABLE IF NOT EXISTS league_players (
+    team_id INTEGER NOT NULL,           -- מזהה הקבוצה באתר המנהלת
+    number  INTEGER NOT NULL,           -- מספר חולצה
+    name    TEXT NOT NULL,              -- שם בעברית
+    PRIMARY KEY (team_id, number)
+  )`,
   `CREATE TABLE IF NOT EXISTS meta (
     key   TEXT PRIMARY KEY,
     value TEXT
@@ -99,6 +105,9 @@ function init() {
     const have = new Set(cols.rows.map(c => c.name));
     const add = STAT_COLS.filter(c => !have.has(c)).map(c => `ALTER TABLE players ADD COLUMN ${c} INTEGER DEFAULT 0`);
     if (!have.has("stats_at")) add.push("ALTER TABLE players ADD COLUMN stats_at TEXT");
+    // פרטי המשחק מ-Opta (הרכבים ואירועים), כ-JSON. ראו server/scraper/details.js
+    const gameCols = new Set((await client.execute("PRAGMA table_info(games)")).rows.map(c => c.name));
+    if (!gameCols.has("opta")) add.push("ALTER TABLE games ADD COLUMN opta TEXT");
     if (add.length) await client.batch(add, "write");
   })().catch(e => { ready = null; throw e; });
   return ready;
@@ -140,10 +149,10 @@ const gameStmt = g => ({
     g.homeTeamId, g.awayTeamId, g.homeScore ?? null, g.awayScore ?? null, g.status ?? null, now()],
 });
 
-const detailsStmt = (id, { attendance = null, referee = null }) => ({
+const detailsStmt = (id, { attendance = null, referee = null, opta = null }) => ({
   sql: `UPDATE games SET attendance = COALESCE(?, attendance), referee = COALESCE(?, referee),
-          details_at = ?, updated_at = ? WHERE id = ?`,
-  args: [attendance, referee, now(), now(), id],
+          opta = COALESCE(?, opta), details_at = ?, updated_at = ? WHERE id = ?`,
+  args: [attendance, referee, opta ? JSON.stringify(opta) : null, now(), now(), id],
 });
 
 /** קבוצות ומשחקים בבת אחת (לוח המשחקים כולו בבקשה אחת למסד) */
@@ -186,6 +195,17 @@ export async function savePlayerStats(list) {
       sql: `UPDATE players SET appearances = ?, minutes = ?, goals = ?, assists = ?, yellow = ?, red = ?,
               clean_sheets = ?, sub_in = ?, stats_at = ? WHERE id = ?`,
       args: [s.appearances, s.minutes, s.goals, s.assists, s.yellow, s.red, s.cleanSheets, s.subIn, at, s.id],
+    })),
+  ]);
+}
+
+/** הסגל של קבוצה אחרת בליגה (שם בעברית לפי מספר חולצה). מחליף את הרשימה הקודמת של אותה קבוצה. */
+export async function replaceLeaguePlayers(teamId, list) {
+  await tx([
+    { sql: "DELETE FROM league_players WHERE team_id = ?", args: [teamId] },
+    ...list.map(p => ({
+      sql: "INSERT OR REPLACE INTO league_players (team_id, number, name) VALUES (?, ?, ?)",
+      args: [teamId, p.number, p.name],
     })),
   ]);
 }
@@ -301,6 +321,11 @@ export async function videos() {
   }));
 }
 
+/** הקבוצות בליגה (רק אלה שיש להן כתובת עמוד באתר המנהלת) */
+export async function leagueTeams() {
+  return q("SELECT id, name, slug FROM teams WHERE slug IS NOT NULL ORDER BY id");
+}
+
 export async function count(table) {
   return (await q(`SELECT COUNT(*) AS n FROM ${table}`))[0].n;
 }
@@ -318,9 +343,33 @@ export async function gameStatus(id) {
   return (await q("SELECT status FROM games WHERE id = ?", [id]))[0]?.status ?? null;
 }
 
-/** משחקים שהסתיימו ועוד אין להם קהל ושופט (לעדכון ידני מלא) */
+/** משחקים שלנו שהסתיימו וחסרים להם קהל ושופט או הרכבים (לעדכון ידני מלא) */
 export async function finishedWithoutDetails() {
-  return q("SELECT id FROM games WHERE status = 3 AND details_at IS NULL");
+  return q(`SELECT id FROM games WHERE status = 3 AND (details_at IS NULL OR opta IS NULL)
+              AND (home_team_id = ? OR away_team_id = ?)`, [OUR_TEAM_ID, OUR_TEAM_ID]);
+}
+
+// שמות מאמנים בעברית שאתר המנהלת לא מציג (לפי השם ש-Opta שולחת)
+const COACHES_HE = { "M. Dego": "מסאי דגו" };
+
+/** פרטי Opta של משחק, עם שמות בעברית כשיש: השחקנים שלנו מהסגל, של היריבה מ-league_players */
+export async function gameOpta(id) {
+  const row = (await q("SELECT opta, home_team_id, away_team_id FROM games WHERE id = ?", [id]))[0];
+  if (!row?.opta) return null;
+  const opta = JSON.parse(row.opta);
+  const teamIds = { home: row.home_team_id, away: row.away_team_id };
+  const he = new Map();
+  for (const r of await q("SELECT team_id, number, name FROM league_players WHERE team_id IN (?, ?)", [teamIds.home, teamIds.away]))
+    he.set(`${r.team_id}:${r.number}`, r.name);
+  for (const r of await q("SELECT number, name FROM players WHERE active = 1 AND number IS NOT NULL"))
+    he.set(`${OUR_TEAM_ID}:${r.number}`, r.name); // הסגל שלנו קודם
+  for (const side of ["home", "away"]) {
+    const t = opta.teams?.[side];
+    if (!t) continue;
+    for (const p of t.players) p.name = he.get(`${teamIds[side]}:${p.num}`) ?? p.name;
+    t.coach = t.coachHe ?? COACHES_HE[t.coach] ?? t.coach;
+  }
+  return opta;
 }
 
 /**

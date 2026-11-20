@@ -5,7 +5,7 @@
 // =========================================================
 import "server-only";
 import { cache } from "react";
-import { ourGames, players, standings, videos, getMeta } from "../../server/db.js";
+import { ourGames, players, standings, videos, getMeta, gameOpta } from "../../server/db.js";
 import { seedIfEmpty } from "../../server/seed.js";
 
 // במחשב, בלי Turso: מסד חדש מתמלא מ-data/seed.json, כדי שהאתר יעבוד מיד אחרי npm install
@@ -17,6 +17,8 @@ export const getGames = cache(async () => { await ready(); return ourGames(); })
 export const getPlayers = cache(async () => { await ready(); return players(); });
 export const getStandings = cache(async () => { await ready(); return standings(); });
 export const getVideos = cache(async () => { await ready(); return videos(); });
+// הרכבים ואירועים של משחק אחד (מ-Opta), עם שמות בעברית כשיש
+export const getGameOpta = cache(async id => { await ready(); return gameOpta(id); });
 
 // סיכום לדף הבית וללוח המשחקים: המשחק הבא, האחרון ומאזן העונה
 export const getSummary = cache(async () => {

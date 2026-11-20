@@ -100,7 +100,487 @@
    "awayScore": 1,
    "status": 3,
    "attendance": 24197,
-   "referee": "Omer Biran"
+   "referee": "Omer Biran",
+   "opta": {
+    "ht": [
+     1,
+     0
+    ],
+    "teams": {
+     "home": {
+      "formation": "4231",
+      "coach": "B. Bakhar",
+      "coachHe": "דייגו פלורס",
+      "captain": "5za437wrlqizff74n6uqodpzp",
+      "players": [
+       {
+        "id": "4i79xygq041riir1g8gdw0mad",
+        "name": "O. Glazer",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "cyh16toqa9wxmxepg635ecgve",
+        "name": "J. Bataille",
+        "num": 25,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "8wlmbcu53ayhhwduvcvi1j3e1",
+        "name": "Tsunami",
+        "num": 66,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "a3969dlycbg8g84qor7wf3q50",
+        "name": "Y. Levi",
+        "num": 8,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "10va1tucy0kb83wllaudp7e95",
+        "name": "Pedrão",
+        "num": 44,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "4cyf8fcefkz6433g76okyd65m",
+        "name": "N. Lonwijk",
+        "num": 21,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "uxb0rai8lghcq59m2r6bkzpx",
+        "name": "K. Saief",
+        "num": 16,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "7cb83xffdcj48ul18gs8a0kmi",
+        "name": "E. Azoulay",
+        "num": 19,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "4eni579noyjud6365u44dl6qy",
+        "name": "S. Kani",
+        "num": 26,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "8n8cefib1ygrubal128esl27e",
+        "name": "Bruninho",
+        "num": 10,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "5za437wrlqizff74n6uqodpzp",
+        "name": "K. Gorré",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "1h0x95btc7kvpehijnzcchp90",
+        "name": "G. Alvin",
+        "num": 90,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "34r5j61c2guc9ns635g7ivwus",
+        "name": "N. Sztejfman",
+        "num": 35,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b10g13bt7ms539ae9wyau23md",
+        "name": "A. Muhammad",
+        "num": 4,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2f245416ulcna17z4l8z3nnbp",
+        "name": "S. Goldberg",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "ubwmzz1zku0kfusjxazie5ex",
+        "name": "A. Novakovich",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8815v1zug9oi6djd67bsp55w4",
+        "name": "Y. Mordechai",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1pt3olrwh3lbb1ad0gamvkg7o",
+        "name": "C. Don",
+        "num": 45,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2uh813m7pdwrjgdnszer228lw",
+        "name": "N. Ratner",
+        "num": 36,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "4kswhnmgejyr2xjiw075bo6j8",
+        "name": "I. Khalaili",
+        "num": 29,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "433",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "1lwtec7wzbygcevtmg0vq568l",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "1lwtec7wzbygcevtmg0vq568l",
+        "name": "D. Twito",
+        "num": 36,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 4,
+        "slot": 11
+       },
+       {
+        "id": "5d9ztql39qfxegka5oa8e8max",
+        "name": "T. Haran",
+        "num": 98,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 18,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "cgnyqr0l0ann2mab5mxprbjf8"
+     },
+     {
+      "min": 22,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "8n8cefib1ygrubal128esl27e",
+      "assist": null,
+      "score": [
+       1,
+       0
+      ]
+     },
+     {
+      "min": 33,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "cyh16toqa9wxmxepg635ecgve"
+     },
+     {
+      "min": 40,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "10va1tucy0kb83wllaudp7e95"
+     },
+     {
+      "min": 45,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "1lwtec7wzbygcevtmg0vq568l"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "8n8cefib1ygrubal128esl27e",
+      "assist": "4eni579noyjud6365u44dl6qy",
+      "score": [
+       2,
+       0
+      ]
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "4kswhnmgejyr2xjiw075bo6j8",
+      "out": "cyh16toqa9wxmxepg635ecgve"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "9a7g7vxgjuo8zi8udvhysg93o",
+      "out": "cgnyqr0l0ann2mab5mxprbjf8"
+     },
+     {
+      "min": 61,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "1k6t149nkiqw3nnvzyqoys3x1",
+      "assist": "1q1restw4b2sd5jcqjhr2vh1w",
+      "score": [
+       2,
+       1
+      ]
+     },
+     {
+      "min": 62,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1pt3olrwh3lbb1ad0gamvkg7o",
+      "out": "uxb0rai8lghcq59m2r6bkzpx"
+     },
+     {
+      "min": 64,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "5n1bkpn81vj99a3r1sffw055g",
+      "out": "10ypze1ivdqfnvebcqhftmzh0"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 70,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "ubwmzz1zku0kfusjxazie5ex",
+      "out": "4eni579noyjud6365u44dl6qy"
+     },
+     {
+      "min": 70,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "b10g13bt7ms539ae9wyau23md",
+      "out": "5za437wrlqizff74n6uqodpzp"
+     },
+     {
+      "min": 72,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "b2h74wqi9263k6b32ikdtk6w9",
+      "out": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 78,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "4cyf8fcefkz6433g76okyd65m"
+     },
+     {
+      "min": 81,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1gkdi40ytebxrggmbsn8n3uvo",
+      "out": "1q1restw4b2sd5jcqjhr2vh1w"
+     },
+     {
+      "min": 81,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "1k6t149nkiqw3nnvzyqoys3x1"
+     },
+     {
+      "min": 81,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "34r5j61c2guc9ns635g7ivwus",
+      "out": "10va1tucy0kb83wllaudp7e95"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC"
+     }
+    ]
+   }
   },
   {
    "id": 310742,
@@ -116,7 +596,464 @@
    "awayScore": 2,
    "status": 3,
    "attendance": 3662,
-   "referee": "Aviad Yahav-Hay Shiloach"
+   "referee": "Aviad Yahav-Hay Shiloach",
+   "opta": {
+    "ht": [
+     0,
+     0
+    ],
+    "teams": {
+     "home": {
+      "formation": "4141",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "1lwtec7wzbygcevtmg0vq568l",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "1lwtec7wzbygcevtmg0vq568l",
+        "name": "D. Twito",
+        "num": 36,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "5d9ztql39qfxegka5oa8e8max",
+        "name": "T. Haran",
+        "num": 98,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "66myjif4rplebci7n00s4pwid",
+        "name": "M. Hozez",
+        "num": 28,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "433",
+      "coach": "R. Kozuch",
+      "coachHe": "רן קוז'וך",
+      "captain": "b1aao6f1gdguppisse26rv8q1",
+      "players": [
+       {
+        "id": "909y6bbt3ht52rsu560ua5gid",
+        "name": "O. Marciano",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "7g2mvl0zfjphlr7nou5i4f1pm",
+        "name": "G. Mizrahi",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "94xmd8kr3t9wghaf95xnyphey",
+        "name": "Pedro Amador",
+        "num": 5,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "b7ri94n62dr73s1hb10br7lrd",
+        "name": "Lucas Ventura",
+        "num": 25,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "4iqkcwtg7gw8r22x27k4d49hw",
+        "name": "D. Diop",
+        "num": 44,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "9fsq3wvshee4whkvr3q08tqay",
+        "name": "I. Rotman",
+        "num": 12,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "o4td8qsz55jn4kil1qtg0d1w",
+        "name": "N. Yehoshua",
+        "num": 28,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "b1aao6f1gdguppisse26rv8q1",
+        "name": "E. Peretz",
+        "num": 7,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "adx5vb311fxo4dj5f4pysunf8",
+        "name": "A. Ohana",
+        "num": 19,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "82n7a1g9p0clcllaeb8369h49",
+        "name": "M. Kna'an",
+        "num": 8,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "aeye6v28onph82wa696vuk9as",
+        "name": "A. Ganah",
+        "num": 11,
+        "pos": 4,
+        "slot": 11
+       },
+       {
+        "id": "a7fohxcubrg6xo782vcag99wq",
+        "name": "M. Wolff",
+        "num": 34,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "evktllmp3l6mfb6o4im0ag0ve",
+        "name": "J. Malede",
+        "num": 14,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "efr0xlfk7a40ds8t4a6r4710p",
+        "name": "R. Levy",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "dffwv1ce7banybrqihjro745x",
+        "name": "M. Baltaxa",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "998xgeu19uw3u31ulafwjchec",
+        "name": "I. Hazut",
+        "num": 23,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1dhrwc8thd5phkw3bi8d8emms",
+        "name": "Y. Shani",
+        "num": 36,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "149ajta5lssgs29msy3o9uz2s",
+        "name": "Y. Stoyanov",
+        "num": 27,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "94dr3scdvwe236e03rwuj8844",
+        "name": "João Victor",
+        "num": 70,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bal6fetsu9dmfjtbjfp4d16mt",
+        "name": "O. Davidzada",
+        "num": 13,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "1k6t149nkiqw3nnvzyqoys3x1"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "evktllmp3l6mfb6o4im0ag0ve",
+      "out": "82n7a1g9p0clcllaeb8369h49"
+     },
+     {
+      "min": 61,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "adx5vb311fxo4dj5f4pysunf8",
+      "assist": null,
+      "score": [
+       0,
+       1
+      ]
+     },
+     {
+      "min": 66,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "7g2mvl0zfjphlr7nou5i4f1pm"
+     },
+     {
+      "min": 66,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "b2h74wqi9263k6b32ikdtk6w9",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "dffwv1ce7banybrqihjro745x",
+      "out": "4iqkcwtg7gw8r22x27k4d49hw"
+     },
+     {
+      "min": 68,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "94dr3scdvwe236e03rwuj8844",
+      "out": "aeye6v28onph82wa696vuk9as"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "66myjif4rplebci7n00s4pwid",
+      "assist": null,
+      "score": [
+       1,
+       1
+      ]
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cgnyqr0l0ann2mab5mxprbjf8",
+      "out": "9a7g7vxgjuo8zi8udvhysg93o"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "66myjif4rplebci7n00s4pwid",
+      "out": "8da3jahixtohf6jwfe6txkglw"
+     },
+     {
+      "min": 80,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "efr0xlfk7a40ds8t4a6r4710p",
+      "out": "adx5vb311fxo4dj5f4pysunf8"
+     },
+     {
+      "min": 80,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bal6fetsu9dmfjtbjfp4d16mt",
+      "out": "94xmd8kr3t9wghaf95xnyphey"
+     },
+     {
+      "min": 83,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "dffwv1ce7banybrqihjro745x"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 91,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "b1aao6f1gdguppisse26rv8q1",
+      "assist": null,
+      "score": [
+       1,
+       2
+      ]
+     },
+     {
+      "min": 92,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "b1aao6f1gdguppisse26rv8q1"
+     },
+     {
+      "min": 92,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "9bb5cg8no9pv7mb3cqy26xudw"
+     }
+    ]
+   }
   },
   {
    "id": 310744,
@@ -132,7 +1069,477 @@
    "awayScore": 0,
    "status": 3,
    "attendance": 17522,
-   "referee": "Gal Levi"
+   "referee": "Gal Levi",
+   "opta": {
+    "ht": [
+     0,
+     0
+    ],
+    "teams": {
+     "away": {
+      "formation": "4231",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "66myjif4rplebci7n00s4pwid",
+        "name": "M. Hozez",
+        "num": 28,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1lwtec7wzbygcevtmg0vq568l",
+        "name": "D. Twito",
+        "num": 36,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5d9ztql39qfxegka5oa8e8max",
+        "name": "T. Haran",
+        "num": 98,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "home": {
+      "formation": "4231",
+      "coach": "E. Barda",
+      "coachHe": "אליניב ברדה",
+      "captain": "crdmczlhynym2z1adqlbt853p",
+      "players": [
+       {
+        "id": "ch8y2mimoj3mywwt30wmeozqh",
+        "name": "A. Tzur",
+        "num": 22,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "2dzasf5mpqm32122nbisje8d1",
+        "name": "S. Piven",
+        "num": 21,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "dmacht40k07rvftgefle0vnu2",
+        "name": "D. Leidner",
+        "num": 16,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "8nc9js00u6c5pshyk5lvs6jmx",
+        "name": "A. Kraev",
+        "num": 6,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "crdmczlhynym2z1adqlbt853p",
+        "name": "F. Mayembo",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "9d5j7rmswsnpgm9cz7v425vjd",
+        "name": "Chico",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "e5hecb7wjysyz5vvy1u8wbspg",
+        "name": "S. Turiel",
+        "num": 11,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "6phaoo48jbafqwlpiq1oxw50q",
+        "name": "Falcão",
+        "num": 98,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "79mo2l821d5zq6dyrg9qkpf4l",
+        "name": "E. Boateng",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "7fmhwcqlf4y5cn1j2ju1a8qhg",
+        "name": "D. Owusu",
+        "num": 35,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "9hlyb2v0349p86qr36694f10",
+        "name": "R. Alkukin",
+        "num": 15,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "8c8s1kxfoknh1tcgw95l904yc",
+        "name": "A. Lemkin",
+        "num": 23,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5t6m3svpmmbcmvmfot76bipsk",
+        "name": "D. Dappa",
+        "num": 44,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "f0ydyr0ufof928xow3xzfo104",
+        "name": "D. Benyamini",
+        "num": 1,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "a0hi1ib68o4m6jkldpwppm68k",
+        "name": "E. Kancepolsky",
+        "num": 14,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "eqkxzxccc6t52fqsy7cxpwvtg",
+        "name": "M. Buskila",
+        "num": 27,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "elrxj1lswla7foudge7puv07p",
+        "name": "O. Altman",
+        "num": 51,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "342mc0tfa7x5iyzikq3qrwnl6",
+        "name": "R. Korine",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "3ih5g351rvacdm4spf797vhn8",
+        "name": "T. Archel",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5071els4ac7xna8wahv7dfcic",
+        "name": "Y. Ferber",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 37,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 47,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "68c6au39axd3tzb8jr5jyo3kk"
+     },
+     {
+      "min": 56,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 56,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "b2h74wqi9263k6b32ikdtk6w9",
+      "out": "66myjif4rplebci7n00s4pwid"
+     },
+     {
+      "min": 57,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "79mo2l821d5zq6dyrg9qkpf4l",
+      "assist": "9hlyb2v0349p86qr36694f10",
+      "score": [
+       1,
+       0
+      ]
+     },
+     {
+      "min": 62,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "5t6m3svpmmbcmvmfot76bipsk",
+      "out": "79mo2l821d5zq6dyrg9qkpf4l"
+     },
+     {
+      "min": 64,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1lwtec7wzbygcevtmg0vq568l",
+      "out": "68c6au39axd3tzb8jr5jyo3kk"
+     },
+     {
+      "min": 68,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "elrxj1lswla7foudge7puv07p",
+      "out": "e5hecb7wjysyz5vvy1u8wbspg"
+     },
+     {
+      "min": 74,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "7fmhwcqlf4y5cn1j2ju1a8qhg",
+      "assist": "8nc9js00u6c5pshyk5lvs6jmx",
+      "score": [
+       2,
+       0
+      ]
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "342mc0tfa7x5iyzikq3qrwnl6",
+      "out": "7fmhwcqlf4y5cn1j2ju1a8qhg"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "3ih5g351rvacdm4spf797vhn8",
+      "out": "dmacht40k07rvftgefle0vnu2"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "eqkxzxccc6t52fqsy7cxpwvtg",
+      "out": "9hlyb2v0349p86qr36694f10"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "1q1restw4b2sd5jcqjhr2vh1w"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1gkdi40ytebxrggmbsn8n3uvo",
+      "out": "8da3jahixtohf6jwfe6txkglw"
+     },
+     {
+      "min": 82,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "9a7g7vxgjuo8zi8udvhysg93o"
+     },
+     {
+      "min": 86,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "OG",
+      "player": "1lwtec7wzbygcevtmg0vq568l",
+      "assist": null,
+      "score": [
+       3,
+       0
+      ]
+     },
+     {
+      "min": 91,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 92,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "crdmczlhynym2z1adqlbt853p",
+      "assist": "342mc0tfa7x5iyzikq3qrwnl6",
+      "score": [
+       4,
+       0
+      ]
+     }
+    ]
+   }
   },
   {
    "id": 310749,
@@ -148,7 +1555,459 @@
    "awayScore": 0,
    "status": 3,
    "attendance": 1935,
-   "referee": "Snir Levi"
+   "referee": "Snir Levi",
+   "opta": {
+    "ht": [
+     2,
+     0
+    ],
+    "teams": {
+     "away": {
+      "formation": "4231",
+      "coach": "R. Levy",
+      "coachHe": "יוסי אבוקסיס",
+      "captain": "afj5u37835t1dkagjc9jmxppm",
+      "players": [
+       {
+        "id": "df10cn4k7ot892lvcp8dskwoa",
+        "name": "Samu",
+        "num": 22,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "7yoti49up7torl5o9f6ah69yh",
+        "name": "A. Azugi",
+        "num": 12,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "8mbtbrut9gp4wcesrdkwmp2w9",
+        "name": "A. Cohen",
+        "num": 24,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2oe38rd8fu8h2ogltboenp4kq",
+        "name": "N. Niddam",
+        "num": 13,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "cfamdx2pw8o0xewgn84gd75sk",
+        "name": "B. Konaté",
+        "num": 6,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "suaxn1lsh0ae372nq0zot5p0",
+        "name": "B. Feldman",
+        "num": 44,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "afj5u37835t1dkagjc9jmxppm",
+        "name": "O. Bilu",
+        "num": 10,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "cma24hkdklib8007a42cso38q",
+        "name": "A. Ouattara",
+        "num": 32,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "ds5nnmlymuxpsmbvvi890b4rt",
+        "name": "Matheus Davó",
+        "num": 83,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1f84523c1pdwgdur1lxfe2vis",
+        "name": "B. Zaarura",
+        "num": 16,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "7j3f6x2ieou5gv0ji17ca0bmd",
+        "name": "D. Haziza",
+        "num": 8,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "bmmiskgiwt26oxdl3v7ifghqt",
+        "name": "N. Antman",
+        "num": 1,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "ju8xnjfhdy2ksx8ql69nz651",
+        "name": "D. Hugi",
+        "num": 11,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "ahcozqnpw09flmk5u7u0hyitx",
+        "name": "G. Morozov",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "3s5i50iv9abqsq15fvevoffxm",
+        "name": "O. Shamir",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "c07q4vfh6dqnpp1y895kriuj8",
+        "name": "L. Cohen",
+        "num": 14,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5bhe5zusg0jhwo1qmimict8us",
+        "name": "O. Talpa",
+        "num": 21,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "94obbqwo2c8t6fnryl8u5nehg",
+        "name": "I. Shwartzman",
+        "num": 30,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8pxup7wz3hbg0xxdo0yb3izca",
+        "name": "K. Jaber",
+        "num": 26,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "dbmc15678uiombo2ijwop9q8k",
+        "name": "D. Kulikov",
+        "num": 5,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "home": {
+      "formation": "4222",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "66myjif4rplebci7n00s4pwid",
+        "name": "M. Hozez",
+        "num": 28,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 16,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "b2h74wqi9263k6b32ikdtk6w9",
+      "assist": "9bb5cg8no9pv7mb3cqy26xudw",
+      "score": [
+       1,
+       0
+      ]
+     },
+     {
+      "min": 35,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "1q1restw4b2sd5jcqjhr2vh1w",
+      "assist": "8da3jahixtohf6jwfe6txkglw",
+      "score": [
+       2,
+       0
+      ]
+     },
+     {
+      "min": 44,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "ju8xnjfhdy2ksx8ql69nz651",
+      "out": "7j3f6x2ieou5gv0ji17ca0bmd"
+     },
+     {
+      "min": 66,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "66myjif4rplebci7n00s4pwid",
+      "out": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 68,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "2h8f8adsovqmetehbj1hguwwk",
+      "out": "a6gl9bfsb08zdj8j3tsq1fuqy"
+     },
+     {
+      "min": 68,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "ahcozqnpw09flmk5u7u0hyitx",
+      "out": "8mbtbrut9gp4wcesrdkwmp2w9"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "5bhe5zusg0jhwo1qmimict8us",
+      "out": "2oe38rd8fu8h2ogltboenp4kq"
+     },
+     {
+      "min": 70,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "ju8xnjfhdy2ksx8ql69nz651"
+     },
+     {
+      "min": 75,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "41557fmzcctiz4k29eool05ih",
+      "out": "63b0iy8j5k5mk46g5jefr1wmi"
+     },
+     {
+      "min": 80,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "8pxup7wz3hbg0xxdo0yb3izca",
+      "out": "7yoti49up7torl5o9f6ah69yh"
+     },
+     {
+      "min": 81,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "c07q4vfh6dqnpp1y895kriuj8",
+      "out": "afj5u37835t1dkagjc9jmxppm"
+     },
+     {
+      "min": 87,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "1q1restw4b2sd5jcqjhr2vh1w"
+     },
+     {
+      "min": 87,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "9a7g7vxgjuo8zi8udvhysg93o",
+      "out": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 89,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "ahcozqnpw09flmk5u7u0hyitx"
+     },
+     {
+      "min": 92,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "cfamdx2pw8o0xewgn84gd75sk"
+     },
+     {
+      "min": 94,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "41557fmzcctiz4k29eool05ih"
+     }
+    ]
+   }
   },
   {
    "id": 310763,
@@ -164,7 +2023,438 @@
    "awayScore": 0,
    "status": 3,
    "attendance": 1247,
-   "referee": "Yoni Klez"
+   "referee": "Yoni Klez",
+   "opta": {
+    "ht": [
+     0,
+     0
+    ],
+    "teams": {
+     "home": {
+      "formation": "442",
+      "coach": "Y. Abukasis",
+      "coachHe": "שרון מימר",
+      "captain": "ed5h5unlqyk1p83o92yfelzhl",
+      "players": [
+       {
+        "id": "a59inho5fd5ud84xlfsdg3rl6",
+        "name": "R. Bălbărău",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "ed5h5unlqyk1p83o92yfelzhl",
+        "name": "M. Gantus",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "3zvp2yd1gctzxmsc8lwpcyy21",
+        "name": "Saná Gomes",
+        "num": 92,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2wg4x0y2thdnaw8cxm91xg2c5",
+        "name": "M. Vorobjovas",
+        "num": 8,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "f48qh7o615ycoub202i9mklp1",
+        "name": "I. Abu Abaid",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "aujtygjafoz85e9kn2i1b65wq",
+        "name": "O. Dahan",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "74w7u994c832ya17u9g7nkh04",
+        "name": "M. Anim Cudjoe",
+        "num": 10,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "56durctv5ftmbu9zbmvy9jims",
+        "name": "A. Taha",
+        "num": 6,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "2wtgd206ztbi9bze9fxb06wic",
+        "name": "B. Khuri",
+        "num": 24,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "g8subv0do8dhuinc6api0bmx",
+        "name": "A. Sefer",
+        "num": 77,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "ehzcdtht7vyekwm7k95lid990",
+        "name": "A. Ibrahim",
+        "num": 29,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "5whynqf5opfxdhlhfdtydrgq2",
+        "name": "M. Abu Nil",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "28w00vpbfbmrid5h0v6vecmc4",
+        "name": "M. Abu Riya",
+        "num": 21,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "daqm0ziygdn6jvp9czd6vnp5g",
+        "name": "M. Ganame",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cj5hwxc6sbznet60l6n3nlp90",
+        "name": "I. Hagag",
+        "num": 28,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "3m5x0jpqhpdrgreap9v5wjqsq",
+        "name": "L. Helf",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "7tlq5ujwrf3ra2dqq7fd83tw4",
+        "name": "A. Kredi",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "ddaypsfbnqmy5cuewt5ykw3kk",
+        "name": "J. Bushnak",
+        "num": 11,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "e42jh6bbwn4aybdnysonrvutx",
+        "name": "L. Owusu",
+        "num": 13,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "40tbeoz8aoa5cl6lrlpkkrdgp",
+        "name": "I. Shviro",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "442",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "66myjif4rplebci7n00s4pwid",
+        "name": "M. Hozez",
+        "num": 28,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 27,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 42,
+      "period": 1,
+      "side": "home",
+      "type": "sub",
+      "in": "e42jh6bbwn4aybdnysonrvutx",
+      "out": "ed5h5unlqyk1p83o92yfelzhl"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "40tbeoz8aoa5cl6lrlpkkrdgp",
+      "out": "2wtgd206ztbi9bze9fxb06wic"
+     },
+     {
+      "min": 52,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "63b0iy8j5k5mk46g5jefr1wmi"
+     },
+     {
+      "min": 55,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "u5untiuhv60hb2mb4rklduui"
+     },
+     {
+      "min": 57,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "f48qh7o615ycoub202i9mklp1"
+     },
+     {
+      "min": 66,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "66myjif4rplebci7n00s4pwid",
+      "out": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "e42jh6bbwn4aybdnysonrvutx",
+      "assist": "74w7u994c832ya17u9g7nkh04",
+      "score": [
+       1,
+       0
+      ]
+     },
+     {
+      "min": 72,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1k6t149nkiqw3nnvzyqoys3x1",
+      "out": "63b0iy8j5k5mk46g5jefr1wmi"
+     },
+     {
+      "min": 79,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cj5hwxc6sbznet60l6n3nlp90",
+      "out": "g8subv0do8dhuinc6api0bmx"
+     },
+     {
+      "min": 79,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "28w00vpbfbmrid5h0v6vecmc4",
+      "out": "ehzcdtht7vyekwm7k95lid990"
+     },
+     {
+      "min": 84,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "2h8f8adsovqmetehbj1hguwwk",
+      "out": "68c6au39axd3tzb8jr5jyo3kk"
+     },
+     {
+      "min": 84,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "9a7g7vxgjuo8zi8udvhysg93o",
+      "out": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 84,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 92,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "7tlq5ujwrf3ra2dqq7fd83tw4",
+      "out": "74w7u994c832ya17u9g7nkh04"
+     }
+    ]
+   }
   },
   {
    "id": 310768,
@@ -180,7 +2470,453 @@
    "awayScore": 4,
    "status": 3,
    "attendance": 4188,
-   "referee": "David Fuxman"
+   "referee": "David Fuxman",
+   "opta": {
+    "ht": [
+     0,
+     2
+    ],
+    "teams": {
+     "home": {
+      "formation": "4231",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "66myjif4rplebci7n00s4pwid",
+        "name": "M. Hozez",
+        "num": 28,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "4231",
+      "coach": "A. Cohen",
+      "coachHe": "ברק יצחקי",
+      "captain": "8twaof4z06di37p9907vqnxt5",
+      "players": [
+       {
+        "id": "3y7h2e79gvzrqor9gg854dl91",
+        "name": "Miguel Silva",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "phcm76f9jlpuyr4br88i6ulm",
+        "name": "N. Antwi",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "2rtx5fdppxirmf6sttk0uqz56",
+        "name": "T. Muzie",
+        "num": 11,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "e3yr2tkuonhu7iwqc78kcqmwa",
+        "name": "B. Enow",
+        "num": 40,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "cwvht4s0gfjqjds2p7ur0rrop",
+        "name": "L. Gadrani",
+        "num": 44,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "8t2kws8ypu1l6zbcuinkjw4mi",
+        "name": "G. Cohen",
+        "num": 5,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "diyyjxujtwg2wlp1na81cuhn9",
+        "name": "O. Atzili",
+        "num": 77,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "pz64u8sdap9mtemj935dnpbd",
+        "name": "A. Serna",
+        "num": 80,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "cj24ptt1lvwh7hakewqydobf9",
+        "name": "S. Weissman",
+        "num": 19,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "my77egltmn05j466bz9larfu",
+        "name": "T. Yosefi",
+        "num": 30,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "8twaof4z06di37p9907vqnxt5",
+        "name": "Y. Shua",
+        "num": 7,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "71o615qbo2sq3tcqqup0zf11w",
+        "name": "A. Yona",
+        "num": 10,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "75n13w1jaew01mbius5z9vfo4",
+        "name": "Y. Ozer",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bnfxpi1hwtf8typhlqeufrqj8",
+        "name": "L. Deri",
+        "num": 25,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "eu11zp6my6jvbkw5y273dyqz8",
+        "name": "O. Azo",
+        "num": 23,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1uf02qwdkvi31t6qq73171444",
+        "name": "Z. Ben Shimol",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cntz26i7p4q9fyzh55xswpudw",
+        "name": "J. Kalu",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "ex6r13asy48yjgpzm1g7xy42c",
+        "name": "D. Worko",
+        "num": 26,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "e6rhc21ownwfq6zgrmnd6ygkq",
+        "name": "R. Elimelech",
+        "num": 14,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "lvbnk881mde943xx8nrr1nmd",
+        "name": "E. Ansah",
+        "num": 13,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 4,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "diyyjxujtwg2wlp1na81cuhn9",
+      "assist": "8twaof4z06di37p9907vqnxt5",
+      "score": [
+       0,
+       1
+      ]
+     },
+     {
+      "min": 47,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "e3yr2tkuonhu7iwqc78kcqmwa",
+      "assist": null,
+      "score": [
+       0,
+       2
+      ]
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "e3yr2tkuonhu7iwqc78kcqmwa",
+      "assist": "phcm76f9jlpuyr4br88i6ulm",
+      "score": [
+       0,
+       3
+      ]
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cgnyqr0l0ann2mab5mxprbjf8",
+      "out": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "b2h74wqi9263k6b32ikdtk6w9",
+      "out": "66myjif4rplebci7n00s4pwid"
+     },
+     {
+      "min": 53,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "5n1bkpn81vj99a3r1sffw055g",
+      "out": "1k6t149nkiqw3nnvzyqoys3x1"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "2h8f8adsovqmetehbj1hguwwk",
+      "out": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 63,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "lvbnk881mde943xx8nrr1nmd",
+      "out": "cj24ptt1lvwh7hakewqydobf9"
+     },
+     {
+      "min": 63,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "71o615qbo2sq3tcqqup0zf11w",
+      "out": "my77egltmn05j466bz9larfu"
+     },
+     {
+      "min": 65,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "lvbnk881mde943xx8nrr1nmd",
+      "assist": "8twaof4z06di37p9907vqnxt5",
+      "score": [
+       0,
+       4
+      ]
+     },
+     {
+      "min": 68,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "eu11zp6my6jvbkw5y273dyqz8",
+      "out": "8twaof4z06di37p9907vqnxt5"
+     },
+     {
+      "min": 70,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "ex6r13asy48yjgpzm1g7xy42c",
+      "out": "e3yr2tkuonhu7iwqc78kcqmwa"
+     },
+     {
+      "min": 74,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "41557fmzcctiz4k29eool05ih",
+      "out": "8da3jahixtohf6jwfe6txkglw"
+     },
+     {
+      "min": 77,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "e6rhc21ownwfq6zgrmnd6ygkq",
+      "out": "phcm76f9jlpuyr4br88i6ulm"
+     }
+    ]
+   }
   },
   {
    "id": 310770,
@@ -196,7 +2932,467 @@
    "awayScore": 2,
    "status": 3,
    "attendance": 3030,
-   "referee": "Dekel Tzino"
+   "referee": "Dekel Tzino",
+   "opta": {
+    "ht": [
+     0,
+     0
+    ],
+    "teams": {
+     "home": {
+      "formation": "3421",
+      "coach": "H. Silvas",
+      "coachHe": "גל אראל",
+      "captain": "8sc73jwz1m804nah1z5in872t",
+      "players": [
+       {
+        "id": "9lyt4yjsopx8bgpe0u8pgun6d",
+        "name": "Y. Gerafi",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "7gjy9c5tw9lc7pbo6r7dlibys",
+        "name": "Y. Gonen",
+        "num": 15,
+        "pos": 3,
+        "slot": 2
+       },
+       {
+        "id": "8f5suoft1lt9thk1arm4u8max",
+        "name": "A. Mendy",
+        "num": 77,
+        "pos": 3,
+        "slot": 3
+       },
+       {
+        "id": "4kmd502s272vf5wgkx8hk4vl5",
+        "name": "I. Kričak",
+        "num": 5,
+        "pos": 2,
+        "slot": 4
+       },
+       {
+        "id": "czfus91j2yrgi45qdgib0yq51",
+        "name": "D. Župarić",
+        "num": 13,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "8sc73jwz1m804nah1z5in872t",
+        "name": "D. Malul",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "6sod0mcgu50ftrc6dyqqam85x",
+        "name": "N. Sabag",
+        "num": 55,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "85i8yzikdcrgvtb7ux5ir3sic",
+        "name": "C. Keita",
+        "num": 8,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "60to2lm16a44euj8moxn37px",
+        "name": "A. Turgeman",
+        "num": 17,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "tey17atns6j7rh4q1jhvuprd",
+        "name": "S. Elias",
+        "num": 10,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "1scymdq7a8sos1h5bvepm33zd",
+        "name": "L. Rotman",
+        "num": 7,
+        "pos": 4,
+        "slot": 11
+       },
+       {
+        "id": "yypdj9w9hu5wdjza7dwd9ck5",
+        "name": "M. Ambar",
+        "num": 23,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9dl8xbth38dqd6muj9d2sm80k",
+        "name": "T. Arbel",
+        "num": 3,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5k91kbwatod7hldycm3qfgqg9",
+        "name": "Noam Cohen",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "a5hyfpvpatem8xbm37h3vc00k",
+        "name": "I. Zafrani",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8wu9q44d622cv286oflodqwwk",
+        "name": "A. Porat Ayash",
+        "num": 12,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "a6fhhhvkknuvuagk3he0c8kk4",
+        "name": "I. Pahima",
+        "num": 11,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "3xtypjqtysfds0hle0w2ifoyc",
+        "name": "C. Diakité",
+        "num": 21,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "biigntvnmyatamzo6u6w0fw89",
+        "name": "G. Diba",
+        "num": 25,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "77so72wzu49hbxw1jzdv5s3my",
+        "name": "W. Habiballah",
+        "num": 14,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "532",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 2,
+        "slot": 4
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 34,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "2h8f8adsovqmetehbj1hguwwk"
+     },
+     {
+      "min": 51,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "68c6au39axd3tzb8jr5jyo3kk"
+     },
+     {
+      "min": 53,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "czfus91j2yrgi45qdgib0yq51"
+     },
+     {
+      "min": 57,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "RC",
+      "player": "85i8yzikdcrgvtb7ux5ir3sic"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "8da3jahixtohf6jwfe6txkglw",
+      "assist": "cgnyqr0l0ann2mab5mxprbjf8",
+      "score": [
+       0,
+       1
+      ]
+     },
+     {
+      "min": 60,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "3xtypjqtysfds0hle0w2ifoyc",
+      "out": "tey17atns6j7rh4q1jhvuprd"
+     },
+     {
+      "min": 64,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "8f5suoft1lt9thk1arm4u8max"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "5k91kbwatod7hldycm3qfgqg9",
+      "out": "8sc73jwz1m804nah1z5in872t"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "a6fhhhvkknuvuagk3he0c8kk4",
+      "out": "7gjy9c5tw9lc7pbo6r7dlibys"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "a5hyfpvpatem8xbm37h3vc00k",
+      "out": "1scymdq7a8sos1h5bvepm33zd"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "1q1restw4b2sd5jcqjhr2vh1w",
+      "assist": "63b0iy8j5k5mk46g5jefr1wmi",
+      "score": [
+       0,
+       2
+      ]
+     },
+     {
+      "min": 72,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "77so72wzu49hbxw1jzdv5s3my",
+      "out": "60to2lm16a44euj8moxn37px"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "due2slypuzm4bdc7xd7ecr7fu",
+      "out": "2h8f8adsovqmetehbj1hguwwk"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "41557fmzcctiz4k29eool05ih",
+      "out": "63b0iy8j5k5mk46g5jefr1wmi"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 81,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "1q1restw4b2sd5jcqjhr2vh1w"
+     },
+     {
+      "min": 84,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "8da3jahixtohf6jwfe6txkglw"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1k6t149nkiqw3nnvzyqoys3x1",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     }
+    ]
+   }
   },
   {
    "id": 310781,
@@ -212,7 +3408,471 @@
    "awayScore": 2,
    "status": 3,
    "attendance": 738,
-   "referee": "Gal Laibuvitz"
+   "referee": "Gal Laibuvitz",
+   "opta": {
+    "ht": [
+     0,
+     2
+    ],
+    "teams": {
+     "home": {
+      "formation": "541",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "8d2uscar7ng7vks99eu0ql4wk",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 2,
+        "slot": 4
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "i1v03s2klpuvgon8pdhbngiy",
+        "name": "O. Ovadia",
+        "num": 27,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "541",
+      "coach": "Z. Arie",
+      "coachHe": "נועם שוהם",
+      "captain": "d64i5cx1s0qogghazwq1elrvu",
+      "players": [
+       {
+        "id": "c2mthx2yamkiprvjwb1ph8i22",
+        "name": "D. Hevron",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "3wnbr48t2n3y7djzpz9lu309g",
+        "name": "G. Deznet",
+        "num": 26,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "d64i5cx1s0qogghazwq1elrvu",
+        "name": "A. Salem",
+        "num": 17,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "bja9m0f8krri8j4olxw34jsb8",
+        "name": "B. Abdach",
+        "num": 22,
+        "pos": 2,
+        "slot": 4
+       },
+       {
+        "id": "c4yeganjgipmrvr7wpzkss53p",
+        "name": "E. Tibi",
+        "num": 18,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "ahu1bvpqh5ag2jjxko5xx7pbd",
+        "name": "E. Yao",
+        "num": 6,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "3ufnrbai0xmk0808qazjx8tlh",
+        "name": "S. Owusu",
+        "num": 9,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "9sva4cj9yo029dj3dhr18bgus",
+        "name": "I. Cohen",
+        "num": 20,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1gkn29z80c66zql5pp8zi8tn8",
+        "name": "L. Hazan",
+        "num": 53,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "6suzj1onu4la61xcb1y69gfai",
+        "name": "E. Inbrum",
+        "num": 99,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "7ak5rric0ga4oarbqgnx2t4kq",
+        "name": "J. Cortés",
+        "num": 77,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "1s5fd585397pi6z6v2n8oogoa",
+        "name": "M. Erlich",
+        "num": 39,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "224a72g0ssa77eo0hb3ruvuhg",
+        "name": "L. Kassa",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "wjsmo66vj6isv36lmxirvvv8",
+        "name": "I. Baruch",
+        "num": 12,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "e9rvjgd2o1dlmsbne8gmiirkk",
+        "name": "Y. Koren",
+        "num": 27,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "7r1nmys0enbb42cz6xog5lu5l",
+        "name": "M. Rakonjac",
+        "num": 97,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "7cs9d96m4f33hits577y18k4p",
+        "name": "O. Dadia",
+        "num": 30,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "4fajtsk3kipajycvv4b3f2bc9",
+        "name": "P. Korrea",
+        "num": 44,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1s1tf4qg1cl4bft58hbujgk45",
+        "name": "K. Spence",
+        "num": 7,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8n0ov984xk1bd857ihgxsb36d",
+        "name": "G. Hadida",
+        "num": 23,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 3,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "7ak5rric0ga4oarbqgnx2t4kq",
+      "assist": "3wnbr48t2n3y7djzpz9lu309g",
+      "score": [
+       0,
+       1
+      ]
+     },
+     {
+      "min": 34,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "ahu1bvpqh5ag2jjxko5xx7pbd"
+     },
+     {
+      "min": 40,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "7ak5rric0ga4oarbqgnx2t4kq",
+      "assist": null,
+      "score": [
+       0,
+       2
+      ]
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "7cs9d96m4f33hits577y18k4p",
+      "out": "ahu1bvpqh5ag2jjxko5xx7pbd"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1k6t149nkiqw3nnvzyqoys3x1",
+      "out": "a6gl9bfsb08zdj8j3tsq1fuqy"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1gkdi40ytebxrggmbsn8n3uvo",
+      "out": "b2h74wqi9263k6b32ikdtk6w9"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "1q1restw4b2sd5jcqjhr2vh1w",
+      "assist": "2h8f8adsovqmetehbj1hguwwk",
+      "score": [
+       1,
+       2
+      ]
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "7ak5rric0ga4oarbqgnx2t4kq"
+     },
+     {
+      "min": 67,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 70,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "4fajtsk3kipajycvv4b3f2bc9",
+      "out": "bja9m0f8krri8j4olxw34jsb8"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "8n0ov984xk1bd857ihgxsb36d",
+      "out": "3ufnrbai0xmk0808qazjx8tlh"
+     },
+     {
+      "min": 77,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 77,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "i1v03s2klpuvgon8pdhbngiy",
+      "out": "cgnyqr0l0ann2mab5mxprbjf8"
+     },
+     {
+      "min": 78,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "1gkn29z80c66zql5pp8zi8tn8"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "7r1nmys0enbb42cz6xog5lu5l",
+      "out": "7ak5rric0ga4oarbqgnx2t4kq"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "wjsmo66vj6isv36lmxirvvv8",
+      "out": "1gkn29z80c66zql5pp8zi8tn8"
+     },
+     {
+      "min": 94,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "wjsmo66vj6isv36lmxirvvv8"
+     }
+    ]
+   }
   },
   {
    "id": 310780,
@@ -228,7 +3888,498 @@
    "awayScore": 5,
    "status": 3,
    "attendance": 4556,
-   "referee": "Igal Frid"
+   "referee": "Igal Frid",
+   "opta": {
+    "ht": [
+     0,
+     3
+    ],
+    "teams": {
+     "home": {
+      "formation": "532",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 2,
+        "slot": 4
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 10
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1lwtec7wzbygcevtmg0vq568l",
+        "name": "D. Twito",
+        "num": 36,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "due2slypuzm4bdc7xd7ecr7fu",
+        "name": "O. Itzhak",
+        "num": 17,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "4141",
+      "coach": "K. Miller",
+      "coachHe": "ז'ארקו לאזטיץ'",
+      "captain": "2ffmtapkhzor2x5a4cybj3w7p",
+      "players": [
+       {
+        "id": "1l0anlzm25gwqb8klbsi7ws9g",
+        "name": "O. Melika",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "4kpf2eyjqmax3f676dmhh9e51",
+        "name": "J. Tavernier",
+        "num": 2,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "kc3wmrtfwhvbpq70g4kf66dx",
+        "name": "S. Jehezkel",
+        "num": 11,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "a5yl0md0zxxjcxi930xsglsa2",
+        "name": "I. Noy",
+        "num": 30,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "70knbl666fg2kyli67knr5l2h",
+        "name": "M. Camara",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "277o13i90bgqej3yrkiw7t0x5",
+        "name": "R. Shlomo",
+        "num": 13,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "464o8uslv6z2fdm269j97gt4a",
+        "name": "O. Davida",
+        "num": 77,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "2ffmtapkhzor2x5a4cybj3w7p",
+        "name": "D. Peretz",
+        "num": 42,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "2nvmxpj8gh0ubhbepwp1w213o",
+        "name": "E. Madmon",
+        "num": 19,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "6b3l1e5cn1ycog97nxegnb10p",
+        "name": "G. Kanichowsky",
+        "num": 16,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "29zdptn1qw7mfwioylxsfz8r8",
+        "name": "Hélio Varela",
+        "num": 29,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "vd6lo0pepy4sg6y62ny25i39",
+        "name": "R. Mishpati",
+        "num": 90,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cio1emair88b1xnhiol0lr7px",
+        "name": "D. Glazer",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "c557plvyoq1qeg2q5e1s7ezje",
+        "name": "I. Ben Hamo",
+        "num": 41,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "6nq9c3imrlsivsewak8nen816",
+        "name": "S. Rosen",
+        "num": 25,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1bsuauhm792sfnupchlm5qj8p",
+        "name": "E. Sokler",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bzwiiyuapfzscvt8i7n82qove",
+        "name": "I. Shahar",
+        "num": 36,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "6f8kp6i2qgcnytbkr3tpqhrai",
+        "name": "H. Layous",
+        "num": 33,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "6yc393e7obnizzhwng8o0yove",
+        "name": "I. Sissokho",
+        "num": 28,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "9eke9un85wjvijhod955yhqfo",
+        "name": "N. Levi",
+        "num": 45,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 3,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "2nvmxpj8gh0ubhbepwp1w213o",
+      "assist": "4kpf2eyjqmax3f676dmhh9e51",
+      "score": [
+       0,
+       1
+      ]
+     },
+     {
+      "min": 22,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "OG",
+      "player": "68c6au39axd3tzb8jr5jyo3kk",
+      "assist": null,
+      "score": [
+       0,
+       2
+      ]
+     },
+     {
+      "min": 27,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "1gkdi40ytebxrggmbsn8n3uvo"
+     },
+     {
+      "min": 29,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "2nvmxpj8gh0ubhbepwp1w213o"
+     },
+     {
+      "min": 30,
+      "period": 1,
+      "side": "home",
+      "type": "sub",
+      "in": "5n1bkpn81vj99a3r1sffw055g",
+      "out": "63b0iy8j5k5mk46g5jefr1wmi"
+     },
+     {
+      "min": 33,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "2s4xvo3bl8qj47taessa5nb2t"
+     },
+     {
+      "min": 38,
+      "period": 1,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "2ffmtapkhzor2x5a4cybj3w7p",
+      "assist": "2nvmxpj8gh0ubhbepwp1w213o",
+      "score": [
+       0,
+       3
+      ]
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "70knbl666fg2kyli67knr5l2h"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "due2slypuzm4bdc7xd7ecr7fu",
+      "out": "1gkdi40ytebxrggmbsn8n3uvo"
+     },
+     {
+      "min": 54,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1bsuauhm792sfnupchlm5qj8p",
+      "out": "2nvmxpj8gh0ubhbepwp1w213o"
+     },
+     {
+      "min": 54,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "c557plvyoq1qeg2q5e1s7ezje",
+      "out": "70knbl666fg2kyli67knr5l2h"
+     },
+     {
+      "min": 59,
+      "period": 2,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "2h8f8adsovqmetehbj1hguwwk"
+     },
+     {
+      "min": 60,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cgnyqr0l0ann2mab5mxprbjf8",
+      "out": "9a7g7vxgjuo8zi8udvhysg93o"
+     },
+     {
+      "min": 65,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "cio1emair88b1xnhiol0lr7px",
+      "out": "a5yl0md0zxxjcxi930xsglsa2"
+     },
+     {
+      "min": 65,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "6f8kp6i2qgcnytbkr3tpqhrai",
+      "out": "464o8uslv6z2fdm269j97gt4a"
+     },
+     {
+      "min": 66,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "1bsuauhm792sfnupchlm5qj8p",
+      "assist": "2ffmtapkhzor2x5a4cybj3w7p",
+      "score": [
+       0,
+       4
+      ]
+     },
+     {
+      "min": 72,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bzwiiyuapfzscvt8i7n82qove",
+      "out": "6b3l1e5cn1ycog97nxegnb10p"
+     },
+     {
+      "min": 76,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "1bsuauhm792sfnupchlm5qj8p",
+      "assist": "6f8kp6i2qgcnytbkr3tpqhrai",
+      "score": [
+       0,
+       5
+      ]
+     },
+     {
+      "min": 78,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1lwtec7wzbygcevtmg0vq568l",
+      "out": "u5untiuhv60hb2mb4rklduui"
+     },
+     {
+      "min": 78,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "41557fmzcctiz4k29eool05ih",
+      "out": "2s4xvo3bl8qj47taessa5nb2t"
+     }
+    ]
+   }
   },
   {
    "id": 310801,
@@ -244,7 +4395,464 @@
    "awayScore": 1,
    "status": 3,
    "attendance": 3653,
-   "referee": "Aviel Levi"
+   "referee": "Aviel Levi",
+   "opta": {
+    "ht": [
+     2,
+     0
+    ],
+    "teams": {
+     "home": {
+      "formation": "4231",
+      "coach": "O. Peretz",
+      "coachHe": "עומר פרץ",
+      "captain": "75ln248xvpebdwz0u572j133d",
+      "players": [
+       {
+        "id": "75ln248xvpebdwz0u572j133d",
+        "name": "O. Katz",
+        "num": 1,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "1mlkfs5xp2yo3y377d1lh2zu",
+        "name": "S. Israeli",
+        "num": 12,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "4yyv3iaih43qzc300whcfreg9",
+        "name": "H. Shalom",
+        "num": 3,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "7c9nhm45crn84vnmw6eghrbx0",
+        "name": "B. Amian",
+        "num": 29,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "1iznmeeu9h4kh74c99opr1fys",
+        "name": "A. Moucketou-Moussounda",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "12zb7k23gszgqwzo5tld7504",
+        "name": "O. Israelov",
+        "num": 20,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "6lk22pf6jquikx5auy7e87wx6",
+        "name": "Clé",
+        "num": 77,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "b88284s4mp8la92plmqyaouz9",
+        "name": "T. Altman",
+        "num": 8,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "7qd7bou2so81xcsawhogsv4t0",
+        "name": "E. Bile",
+        "num": 9,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "6qhh0muduq00c51w6ptvky3h0",
+        "name": "N. Cohen",
+        "num": 28,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "efr0xlfk7a40ds8t4a6r4710p",
+        "name": "R. Levy",
+        "num": 7,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "41jmpagjbdp8ux9cwqh6txw5w",
+        "name": "A. Mashiah",
+        "num": 18,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1pwlesioycragkxm2n25dlst0",
+        "name": "R. David",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "3qu08cgw2d8x2nrwc3f4d1w5w",
+        "name": "I. Ehud",
+        "num": 6,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cuuqsx3evq71cml0vhz7i4odm",
+        "name": "Y. Nassar",
+        "num": 72,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "8r7qvif6sdjgybamzn9y7k82d",
+        "name": "H. Keyta",
+        "num": 11,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1761f95ysqp2xfavgo4v9whcl",
+        "name": "G. Badash",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cvvph0d3o6tld421xokabl2ei",
+        "name": "K. Kimvuidi",
+        "num": 26,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "7b05satn2kfmrgenup24mnlgq",
+        "name": "M. Meir",
+        "num": 66,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "7zk4t9lcdcwrh1q4o8kvdrdhw",
+        "name": "O. Cohen",
+        "num": 34,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     },
+     "away": {
+      "formation": "4231",
+      "coach": "M. Dego",
+      "coachHe": null,
+      "captain": "u5untiuhv60hb2mb4rklduui",
+      "players": [
+       {
+        "id": "8d2uscar7ng7vks99eu0ql4wk",
+        "name": "A. Raif",
+        "num": 55,
+        "pos": 1,
+        "slot": 1
+       },
+       {
+        "id": "9a7g7vxgjuo8zi8udvhysg93o",
+        "name": "N. Schwartz",
+        "num": 15,
+        "pos": 2,
+        "slot": 2
+       },
+       {
+        "id": "2h8f8adsovqmetehbj1hguwwk",
+        "name": "D. Tishler",
+        "num": 3,
+        "pos": 2,
+        "slot": 3
+       },
+       {
+        "id": "1k6t149nkiqw3nnvzyqoys3x1",
+        "name": "M. Plakushchenko",
+        "num": 7,
+        "pos": 3,
+        "slot": 4
+       },
+       {
+        "id": "u5untiuhv60hb2mb4rklduui",
+        "name": "Jota Gonçalves",
+        "num": 5,
+        "pos": 2,
+        "slot": 5
+       },
+       {
+        "id": "68c6au39axd3tzb8jr5jyo3kk",
+        "name": "Márcio Silva",
+        "num": 4,
+        "pos": 2,
+        "slot": 6
+       },
+       {
+        "id": "5n1bkpn81vj99a3r1sffw055g",
+        "name": "M. Semel",
+        "num": 10,
+        "pos": 3,
+        "slot": 7
+       },
+       {
+        "id": "2s4xvo3bl8qj47taessa5nb2t",
+        "name": "S. Mijailović",
+        "num": 66,
+        "pos": 3,
+        "slot": 8
+       },
+       {
+        "id": "1q1restw4b2sd5jcqjhr2vh1w",
+        "name": "Luan Campos",
+        "num": 99,
+        "pos": 4,
+        "slot": 9
+       },
+       {
+        "id": "9bb5cg8no9pv7mb3cqy26xudw",
+        "name": "I. Oli",
+        "num": 21,
+        "pos": 3,
+        "slot": 10
+       },
+       {
+        "id": "8da3jahixtohf6jwfe6txkglw",
+        "name": "D. Asanka",
+        "num": 11,
+        "pos": 3,
+        "slot": 11
+       },
+       {
+        "id": "234kg5m85xkj9ywlgcdy91at",
+        "name": "A. Yanko",
+        "num": 22,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "1gkdi40ytebxrggmbsn8n3uvo",
+        "name": "A. Tzur",
+        "num": 16,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "bsr0swmz7klou3lfulpvuzg2c",
+        "name": "C. Boniface",
+        "num": 20,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "cgnyqr0l0ann2mab5mxprbjf8",
+        "name": "G. Yabelo",
+        "num": 2,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "10ypze1ivdqfnvebcqhftmzh0",
+        "name": "I. Barnes",
+        "num": 8,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "63b0iy8j5k5mk46g5jefr1wmi",
+        "name": "G. Naor",
+        "num": 6,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "b2h74wqi9263k6b32ikdtk6w9",
+        "name": "M. Noubissi",
+        "num": 9,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "a6gl9bfsb08zdj8j3tsq1fuqy",
+        "name": "F. Ibrahim",
+        "num": 33,
+        "pos": 5,
+        "slot": 0
+       },
+       {
+        "id": "41557fmzcctiz4k29eool05ih",
+        "name": "T. Glazer",
+        "num": 24,
+        "pos": 5,
+        "slot": 0
+       }
+      ]
+     }
+    },
+    "events": [
+     {
+      "min": 31,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "7c9nhm45crn84vnmw6eghrbx0",
+      "assist": "6qhh0muduq00c51w6ptvky3h0",
+      "score": [
+       1,
+       0
+      ]
+     },
+     {
+      "min": 33,
+      "period": 1,
+      "side": "home",
+      "type": "goal",
+      "kind": "G",
+      "player": "efr0xlfk7a40ds8t4a6r4710p",
+      "assist": "6qhh0muduq00c51w6ptvky3h0",
+      "score": [
+       2,
+       0
+      ]
+     },
+     {
+      "min": 35,
+      "period": 1,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 41,
+      "period": 1,
+      "side": "home",
+      "type": "card",
+      "kind": "YC",
+      "player": "1mlkfs5xp2yo3y377d1lh2zu"
+     },
+     {
+      "min": 46,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "bsr0swmz7klou3lfulpvuzg2c",
+      "out": "9bb5cg8no9pv7mb3cqy26xudw"
+     },
+     {
+      "min": 50,
+      "period": 2,
+      "side": "away",
+      "type": "goal",
+      "kind": "G",
+      "player": "5n1bkpn81vj99a3r1sffw055g",
+      "assist": "1k6t149nkiqw3nnvzyqoys3x1",
+      "score": [
+       2,
+       1
+      ]
+     },
+     {
+      "min": 62,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1761f95ysqp2xfavgo4v9whcl",
+      "out": "6lk22pf6jquikx5auy7e87wx6"
+     },
+     {
+      "min": 62,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "cgnyqr0l0ann2mab5mxprbjf8",
+      "out": "9a7g7vxgjuo8zi8udvhysg93o"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "3qu08cgw2d8x2nrwc3f4d1w5w",
+      "out": "b88284s4mp8la92plmqyaouz9"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "10ypze1ivdqfnvebcqhftmzh0",
+      "out": "5n1bkpn81vj99a3r1sffw055g"
+     },
+     {
+      "min": 69,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cvvph0d3o6tld421xokabl2ei",
+      "out": "6qhh0muduq00c51w6ptvky3h0"
+     },
+     {
+      "min": 73,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "cgnyqr0l0ann2mab5mxprbjf8"
+     },
+     {
+      "min": 82,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "cuuqsx3evq71cml0vhz7i4odm",
+      "out": "efr0xlfk7a40ds8t4a6r4710p"
+     },
+     {
+      "min": 83,
+      "period": 2,
+      "side": "home",
+      "type": "sub",
+      "in": "1pwlesioycragkxm2n25dlst0",
+      "out": "7qd7bou2so81xcsawhogsv4t0"
+     },
+     {
+      "min": 83,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "1gkdi40ytebxrggmbsn8n3uvo",
+      "out": "2h8f8adsovqmetehbj1hguwwk"
+     },
+     {
+      "min": 83,
+      "period": 2,
+      "side": "away",
+      "type": "sub",
+      "in": "b2h74wqi9263k6b32ikdtk6w9",
+      "out": "8da3jahixtohf6jwfe6txkglw"
+     },
+     {
+      "min": 85,
+      "period": 2,
+      "side": "away",
+      "type": "card",
+      "kind": "YC",
+      "player": "1gkdi40ytebxrggmbsn8n3uvo"
+     }
+    ]
+   }
   },
   {
    "id": 310800,
@@ -1221,6 +5829,1778 @@
    "gf": 10,
    "ga": 14,
    "points": 4
+  }
+ ],
+ "leaguePlayers": [
+  {
+   "teamId": 4524,
+   "number": 2,
+   "name": "נאנא אנטווי"
+  },
+  {
+   "teamId": 4524,
+   "number": 4,
+   "name": "בראיין קראבלי"
+  },
+  {
+   "teamId": 4524,
+   "number": 5,
+   "name": "גיל כהן"
+  },
+  {
+   "teamId": 4524,
+   "number": 7,
+   "name": "ירדן שועה"
+  },
+  {
+   "teamId": 4524,
+   "number": 8,
+   "name": "זיו בן שימול"
+  },
+  {
+   "teamId": 4524,
+   "number": 9,
+   "name": "סמואל קאלו"
+  },
+  {
+   "teamId": 4524,
+   "number": 10,
+   "name": "עדי יונה"
+  },
+  {
+   "teamId": 4524,
+   "number": 11,
+   "name": "טימוטי מוזי"
+  },
+  {
+   "teamId": 4524,
+   "number": 13,
+   "name": "יוג'ין אנסה"
+  },
+  {
+   "teamId": 4524,
+   "number": 14,
+   "name": "רועי אלימלך"
+  },
+  {
+   "teamId": 4524,
+   "number": 15,
+   "name": "נועם מוצ'ה"
+  },
+  {
+   "teamId": 4524,
+   "number": 16,
+   "name": "ירדן כהן"
+  },
+  {
+   "teamId": 4524,
+   "number": 19,
+   "name": "שון וייסמן"
+  },
+  {
+   "teamId": 4524,
+   "number": 21,
+   "name": "יאן שיקוט"
+  },
+  {
+   "teamId": 4524,
+   "number": 22,
+   "name": "יהונתן עוזר"
+  },
+  {
+   "teamId": 4524,
+   "number": 23,
+   "name": "אורי עזו"
+  },
+  {
+   "teamId": 4524,
+   "number": 25,
+   "name": "ליאל דרעי"
+  },
+  {
+   "teamId": 4524,
+   "number": 26,
+   "name": "דניאל וורקו"
+  },
+  {
+   "teamId": 4524,
+   "number": 30,
+   "name": "רביד אברג'יל"
+  },
+  {
+   "teamId": 4524,
+   "number": 33,
+   "name": "דביר ניר"
+  },
+  {
+   "teamId": 4524,
+   "number": 40,
+   "name": "בוריס אינו"
+  },
+  {
+   "teamId": 4524,
+   "number": 44,
+   "name": "לוקה גדראני"
+  },
+  {
+   "teamId": 4524,
+   "number": 55,
+   "name": "מיגל סילבה"
+  },
+  {
+   "teamId": 4524,
+   "number": 77,
+   "name": "עומר אצילי"
+  },
+  {
+   "teamId": 4524,
+   "number": 80,
+   "name": "אלכסיס סרנה"
+  },
+  {
+   "teamId": 4524,
+   "number": 91,
+   "name": "נבו שדו"
+  },
+  {
+   "teamId": 4530,
+   "number": 1,
+   "name": "דור בנימיני"
+  },
+  {
+   "teamId": 4530,
+   "number": 4,
+   "name": "צ'יקו אלבס"
+  },
+  {
+   "teamId": 4530,
+   "number": 5,
+   "name": "פרננד מאיימבו"
+  },
+  {
+   "teamId": 4530,
+   "number": 6,
+   "name": "אנדריאן קרייב"
+  },
+  {
+   "teamId": 4530,
+   "number": 7,
+   "name": "רוי קורין"
+  },
+  {
+   "teamId": 4530,
+   "number": 8,
+   "name": "יונתן פרבר"
+  },
+  {
+   "teamId": 4530,
+   "number": 9,
+   "name": "עמנואל בואטנג"
+  },
+  {
+   "teamId": 4530,
+   "number": 11,
+   "name": "סתיו טוריאל"
+  },
+  {
+   "teamId": 4530,
+   "number": 13,
+   "name": "בן סורנסן"
+  },
+  {
+   "teamId": 4530,
+   "number": 14,
+   "name": "אל-ים קנצפולסקי"
+  },
+  {
+   "teamId": 4530,
+   "number": 15,
+   "name": "רועי אלקוקין"
+  },
+  {
+   "teamId": 4530,
+   "number": 16,
+   "name": "דורון ליידנר"
+  },
+  {
+   "teamId": 4530,
+   "number": 17,
+   "name": "איתי שביט"
+  },
+  {
+   "teamId": 4530,
+   "number": 18,
+   "name": "טל ארצ'ל"
+  },
+  {
+   "teamId": 4530,
+   "number": 19,
+   "name": "אנאס מחאמיד"
+  },
+  {
+   "teamId": 4530,
+   "number": 21,
+   "name": "שחר פיבן"
+  },
+  {
+   "teamId": 4530,
+   "number": 22,
+   "name": "אסף צור"
+  },
+  {
+   "teamId": 4530,
+   "number": 23,
+   "name": "עמית למקין"
+  },
+  {
+   "teamId": 4530,
+   "number": 27,
+   "name": "מור בוסקילה"
+  },
+  {
+   "teamId": 4530,
+   "number": 32,
+   "name": "יאניק ללינדל"
+  },
+  {
+   "teamId": 4530,
+   "number": 33,
+   "name": "ינאל בזאדוג"
+  },
+  {
+   "teamId": 4530,
+   "number": 35,
+   "name": "דגלאס אווסו"
+  },
+  {
+   "teamId": 4530,
+   "number": 42,
+   "name": "גיא אליגולאשווילי"
+  },
+  {
+   "teamId": 4530,
+   "number": 44,
+   "name": "דניאל דאפה"
+  },
+  {
+   "teamId": 4530,
+   "number": 51,
+   "name": "עומרי אלטמן"
+  },
+  {
+   "teamId": 4530,
+   "number": 77,
+   "name": "עומרי לוי"
+  },
+  {
+   "teamId": 4530,
+   "number": 97,
+   "name": "מרקוס קוקו"
+  },
+  {
+   "teamId": 4530,
+   "number": 98,
+   "name": "לוקאס פלקאו"
+  },
+  {
+   "teamId": 4536,
+   "number": 1,
+   "name": "אופק מליקה"
+  },
+  {
+   "teamId": 4536,
+   "number": 2,
+   "name": "נועם בן הרוש"
+  },
+  {
+   "teamId": 4536,
+   "number": 5,
+   "name": "עלי קמארה"
+  },
+  {
+   "teamId": 4536,
+   "number": 6,
+   "name": "טייריס אסנטה"
+  },
+  {
+   "teamId": 4536,
+   "number": 9,
+   "name": "אסטר סוקלר"
+  },
+  {
+   "teamId": 4536,
+   "number": 11,
+   "name": "שגיב יחזקאל"
+  },
+  {
+   "teamId": 4536,
+   "number": 13,
+   "name": "רז שלמה"
+  },
+  {
+   "teamId": 4536,
+   "number": 14,
+   "name": "דני גרופר"
+  },
+  {
+   "teamId": 4536,
+   "number": 16,
+   "name": "גבי קניקובסקי"
+  },
+  {
+   "teamId": 4536,
+   "number": 17,
+   "name": "כריסטיאן בליץ'"
+  },
+  {
+   "teamId": 4536,
+   "number": 18,
+   "name": "דן גלזר"
+  },
+  {
+   "teamId": 4536,
+   "number": 19,
+   "name": "אלעד מדמון"
+  },
+  {
+   "teamId": 4536,
+   "number": 25,
+   "name": "שחר רוזן"
+  },
+  {
+   "teamId": 4536,
+   "number": 28,
+   "name": "איסוף סיסוקו"
+  },
+  {
+   "teamId": 4536,
+   "number": 29,
+   "name": "הליו וארלה"
+  },
+  {
+   "teamId": 4536,
+   "number": 30,
+   "name": "איתמר נוי"
+  },
+  {
+   "teamId": 4536,
+   "number": 33,
+   "name": "הישאם לאיוס"
+  },
+  {
+   "teamId": 4536,
+   "number": 36,
+   "name": "עידו שחר"
+  },
+  {
+   "teamId": 4536,
+   "number": 41,
+   "name": "איתי בן חמו"
+  },
+  {
+   "teamId": 4536,
+   "number": 42,
+   "name": "דור פרץ"
+  },
+  {
+   "teamId": 4536,
+   "number": 45,
+   "name": "Noam Raphael Levy"
+  },
+  {
+   "teamId": 4536,
+   "number": 50,
+   "name": "עידן טראו"
+  },
+  {
+   "teamId": 4536,
+   "number": 51,
+   "name": "שלו סעדיה"
+  },
+  {
+   "teamId": 4536,
+   "number": 60,
+   "name": "עילאי בן סימון"
+  },
+  {
+   "teamId": 4536,
+   "number": 77,
+   "name": "אושר דוידה"
+  },
+  {
+   "teamId": 4536,
+   "number": 90,
+   "name": "רועי משפתי"
+  },
+  {
+   "teamId": 4536,
+   "number": 98,
+   "name": "יון ניקולאסקו"
+  },
+  {
+   "teamId": 4539,
+   "number": 1,
+   "name": "עומר ניראון"
+  },
+  {
+   "teamId": 4539,
+   "number": 2,
+   "name": "אלי דסה"
+  },
+  {
+   "teamId": 4539,
+   "number": 3,
+   "name": "שון גולדברג"
+  },
+  {
+   "teamId": 4539,
+   "number": 4,
+   "name": "עלי מוחמד"
+  },
+  {
+   "teamId": 4539,
+   "number": 7,
+   "name": "יאיר מרדכי"
+  },
+  {
+   "teamId": 4539,
+   "number": 8,
+   "name": "ירין לוי"
+  },
+  {
+   "teamId": 4539,
+   "number": 9,
+   "name": "אנדראה נובאקוביץ'"
+  },
+  {
+   "teamId": 4539,
+   "number": 10,
+   "name": "ברוניניו"
+  },
+  {
+   "teamId": 4539,
+   "number": 11,
+   "name": "קנג'י חורה"
+  },
+  {
+   "teamId": 4539,
+   "number": 14,
+   "name": "מנואל בנסון"
+  },
+  {
+   "teamId": 4539,
+   "number": 16,
+   "name": "קני סייף"
+  },
+  {
+   "teamId": 4539,
+   "number": 18,
+   "name": "גיא מלמד"
+  },
+  {
+   "teamId": 4539,
+   "number": 19,
+   "name": "איתן אזולאי"
+  },
+  {
+   "teamId": 4539,
+   "number": 21,
+   "name": "נייג'ל לונוויק"
+  },
+  {
+   "teamId": 4539,
+   "number": 25,
+   "name": "יילה בטאיי"
+  },
+  {
+   "teamId": 4539,
+   "number": 26,
+   "name": "סילבה קאני"
+  },
+  {
+   "teamId": 4539,
+   "number": 27,
+   "name": "פייר קורנו"
+  },
+  {
+   "teamId": 4539,
+   "number": 29,
+   "name": "ינון פיינגזיכט"
+  },
+  {
+   "teamId": 4539,
+   "number": 30,
+   "name": "פדרו ברזאו"
+  },
+  {
+   "teamId": 4539,
+   "number": 31,
+   "name": "עמית ארזי"
+  },
+  {
+   "teamId": 4539,
+   "number": 33,
+   "name": "ליאם לוסקי"
+  },
+  {
+   "teamId": 4539,
+   "number": 35,
+   "name": "נועם שטייפמן"
+  },
+  {
+   "teamId": 4539,
+   "number": 36,
+   "name": "נבות רטנר"
+  },
+  {
+   "teamId": 4539,
+   "number": 37,
+   "name": "אלעד אמיר"
+  },
+  {
+   "teamId": 4539,
+   "number": 38,
+   "name": "אדם גרימברג"
+  },
+  {
+   "teamId": 4539,
+   "number": 40,
+   "name": "שריף כיוף"
+  },
+  {
+   "teamId": 4539,
+   "number": 42,
+   "name": "איילון ברוך"
+  },
+  {
+   "teamId": 4539,
+   "number": 44,
+   "name": "פדרו דה אוליברה"
+  },
+  {
+   "teamId": 4539,
+   "number": 45,
+   "name": "סדריק דון"
+  },
+  {
+   "teamId": 4539,
+   "number": 55,
+   "name": "עמרי גלזר"
+  },
+  {
+   "teamId": 4539,
+   "number": 66,
+   "name": "ונדרסון צונאמי"
+  },
+  {
+   "teamId": 4539,
+   "number": 90,
+   "name": "גלן אלוין"
+  },
+  {
+   "teamId": 4542,
+   "number": 1,
+   "name": "עומר כץ"
+  },
+  {
+   "teamId": 4542,
+   "number": 2,
+   "name": "אבישי כהן"
+  },
+  {
+   "teamId": 4542,
+   "number": 3,
+   "name": "הראל שלום"
+  },
+  {
+   "teamId": 4542,
+   "number": 4,
+   "name": "דייגו ארויו"
+  },
+  {
+   "teamId": 4542,
+   "number": 5,
+   "name": "אלכס מוסונדה"
+  },
+  {
+   "teamId": 4542,
+   "number": 6,
+   "name": "איתי אהוד"
+  },
+  {
+   "teamId": 4542,
+   "number": 7,
+   "name": "רועי לוי"
+  },
+  {
+   "teamId": 4542,
+   "number": 8,
+   "name": "תומר אלטמן"
+  },
+  {
+   "teamId": 4542,
+   "number": 9,
+   "name": "אריק בילה"
+  },
+  {
+   "teamId": 4542,
+   "number": 11,
+   "name": "חמידו קייטה"
+  },
+  {
+   "teamId": 4542,
+   "number": 12,
+   "name": "סתיו ישראלי"
+  },
+  {
+   "teamId": 4542,
+   "number": 14,
+   "name": "אדמונד אסנטה"
+  },
+  {
+   "teamId": 4542,
+   "number": 15,
+   "name": "נחמן יעקב ויטה אסל"
+  },
+  {
+   "teamId": 4542,
+   "number": 16,
+   "name": "רועי דוד"
+  },
+  {
+   "teamId": 4542,
+   "number": 18,
+   "name": "עמית משיח"
+  },
+  {
+   "teamId": 4542,
+   "number": 20,
+   "name": "אור ישראלוב"
+  },
+  {
+   "teamId": 4542,
+   "number": 24,
+   "name": "גיא בדש"
+  },
+  {
+   "teamId": 4542,
+   "number": 26,
+   "name": "קארים קימבודי"
+  },
+  {
+   "teamId": 4542,
+   "number": 28,
+   "name": "נועם כהן"
+  },
+  {
+   "teamId": 4542,
+   "number": 29,
+   "name": "בוני אמיאן"
+  },
+  {
+   "teamId": 4542,
+   "number": 33,
+   "name": "זוהר גרינברג"
+  },
+  {
+   "teamId": 4542,
+   "number": 34,
+   "name": "עומרי כהן"
+  },
+  {
+   "teamId": 4542,
+   "number": 66,
+   "name": "משה מאיר"
+  },
+  {
+   "teamId": 4542,
+   "number": 72,
+   "name": "יזן נאסר"
+  },
+  {
+   "teamId": 4542,
+   "number": 77,
+   "name": "אנדרדה קליי"
+  },
+  {
+   "teamId": 4545,
+   "number": 1,
+   "name": "ניב אנטמן"
+  },
+  {
+   "teamId": 4545,
+   "number": 2,
+   "name": "גריגורי מורוזוב"
+  },
+  {
+   "teamId": 4545,
+   "number": 4,
+   "name": "איתי בן שבת"
+  },
+  {
+   "teamId": 4545,
+   "number": 5,
+   "name": "דניס קוליקוב"
+  },
+  {
+   "teamId": 4545,
+   "number": 6,
+   "name": "בקארי קונאטה"
+  },
+  {
+   "teamId": 4545,
+   "number": 7,
+   "name": "איסק רודריגז דה לימה"
+  },
+  {
+   "teamId": 4545,
+   "number": 8,
+   "name": "דולב חזיזה"
+  },
+  {
+   "teamId": 4545,
+   "number": 9,
+   "name": "אילון אלמוג"
+  },
+  {
+   "teamId": 4545,
+   "number": 10,
+   "name": "עוז בילו"
+  },
+  {
+   "teamId": 4545,
+   "number": 11,
+   "name": "דור חוגי"
+  },
+  {
+   "teamId": 4545,
+   "number": 12,
+   "name": "אלון אזוגי"
+  },
+  {
+   "teamId": 4545,
+   "number": 13,
+   "name": "נדב נידם"
+  },
+  {
+   "teamId": 4545,
+   "number": 14,
+   "name": "ליאם כהן"
+  },
+  {
+   "teamId": 4545,
+   "number": 15,
+   "name": "מאור לוי"
+  },
+  {
+   "teamId": 4545,
+   "number": 16,
+   "name": "בסאם זערורה"
+  },
+  {
+   "teamId": 4545,
+   "number": 17,
+   "name": "ירין אבוחצירא"
+  },
+  {
+   "teamId": 4545,
+   "number": 18,
+   "name": "עמרי שמיר"
+  },
+  {
+   "teamId": 4545,
+   "number": 21,
+   "name": "אלכס טלפה"
+  },
+  {
+   "teamId": 4545,
+   "number": 22,
+   "name": "סמואל אנטוניו סילבה"
+  },
+  {
+   "teamId": 4545,
+   "number": 23,
+   "name": "אוליבר ורדון"
+  },
+  {
+   "teamId": 4545,
+   "number": 24,
+   "name": "עמית כהן"
+  },
+  {
+   "teamId": 4545,
+   "number": 25,
+   "name": "וויליאן סיפריאן"
+  },
+  {
+   "teamId": 4545,
+   "number": 26,
+   "name": "כארם ג'אבר"
+  },
+  {
+   "teamId": 4545,
+   "number": 30,
+   "name": "איתי שוורצמן"
+  },
+  {
+   "teamId": 4545,
+   "number": 32,
+   "name": "עזיז אווטארה"
+  },
+  {
+   "teamId": 4545,
+   "number": 40,
+   "name": "סאבא חוודג'יאני"
+  },
+  {
+   "teamId": 4545,
+   "number": 44,
+   "name": "בני פלדמן"
+  },
+  {
+   "teamId": 4545,
+   "number": 75,
+   "name": "דניאל כהן"
+  },
+  {
+   "teamId": 4545,
+   "number": 83,
+   "name": "מתאוס דאבו"
+  },
+  {
+   "teamId": 4545,
+   "number": 98,
+   "name": "גבריאל סמיון"
+  },
+  {
+   "teamId": 4554,
+   "number": 1,
+   "name": "אופיר מרציאנו"
+  },
+  {
+   "teamId": 4554,
+   "number": 2,
+   "name": "גיא מזרחי"
+  },
+  {
+   "teamId": 4554,
+   "number": 3,
+   "name": "מתן בלטקסה"
+  },
+  {
+   "teamId": 4554,
+   "number": 4,
+   "name": "מיגל ויטור"
+  },
+  {
+   "teamId": 4554,
+   "number": 5,
+   "name": "פדרו מיגל אמאדור"
+  },
+  {
+   "teamId": 4554,
+   "number": 7,
+   "name": "אליאל פרץ"
+  },
+  {
+   "teamId": 4554,
+   "number": 8,
+   "name": "חמודי כנעאן"
+  },
+  {
+   "teamId": 4554,
+   "number": 9,
+   "name": "זאהי אחמד"
+  },
+  {
+   "teamId": 4554,
+   "number": 10,
+   "name": "דן ביטון"
+  },
+  {
+   "teamId": 4554,
+   "number": 11,
+   "name": "אמיר גנאח"
+  },
+  {
+   "teamId": 4554,
+   "number": 12,
+   "name": "איתי רוטמן"
+  },
+  {
+   "teamId": 4554,
+   "number": 13,
+   "name": "אופיר דוידזאדה"
+  },
+  {
+   "teamId": 4554,
+   "number": 14,
+   "name": "יונס מלדה"
+  },
+  {
+   "teamId": 4554,
+   "number": 15,
+   "name": "עידן נחמיאס"
+  },
+  {
+   "teamId": 4554,
+   "number": 17,
+   "name": "פורסון אמנקווה"
+  },
+  {
+   "teamId": 4554,
+   "number": 19,
+   "name": "עמית אוחנה"
+  },
+  {
+   "teamId": 4554,
+   "number": 20,
+   "name": "ג'בון איסט"
+  },
+  {
+   "teamId": 4554,
+   "number": 25,
+   "name": "לוקאס ונטורה"
+  },
+  {
+   "teamId": 4554,
+   "number": 27,
+   "name": "יוני סטויאנוב"
+  },
+  {
+   "teamId": 4554,
+   "number": 28,
+   "name": "ניב יהושע"
+  },
+  {
+   "teamId": 4554,
+   "number": 34,
+   "name": "מרקו וולף"
+  },
+  {
+   "teamId": 4554,
+   "number": 36,
+   "name": "יונתן שני"
+  },
+  {
+   "teamId": 4554,
+   "number": 44,
+   "name": "ג'יבריל דיופ"
+  },
+  {
+   "teamId": 4554,
+   "number": 45,
+   "name": "מוחמד אבו רומי"
+  },
+  {
+   "teamId": 4554,
+   "number": 66,
+   "name": "איגור זלאטנוביץ'"
+  },
+  {
+   "teamId": 4554,
+   "number": 70,
+   "name": "ז'ואאו ויקטור"
+  },
+  {
+   "teamId": 4554,
+   "number": 90,
+   "name": "אדריאן אוגריסה"
+  },
+  {
+   "teamId": 4563,
+   "number": 1,
+   "name": "תומר אלון"
+  },
+  {
+   "teamId": 4563,
+   "number": 4,
+   "name": "עמית גלזר"
+  },
+  {
+   "teamId": 4563,
+   "number": 6,
+   "name": "אופיר בנבנישתי"
+  },
+  {
+   "teamId": 4563,
+   "number": 7,
+   "name": "אמאדו סנייה"
+  },
+  {
+   "teamId": 4563,
+   "number": 8,
+   "name": "טאלס קוסטה"
+  },
+  {
+   "teamId": 4563,
+   "number": 9,
+   "name": "אלכסנדרו פופ"
+  },
+  {
+   "teamId": 4563,
+   "number": 10,
+   "name": "אריאל שרצקי"
+  },
+  {
+   "teamId": 4563,
+   "number": 11,
+   "name": "שי סבח"
+  },
+  {
+   "teamId": 4563,
+   "number": 12,
+   "name": "גואן חלבי"
+  },
+  {
+   "teamId": 4563,
+   "number": 14,
+   "name": "הראל גולדנברג"
+  },
+  {
+   "teamId": 4563,
+   "number": 16,
+   "name": "מור סימן טוב"
+  },
+  {
+   "teamId": 4563,
+   "number": 17,
+   "name": "איציק שולמייסטר"
+  },
+  {
+   "teamId": 4563,
+   "number": 18,
+   "name": "אורי שנפר"
+  },
+  {
+   "teamId": 4563,
+   "number": 19,
+   "name": "דניאל טננבאום"
+  },
+  {
+   "teamId": 4563,
+   "number": 20,
+   "name": "עובדיה דרוויש"
+  },
+  {
+   "teamId": 4563,
+   "number": 21,
+   "name": "רופאט עבדולזאדה"
+  },
+  {
+   "teamId": 4563,
+   "number": 24,
+   "name": "נדב מרקוביץ'"
+  },
+  {
+   "teamId": 4563,
+   "number": 26,
+   "name": "נמניה ליוביסלייביץ'"
+  },
+  {
+   "teamId": 4563,
+   "number": 28,
+   "name": "עידו וייר"
+  },
+  {
+   "teamId": 4563,
+   "number": 29,
+   "name": "יהונתן מלכה"
+  },
+  {
+   "teamId": 4563,
+   "number": 30,
+   "name": "אוואג'ו אספה"
+  },
+  {
+   "teamId": 4563,
+   "number": 32,
+   "name": "שי בן דויד"
+  },
+  {
+   "teamId": 4563,
+   "number": 39,
+   "name": "ניב גבאי"
+  },
+  {
+   "teamId": 4563,
+   "number": 44,
+   "name": "שון עדרי"
+  },
+  {
+   "teamId": 4563,
+   "number": 63,
+   "name": "אלכסנדרה סולה"
+  },
+  {
+   "teamId": 4563,
+   "number": 91,
+   "name": "בילאל שאהין"
+  },
+  {
+   "teamId": 7020,
+   "number": 1,
+   "name": "בן גורדין"
+  },
+  {
+   "teamId": 7020,
+   "number": 3,
+   "name": "נועם מלמוד"
+  },
+  {
+   "teamId": 7020,
+   "number": 4,
+   "name": "יונתן ליש"
+  },
+  {
+   "teamId": 7020,
+   "number": 7,
+   "name": "אוהד אלמגור"
+  },
+  {
+   "teamId": 7020,
+   "number": 8,
+   "name": "איליי מדמון"
+  },
+  {
+   "teamId": 7020,
+   "number": 9,
+   "name": "אדוארד צ'ילופיה"
+  },
+  {
+   "teamId": 7020,
+   "number": 10,
+   "name": "ויטאלי דמשקאן"
+  },
+  {
+   "teamId": 7020,
+   "number": 11,
+   "name": "ינאי דיסטלפלד"
+  },
+  {
+   "teamId": 7020,
+   "number": 13,
+   "name": "איתן שיינזינגר"
+  },
+  {
+   "teamId": 7020,
+   "number": 14,
+   "name": "עומר אבוהב"
+  },
+  {
+   "teamId": 7020,
+   "number": 16,
+   "name": "עומר אגבדיש"
+  },
+  {
+   "teamId": 7020,
+   "number": 17,
+   "name": "סאני אבדולסאלם"
+  },
+  {
+   "teamId": 7020,
+   "number": 18,
+   "name": "ליאון מזרחי"
+  },
+  {
+   "teamId": 7020,
+   "number": 19,
+   "name": "נדים וראסנה"
+  },
+  {
+   "teamId": 7020,
+   "number": 20,
+   "name": "אופק נדיר"
+  },
+  {
+   "teamId": 7020,
+   "number": 21,
+   "name": "איינאו פרדה"
+  },
+  {
+   "teamId": 7020,
+   "number": 22,
+   "name": "תמיר חיימוביץ'"
+  },
+  {
+   "teamId": 7020,
+   "number": 23,
+   "name": "נתנאל שפראו"
+  },
+  {
+   "teamId": 7020,
+   "number": 25,
+   "name": "אנדרו אידוקו"
+  },
+  {
+   "teamId": 7020,
+   "number": 26,
+   "name": "עידן כהן"
+  },
+  {
+   "teamId": 7020,
+   "number": 27,
+   "name": "מוחמד דיאב"
+  },
+  {
+   "teamId": 7020,
+   "number": 31,
+   "name": "חמזה מוחמד"
+  },
+  {
+   "teamId": 7020,
+   "number": 33,
+   "name": "ישראל דאפה"
+  },
+  {
+   "teamId": 7020,
+   "number": 55,
+   "name": "נדב זמיר"
+  },
+  {
+   "teamId": 7020,
+   "number": 70,
+   "name": "זוברו שאראני"
+  },
+  {
+   "teamId": 7020,
+   "number": 91,
+   "name": "כריסט טיהי"
+  },
+  {
+   "teamId": 7020,
+   "number": 97,
+   "name": "יונתן סורקין"
+  },
+  {
+   "teamId": 7020,
+   "number": 99,
+   "name": "גיא בר"
+  },
+  {
+   "teamId": 12039,
+   "number": 1,
+   "name": "גד עמוס"
+  },
+  {
+   "teamId": 12039,
+   "number": 3,
+   "name": "דוד קלטינס"
+  },
+  {
+   "teamId": 12039,
+   "number": 4,
+   "name": "ממאדו סמבה"
+  },
+  {
+   "teamId": 12039,
+   "number": 5,
+   "name": "נהוראי חן"
+  },
+  {
+   "teamId": 12039,
+   "number": 6,
+   "name": "פיראס אבו עאקל"
+  },
+  {
+   "teamId": 12039,
+   "number": 8,
+   "name": "ארי כהן"
+  },
+  {
+   "teamId": 12039,
+   "number": 9,
+   "name": "ארטור מירניאן"
+  },
+  {
+   "teamId": 12039,
+   "number": 10,
+   "name": "בר כהן"
+  },
+  {
+   "teamId": 12039,
+   "number": 11,
+   "name": "סמיר פרהוד"
+  },
+  {
+   "teamId": 12039,
+   "number": 12,
+   "name": "קייס גאנם"
+  },
+  {
+   "teamId": 12039,
+   "number": 13,
+   "name": "זיו מורגן"
+  },
+  {
+   "teamId": 12039,
+   "number": 14,
+   "name": "גיא סנקר"
+  },
+  {
+   "teamId": 12039,
+   "number": 17,
+   "name": "רון אונגר"
+  },
+  {
+   "teamId": 12039,
+   "number": 18,
+   "name": "עדן שמיר"
+  },
+  {
+   "teamId": 12039,
+   "number": 19,
+   "name": "גל מעתוק"
+  },
+  {
+   "teamId": 12039,
+   "number": 21,
+   "name": "ירין סרדל"
+  },
+  {
+   "teamId": 12039,
+   "number": 22,
+   "name": "עידו שרון"
+  },
+  {
+   "teamId": 12039,
+   "number": 23,
+   "name": "כריס קואקו"
+  },
+  {
+   "teamId": 12039,
+   "number": 26,
+   "name": "רביד שמאי"
+  },
+  {
+   "teamId": 12039,
+   "number": 27,
+   "name": "ירין סויסה"
+  },
+  {
+   "teamId": 12039,
+   "number": 30,
+   "name": "מנסור באדג'י"
+  },
+  {
+   "teamId": 12039,
+   "number": 37,
+   "name": "אונדז'יי באצ'ו"
+  },
+  {
+   "teamId": 12039,
+   "number": 47,
+   "name": "דניאל גולאני"
+  },
+  {
+   "teamId": 12039,
+   "number": 55,
+   "name": "ג'ונס אבו גנימה"
+  },
+  {
+   "teamId": 12039,
+   "number": 77,
+   "name": "יהודה אגם"
+  },
+  {
+   "teamId": 12039,
+   "number": 84,
+   "name": "ננה גמבלה"
+  },
+  {
+   "teamId": 14316,
+   "number": 1,
+   "name": "יואב ג'ראפי"
+  },
+  {
+   "teamId": 14316,
+   "number": 2,
+   "name": "נעם כהן"
+  },
+  {
+   "teamId": 14316,
+   "number": 3,
+   "name": "תמיר ארבל"
+  },
+  {
+   "teamId": 14316,
+   "number": 4,
+   "name": "דור מלול"
+  },
+  {
+   "teamId": 14316,
+   "number": 5,
+   "name": "איוון קריצ'יאק"
+  },
+  {
+   "teamId": 14316,
+   "number": 7,
+   "name": "לירן רוטמן"
+  },
+  {
+   "teamId": 14316,
+   "number": 8,
+   "name": "צ'יק קייטה"
+  },
+  {
+   "teamId": 14316,
+   "number": 9,
+   "name": "וויליאם אגאדה"
+  },
+  {
+   "teamId": 14316,
+   "number": 10,
+   "name": "שי אליאס"
+  },
+  {
+   "teamId": 14316,
+   "number": 11,
+   "name": "סאלי פחימה"
+  },
+  {
+   "teamId": 14316,
+   "number": 12,
+   "name": "אניס פורת עיאש"
+  },
+  {
+   "teamId": 14316,
+   "number": 13,
+   "name": "דאריו זופאריץ'"
+  },
+  {
+   "teamId": 14316,
+   "number": 14,
+   "name": "והיב חביבאללה"
+  },
+  {
+   "teamId": 14316,
+   "number": 15,
+   "name": "יעד גונן"
+  },
+  {
+   "teamId": 14316,
+   "number": 17,
+   "name": "אלון תורג'מן"
+  },
+  {
+   "teamId": 14316,
+   "number": 18,
+   "name": "איתי זעפרני"
+  },
+  {
+   "teamId": 14316,
+   "number": 19,
+   "name": "סער אלקיים"
+  },
+  {
+   "teamId": 14316,
+   "number": 20,
+   "name": "אחמד המאן"
+  },
+  {
+   "teamId": 14316,
+   "number": 21,
+   "name": "שיקאנה דיאקיטה"
+  },
+  {
+   "teamId": 14316,
+   "number": 23,
+   "name": "מתן עמבר"
+  },
+  {
+   "teamId": 14316,
+   "number": 25,
+   "name": "ג'ורג' דיבה"
+  },
+  {
+   "teamId": 14316,
+   "number": 30,
+   "name": "עידן דדיה"
+  },
+  {
+   "teamId": 14316,
+   "number": 31,
+   "name": "ליאם נחום"
+  },
+  {
+   "teamId": 14316,
+   "number": 42,
+   "name": "טל נעים"
+  },
+  {
+   "teamId": 14316,
+   "number": 55,
+   "name": "נאור סבג"
+  },
+  {
+   "teamId": 14316,
+   "number": 77,
+   "name": "אריאל מנדי"
+  },
+  {
+   "teamId": 15006,
+   "number": 1,
+   "name": "דור חברון"
+  },
+  {
+   "teamId": 15006,
+   "number": 6,
+   "name": "אלוז' יאו"
+  },
+  {
+   "teamId": 15006,
+   "number": 7,
+   "name": "קייל ספנס"
+  },
+  {
+   "teamId": 15006,
+   "number": 8,
+   "name": "לי-ים דן"
+  },
+  {
+   "teamId": 15006,
+   "number": 9,
+   "name": "יניב פרץ"
+  },
+  {
+   "teamId": 15006,
+   "number": 10,
+   "name": "אריאל לוגסי"
+  },
+  {
+   "teamId": 15006,
+   "number": 12,
+   "name": "איתי ברוך"
+  },
+  {
+   "teamId": 15006,
+   "number": 15,
+   "name": "אדר רטנר"
+  },
+  {
+   "teamId": 15006,
+   "number": 17,
+   "name": "אביב סלם"
+  },
+  {
+   "teamId": 15006,
+   "number": 18,
+   "name": "איתן טיבי"
+  },
+  {
+   "teamId": 15006,
+   "number": 20,
+   "name": "עידו כהן"
+  },
+  {
+   "teamId": 15006,
+   "number": 21,
+   "name": "איברהימה סומה"
+  },
+  {
+   "teamId": 15006,
+   "number": 22,
+   "name": "בשאר אבדח"
+  },
+  {
+   "teamId": 15006,
+   "number": 23,
+   "name": "גיא חדידה"
+  },
+  {
+   "teamId": 15006,
+   "number": 24,
+   "name": "ליאור קאסה"
+  },
+  {
+   "teamId": 15006,
+   "number": 26,
+   "name": "גיא דזנט"
+  },
+  {
+   "teamId": 15006,
+   "number": 27,
+   "name": "יואב קורן"
+  },
+  {
+   "teamId": 15006,
+   "number": 30,
+   "name": "אור דדיה"
+  },
+  {
+   "teamId": 15006,
+   "number": 39,
+   "name": "מאור ארליך"
+  },
+  {
+   "teamId": 15006,
+   "number": 44,
+   "name": "פאבלוס קוריאה"
+  },
+  {
+   "teamId": 15006,
+   "number": 53,
+   "name": "לירן חזן"
+  },
+  {
+   "teamId": 15006,
+   "number": 77,
+   "name": "חוסה קורטס"
+  },
+  {
+   "teamId": 15006,
+   "number": 80,
+   "name": "יהונתן עוז"
+  },
+  {
+   "teamId": 15006,
+   "number": 95,
+   "name": "עילי טובים"
+  },
+  {
+   "teamId": 15006,
+   "number": 97,
+   "name": "מרקו רקוניאץ'"
+  },
+  {
+   "teamId": 15006,
+   "number": 99,
+   "name": "אייל אינברום"
+  },
+  {
+   "teamId": 15960,
+   "number": 1,
+   "name": "ראול בלבראו"
+  },
+  {
+   "teamId": 15960,
+   "number": 2,
+   "name": "מארון גנטוס"
+  },
+  {
+   "teamId": 15960,
+   "number": 4,
+   "name": "אורי דהן"
+  },
+  {
+   "teamId": 15960,
+   "number": 5,
+   "name": "איאד אבו עביד"
+  },
+  {
+   "teamId": 15960,
+   "number": 6,
+   "name": "אחמד טאהא"
+  },
+  {
+   "teamId": 15960,
+   "number": 7,
+   "name": "איתמר שבירו"
+  },
+  {
+   "teamId": 15960,
+   "number": 8,
+   "name": "מודסטאס וורוביובאס"
+  },
+  {
+   "teamId": 15960,
+   "number": 9,
+   "name": "דניאל פרסקיב"
+  },
+  {
+   "teamId": 15960,
+   "number": 10,
+   "name": "מת'יו קדג'ו אנים"
+  },
+  {
+   "teamId": 15960,
+   "number": 11,
+   "name": "ג'בייר בושנאק"
+  },
+  {
+   "teamId": 15960,
+   "number": 13,
+   "name": "לירוי אווסו"
+  },
+  {
+   "teamId": 15960,
+   "number": 16,
+   "name": "לואי חלף"
+  },
+  {
+   "teamId": 15960,
+   "number": 17,
+   "name": "עמית קרדי"
+  },
+  {
+   "teamId": 15960,
+   "number": 19,
+   "name": "סאהר תאג'י"
+  },
+  {
+   "teamId": 15960,
+   "number": 20,
+   "name": "מוחמד גנאמה"
+  },
+  {
+   "teamId": 15960,
+   "number": 21,
+   "name": "מוחמד אבו ריא"
+  },
+  {
+   "teamId": 15960,
+   "number": 22,
+   "name": "מוחמד אבו ניל"
+  },
+  {
+   "teamId": 15960,
+   "number": 24,
+   "name": "באסיל חורי"
+  },
+  {
+   "teamId": 15960,
+   "number": 25,
+   "name": "עמאד אלדין עבדאללה"
+  },
+  {
+   "teamId": 15960,
+   "number": 27,
+   "name": "ראני סיף"
+  },
+  {
+   "teamId": 15960,
+   "number": 28,
+   "name": "עילאי חג'ג'"
+  },
+  {
+   "teamId": 15960,
+   "number": 29,
+   "name": "אחמד סלמן"
+  },
+  {
+   "teamId": 15960,
+   "number": 37,
+   "name": "אכרם זבידאת"
+  },
+  {
+   "teamId": 15960,
+   "number": 44,
+   "name": "עלי גנאמה"
+  },
+  {
+   "teamId": 15960,
+   "number": 77,
+   "name": "אנטוניו ספר"
+  },
+  {
+   "teamId": 15960,
+   "number": 92,
+   "name": "סאנה גומס"
+  },
+  {
+   "teamId": 15960,
+   "number": 97,
+   "name": "דימיטרי קאברה"
   }
  ]
 }

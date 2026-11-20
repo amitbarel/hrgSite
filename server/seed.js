@@ -5,7 +5,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { saveFixtures, replacePlayers, saveGameDetails, savePlayerStats, saveStandings, count, playersWithStats } from "./db.js";
+import { saveFixtures, replacePlayers, saveGameDetails, savePlayerStats, saveStandings, replaceLeaguePlayers, count, playersWithStats } from "./db.js";
 
 const file = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "data", "seed.json");
 
@@ -14,9 +14,10 @@ export async function seedIfEmpty() {
   const seed = JSON.parse(readFileSync(file, "utf8"));
   await seedStatsIfMissing(seed);
   await seedStandingsIfMissing(seed);
+  await seedLeaguePlayersIfMissing(seed);
   if ((await count("games")) > 0) return false;
   await saveFixtures(seed.teams, seed.games);
-  for (const g of seed.games) if (g.attendance || g.referee) await saveGameDetails(g.id, g);
+  for (const g of seed.games) if (g.attendance || g.referee || g.opta) await saveGameDetails(g.id, g);
   await replacePlayers(seed.players);
   await seedStatsIfMissing(seed);
   console.log(`[seed] loaded ${seed.games.length} games, ${seed.players.length} players`);
@@ -33,4 +34,11 @@ async function seedStatsIfMissing(seed) {
 async function seedStandingsIfMissing(seed) {
   if (!seed.standings?.length) return;
   if ((await count("standings")) === 0) await saveStandings(seed.standings);
+}
+
+// שמות בעברית לשחקני שאר הקבוצות (בשביל ההרכבים), עד שהסגלים נמשכים מהאתר בפעם הראשונה
+async function seedLeaguePlayersIfMissing(seed) {
+  if (!seed.leaguePlayers?.length || (await count("league_players")) > 0) return;
+  const byTeam = Map.groupBy(seed.leaguePlayers, p => p.teamId);
+  for (const [teamId, list] of byTeam) await replaceLeaguePlayers(teamId, list);
 }

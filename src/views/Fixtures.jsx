@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import PageHero from "../components/PageHero.jsx";
 import SectionHead from "../components/SectionHead.jsx";
 import Filters from "../components/Filters.jsx";
@@ -44,6 +45,7 @@ function FixtureRow({ g, hl }) {
       <div className="fx-result">
         {r ? <span className={`result-tag ${r.cls}`}>{r.label}</span> : <span className="result-tag upcoming">טרם שוחק</span>}
         {g.attendance && <span className="fx-crowd"><b>{fmtNum(g.attendance)}</b> צופים</span>}
+        <Link href={`/match/${g.id}`} className="fx-more">{g.score ? "לדף המשחק" : "פרטים"} ←</Link>
         {hl?.short && (
           <span className="fx-hl">
             <a href={`https://www.youtube.com/watch?v=${hl.short}`} target="_blank" rel="noopener">▶ תקציר<span className="sr-only"> (יוטיוב, נפתח בחלון חדש)</span></a>
