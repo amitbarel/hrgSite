@@ -56,6 +56,11 @@ export function kitStyle(kit) {
   };
 }
 
+// כל הצבעים של חולצה (כולל הצבע השני בפסים / חצי-חצי)
+const colors = (kit) => [kit.shirt, kit.second].filter(Boolean);
+// התנגשות: אחד מצבעי החולצה של האורחת קרוב לאחד מצבעי החולצה של המארחת
+const clash = (x, y) => colors(x).some((c) => colors(y).some((d) => distance(c, d) < 120));
+
 /**
  * הקבוצה המארחת לובשת תלבושת בית. האורחת לובשת תלבושת בית, אלא אם היא דומה מדי לזו של המארחת,
  * ואז תלבושת חוץ. מחזיר { home, away }.
@@ -64,9 +69,10 @@ export function matchKits(homeId, awayId) {
   const h = KITS[homeId] ?? FALLBACK;
   const a = KITS[awayId] ?? FALLBACK;
   const home = h.home;
+  // האורחת בתלבושת הבית שלה, ועוברת לתלבושת החוץ רק כשיש התנגשות בצבעים
   let away = a.home;
-  if (distance(home.shirt, away.shirt) < 120) away = a.away;
-  if (distance(home.shirt, away.shirt) < 120)
+  if (clash(home, away)) away = a.away;
+  if (clash(home, away))
     away = home.shirt === WHITE ? k(BLACK, WHITE) : k(WHITE, BLACK);
   return { home, away };
 }
